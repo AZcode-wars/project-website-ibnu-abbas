@@ -23,7 +23,7 @@ const About = () => {
   ];
 
   return (
-    <section id="profil" className="section-padding bg-white">
+    <section id="tentang-kami" className="section-padding bg-white">
       <Container>
         <div className="text-center mb-5">
           <h5 className="text-accent-gold fw-bold">Mengenal Lebih Dekat</h5>
@@ -31,7 +31,7 @@ const About = () => {
           <div className="mx-auto bg-accent-gold mt-3" style={{ width: '80px', height: '4px' }}></div>
         </div>
 
-        <Row className="mb-5 align-items-center">
+        <Row id="sejarah" className="mb-5 align-items-center">
           <Col lg={6}>
             <div className="pe-lg-5">
               <h3 className="mb-4">Perjalanan Kami</h3>
@@ -68,7 +68,7 @@ const About = () => {
           </Col>
         </Row>
 
-        <Row>
+        <Row id="visi-misi">
           {cards.map((card, idx) => (
             <Col key={idx} md={4} className="mb-4">
               <motion.div
