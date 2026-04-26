@@ -1,23 +1,22 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Teachers from './components/Teachers';
-import Facilities from './components/Facilities';
-import PPDBDashboard from './components/PPDBDashboard';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import ScrollToHash from './utils/ScrollToHash';
+import HomePage from './pages/HomePage';
+import PPDBPage from './pages/PPDBPage';
 
 function App() {
   return (
     <div className="app-container">
+      <ScrollToHash />
       <Header />
       <main>
-        <Hero />
-        <About />
-        <Teachers />
-        <Facilities />
-        <PPDBDashboard />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/ppdb" element={<PPDBPage />} />
+        </Routes>
       </main>
       <Footer />
       <FloatingWhatsApp />

@@ -1,0 +1,191 @@
+/* =========================================
+   Navbar Enhancement Styles — Orang A
+   File milik Orang A, jangan edit index.css
+   ========================================= */
+
+/* ── Scroll State Transitions ── */
+.navbar-pondok {
+  transition: all 0.35s ease;
+}
+
+.navbar-top {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  box-shadow: none;
+}
+
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(6, 78, 59, 0.08);
+}
+
+/* ── Active Nav Link (Scroll Spy) ── */
+.navbar-pondok .nav-link-custom {
+  position: relative;
+  color: #374151;
+  font-weight: 500;
+  margin: 0 6px;
+  padding: 8px 12px !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-pondok .nav-link-custom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2.5px;
+  background-color: #064E3B;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.navbar-pondok .nav-link-custom:hover {
+  color: #064E3B;
+}
+
+.navbar-pondok .nav-link-custom:hover::after {
+  width: 60%;
+}
+
+.navbar-pondok .nav-link-custom.active {
+  color: #064E3B !important;
+  font-weight: 600;
+}
+
+.navbar-pondok .nav-link-custom.active::after {
+  width: 60%;
+}
+
+/* ── Dropdown Styling ── */
+.nav-dropdown-custom .dropdown-toggle {
+  color: #374151 !important;
+  font-weight: 500;
+  margin: 0 6px;
+  padding: 8px 12px !important;
+  transition: color 0.3s ease;
+}
+
+.nav-dropdown-custom .dropdown-toggle:hover {
+  color: #064E3B !important;
+}
+
+.nav-dropdown-custom.active-dropdown .dropdown-toggle {
+  color: #064E3B !important;
+  font-weight: 600;
+}
+
+.nav-dropdown-custom .dropdown-menu {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  margin-top: 8px;
+  animation: dropdownFade 0.25s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-dropdown-custom .dropdown-item {
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.nav-dropdown-custom .dropdown-item:hover {
+  background-color: #ECFDF5;
+  color: #064E3B;
+  padding-left: 24px;
+}
+
+.nav-dropdown-custom .dropdown-item.active-item {
+  background-color: #ECFDF5;
+  color: #064E3B;
+  font-weight: 600;
+  border-left: 3px solid #064E3B;
+}
+
+.nav-dropdown-custom .dropdown-divider {
+  margin: 4px 16px;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+/* ── Hamburger Toggle Button ── */
+.navbar-pondok .navbar-toggler {
+  border: 2px solid rgba(6, 78, 59, 0.2);
+  border-radius: 8px;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar-pondok .navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(6, 78, 59, 0.15);
+}
+
+.navbar-pondok .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23064E3B' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ── Mobile Responsive ── */
+@media (max-width: 991.98px) {
+  .navbar-pondok .navbar-collapse {
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-pondok .nav-link-custom {
+    padding: 12px 16px !important;
+    margin: 2px 0;
+    border-radius: 8px;
+  }
+
+  .navbar-pondok .nav-link-custom:hover,
+  .navbar-pondok .nav-link-custom.active {
+    background-color: #ECFDF5;
+  }
+
+  .navbar-pondok .nav-link-custom::after {
+    display: none;
+  }
+
+  .nav-dropdown-custom .dropdown-toggle {
+    padding: 12px 16px !important;
+    margin: 2px 0;
+    border-radius: 8px;
+  }
+
+  .nav-dropdown-custom .dropdown-menu {
+    box-shadow: none;
+    border-radius: 8px;
+    background-color: #f8fffe;
+    margin-top: 0;
+    padding-left: 12px;
+    animation: none;
+  }
+
+  .nav-dropdown-custom .dropdown-item {
+    border-radius: 6px;
+    padding: 10px 16px;
+  }
+
+  .nav-dropdown-custom .dropdown-item.active-item {
+    border-left: none;
+    background-color: #ECFDF5;
+  }
+}
