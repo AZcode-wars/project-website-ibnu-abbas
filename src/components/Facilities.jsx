@@ -1,50 +1,124 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Carousel, Modal, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import { Maximize2, X } from 'lucide-react';
+
+import asramaImg from '../assets/asrama.png';
+import masjidImg from '../assets/masjid.png';
 
 const Facilities = () => {
+  const [showLightbox, setShowLightbox] = useState(false);
+  const [activeImg, setActiveImg] = useState(0);
+
   const facilities = [
-    { title: "Masjid Utama", img: "https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=800" },
-    { title: "Asrama Santri", img: "https://images.unsplash.com/photo-1555854817-5b2247a8175f?auto=format&fit=crop&q=80&w=800" },
-    { title: "Perpustakaan", img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=800" },
-    { title: "Laboratorium Komputer", img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800" },
-    { title: "Lapangan Memanah", img: "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&q=80&w=800" },
-    { title: "Ruang Kelas Modern", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800" }
+    { 
+      title: "Asrama Santri Modern", 
+      desc: "Kamar tidur yang nyaman dan bersih untuk mendukung istirahat santri.", 
+      img: asramaImg 
+    },
+    { 
+      title: "Masjid Jami' Ibnu Abbas", 
+      desc: "Pusat kegiatan ibadah dan kajian keislaman dengan arsitektur menawan.", 
+      img: masjidImg 
+    },
+    { 
+      title: "Ruang Kelas Digital", 
+      desc: "Kelas interaktif dengan fasilitas multimedia untuk pembelajaran modern.", 
+      img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1000" 
+    },
+    { 
+      title: "Perpustakaan & Maktabah", 
+      desc: "Koleksi ribuan kitab kuning dan buku literatur umum yang lengkap.", 
+      img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=1000" 
+    }
   ];
+
+  const handleOpenLightbox = (index) => {
+    setActiveImg(index);
+    setShowLightbox(true);
+  };
 
   return (
     <section id="fasilitas" className="section-padding bg-white">
       <Container>
-        <div className="text-center mb-5">
-          <h5 className="text-accent-gold fw-bold">Fasilitas Pondok</h5>
-          <h2 className="display-5 fw-bold">Lingkungan & Sarana</h2>
-          <div className="mx-auto bg-accent-gold mt-3" style={{ width: '80px', height: '4px' }}></div>
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-5"
+        >
+          <h5 className="text-accent-gold fw-bold mb-2">Fasilitas Pondok</h5>
+          <h2 className="display-5 fw-bold section-title text-center">Sarana & Prasarana</h2>
+        </motion.div>
 
-        <Row>
-          {facilities.map((item, idx) => (
-            <Col key={idx} md={4} className="mb-4">
+        {/* Main Carousel */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="mb-5 shadow-xl rounded-4 overflow-hidden"
+        >
+          <Carousel indicators={true} fade className="facility-carousel">
+            {facilities.map((f, i) => (
+              <Carousel.Item key={i}>
+                <div style={{ height: '500px', position: 'relative' }}>
+                  <img
+                    className="d-block w-100 h-100 object-fit-cover"
+                    src={f.img}
+                    alt={f.title}
+                  />
+                  <Carousel.Caption className="text-start start-0 bottom-0 w-100 p-5" style={{ background: 'linear-gradient(transparent, rgba(0,0,0,0.8))' }}>
+                    <h3 className="text-accent-gold fw-bold">{f.title}</h3>
+                    <p className="fs-5">{f.desc}</p>
+                  </Carousel.Caption>
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </motion.div>
+
+        {/* Thumbnail Gallery */}
+        <Row className="g-4">
+          {facilities.map((f, i) => (
+            <Col key={i} md={3}>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="position-relative overflow-hidden rounded-4 shadow-sm"
-                style={{ height: '250px' }}
+                className="position-relative overflow-hidden rounded-3 cursor-pointer group shadow-sm"
+                onClick={() => handleOpenLightbox(i)}
+                style={{ height: '180px', cursor: 'pointer' }}
               >
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
-                  className="w-100 h-100" 
-                  style={{ objectFit: 'cover' }}
-                />
-                <div 
-                  className="position-absolute bottom-0 start-0 w-100 p-3 text-white" 
-                  style={{ background: 'linear-gradient(transparent, rgba(0,0,0,0.8))' }}
-                >
-                  <h5 className="mb-0">{item.title}</h5>
+                <img src={f.img} alt={f.title} className="w-100 h-100 object-fit-cover" />
+                <div className="position-absolute top-0 start-0 w-100 h-100 bg-primary-green bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 group-hover-opacity-100 transition-all duration-300">
+                  <Maximize2 className="text-white" />
                 </div>
               </motion.div>
             </Col>
           ))}
         </Row>
+
+        {/* Lightbox Modal */}
+        <Modal 
+          show={showLightbox} 
+          onHide={() => setShowLightbox(false)} 
+          size="lg" 
+          centered
+          contentClassName="bg-transparent border-0"
+        >
+          <Modal.Body className="p-0 position-relative">
+            <Button 
+              variant="link" 
+              className="position-absolute top-0 end-0 text-white p-3 z-3"
+              onClick={() => setShowLightbox(false)}
+            >
+              <X size={32} />
+            </Button>
+            <img src={facilities[activeImg].img} alt="Preview" className="w-100 rounded-3 shadow-2xl" />
+            <div className="bg-white p-4 rounded-bottom-3 mt-n2">
+              <h4 className="text-primary-green fw-bold">{facilities[activeImg].title}</h4>
+              <p className="text-muted mb-0">{facilities[activeImg].desc}</p>
+            </div>
+          </Modal.Body>
+        </Modal>
       </Container>
     </section>
   );

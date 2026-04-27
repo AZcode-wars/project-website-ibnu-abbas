@@ -1,26 +1,25 @@
 import React from 'react';
-import Header from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Teachers from './components/Teachers';
-import Facilities from './components/Facilities';
-import PPDBDashboard from './components/PPDBDashboard';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import PPDBPage from './pages/PPDBPage';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="app-container">
-      <Header />
+      <Navbar />
       <main>
-        <Hero />
-        <About />
-        <Teachers />
-        <Facilities />
-        <PPDBDashboard />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/ppdb" element={<PPDBPage />} />
+        </Routes>
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <ScrollToTop />
     </div>
   );
 }

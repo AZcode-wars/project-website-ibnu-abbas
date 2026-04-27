@@ -1,24 +1,61 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { BookOpen } from 'lucide-react';
+import logoMahad from '../assets/logo_mahad.png';
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  // Task A1: Background change on scroll - delayed until leaving Hero
+  useEffect(() => {
+    const handleScroll = () => {
+      // Threshold set to 80% of viewport height
+      if (window.scrollY > window.innerHeight * 0.8) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const isHomePage = location.pathname === '/';
+  const shouldBeSolid = scrolled || !isHomePage;
+
   return (
-    <Navbar expand="lg" sticky="top" className="navbar-pondok py-3">
+    <Navbar 
+      expand="lg" 
+      fixed="top" 
+      className={`navbar-pondok py-3 ${shouldBeSolid ? 'scrolled shadow-sm py-2' : 'bg-transparent shadow-none'}`}
+    >
       <Container>
-        <Navbar.Brand href="#home" className="d-flex align-items-center">
-          <BookOpen className="text-primary-green me-2" size={32} />
-          <span className="fw-bold fs-4 text-primary-green">Ibnu Abbas</span>
+        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
+          <img 
+            src={logoMahad} 
+            alt="Logo Ma'had" 
+            height="50" 
+            className="me-2"
+          />
+          <span className={`fw-bold fs-4 ${shouldBeSolid ? 'text-primary-green' : 'text-white'}`}>Ibnu Abbas</span>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className={shouldBeSolid ? '' : 'navbar-dark'} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center">
-            <Nav.Link href="#home">Beranda</Nav.Link>
-            <Nav.Link href="#profil">Profil</Nav.Link>
-            <Nav.Link href="#pengajar">Pengajar</Nav.Link>
-            <Nav.Link href="#fasilitas">Fasilitas</Nav.Link>
-            <Nav.Link href="#ppdb" className="fw-bold text-accent-gold">PPDB Center</Nav.Link>
-            <Button className="btn-primary-pondok ms-lg-3 mt-3 mt-lg-0">Hubungi Kami</Button>
+            <Nav.Link as={Link} to="/" className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Beranda</Nav.Link>
+            <Nav.Link href="/#profil" className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Profil</Nav.Link>
+            <Nav.Link href="/#pengajar" className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Pengajar</Nav.Link>
+            <Nav.Link href="/#fasilitas" className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Fasilitas</Nav.Link>
+            
+            <Button 
+              as={Link} 
+              to="/ppdb" 
+              className="btn-accent-pondok ms-lg-3 mt-3 mt-lg-0 shadow-sm"
+            >
+              Daftar Sekarang
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
