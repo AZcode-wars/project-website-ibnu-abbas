@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-green text-white pt-5 pb-3">
+    <footer id="kontak" className="bg-primary-green text-white pt-5 pb-3">
       <Container>
         <Row className="mb-5">
           <Col lg={4} className="mb-4 mb-lg-0">
@@ -23,9 +24,9 @@ const Footer = () => {
             <h5 className="fw-bold mb-4">Tautan Cepat</h5>
             <ul className="list-unstyled opacity-75">
               <li className="mb-2"><a href="#home" className="text-white text-decoration-none">Beranda</a></li>
-              <li className="mb-2"><a href="#profil" className="text-white text-decoration-none">Profil Pondok</a></li>
+              <li className="mb-2"><a href="#tentang-kami" className="text-white text-decoration-none">Profil Pondok</a></li>
               <li className="mb-2"><a href="#pengajar" className="text-white text-decoration-none">Dewan Guru</a></li>
-              <li className="mb-2"><a href="#ppdb" className="text-white text-decoration-none">Pendaftaran Santri</a></li>
+              <li className="mb-2"><Link to="/ppdb" className="text-white text-decoration-none">Pendaftaran Santri</Link></li>
             </ul>
           </Col>
           

@@ -43,7 +43,7 @@ const About = () => {
           <h2 className="display-5 fw-bold section-title text-center">Sejarah & Visi Misi</h2>
         </motion.div>
 
-        <Row className="mb-5 align-items-center">
+        <Row id="sejarah" className="mb-5 align-items-center">
           <Col lg={6}>
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
@@ -88,7 +88,7 @@ const About = () => {
           </Col>
         </Row>
 
-        <Row>
+        <Row id="visi-misi">
           {cards.map((card, idx) => (
             <Col key={idx} md={4} className="mb-4">
               <motion.div
