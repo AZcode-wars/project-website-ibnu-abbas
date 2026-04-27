@@ -1,25 +1,25 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Navbar';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import PPDBPage from './pages/PPDBPage';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-import ScrollToHash from './utils/ScrollToHash';
-import HomePage from './pages/HomePage';
-import PPDBPage from './pages/PPDBPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="app-container">
-      <ScrollToHash />
-      <Header />
+      <Navbar />
       <main>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Home />} />
           <Route path="/ppdb" element={<PPDBPage />} />
         </Routes>
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <ScrollToTop />
     </div>
   );
 }

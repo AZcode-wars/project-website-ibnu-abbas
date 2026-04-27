@@ -6,11 +6,11 @@
 ---
 
 ## ⚡ Fase 0: Pra-Task — Fondasi Bersama (Dikerjakan Orang A)
-- [ ] **Setup Routing** — Install `react-router-dom`, konfigurasi di `main.jsx`
-- [ ] **Update `App.jsx`** — Atur routing: `/` = Homepage, `/ppdb` = Halaman PPDB Center
-- [ ] **Buat halaman PPDB terpisah** — Pindahkan `PPDBDashboard` dari homepage ke page `/ppdb`
-- [ ] **Restrukturisasi Navbar** — Menu: Beranda, Profil, Tentang Kami, Kontak Kami
-- [ ] **Commit & push** fondasi bersama
+- [x] **Setup Routing** — Install `react-router-dom`, konfigurasi di `main.jsx`
+- [x] **Update `App.jsx`** — Atur routing: `/` = Homepage, `/ppdb` = Halaman PPDB Center
+- [x] **Buat halaman PPDB terpisah** — Pindahkan `PPDBDashboard` dari homepage ke page `/ppdb`
+- [x] **Restrukturisasi Navbar** — Menu: Beranda, Profil, Tentang Kami, Kontak Kami
+- [x] **Commit & push** fondasi bersama
 
 ---
 
@@ -18,42 +18,42 @@
 *Files: `index.css`, `Hero.jsx`, `About.jsx`, `Teachers.jsx`, `Facilities.jsx`*
 
 ### B1: Design System & CSS Polish
-- [ ] Tambahkan CSS variables tambahan (shadow, radius, spacing)
-- [ ] Tambahkan `scroll-behavior: smooth` pada `html`
-- [ ] Tambahkan utility class `.bg-mint` (belum didefinisikan)
-- [ ] Perkuat section title styling (garis gold di bawah heading)
-- [ ] Tambahkan responsive font sizing
+- [x] Tambahkan CSS variables tambahan (shadow, radius, spacing)
+- [x] Tambahkan `scroll-behavior: smooth` pada `html`
+- [x] Tambahkan utility class `.bg-mint` (belum didefinisikan)
+- [x] Perkuat section title styling (garis gold di bawah heading)
+- [x] Tambahkan responsive font sizing
 - [ ] Tambahkan subtle background textures/patterns
 
 ### B2: Hero Section Enhancement
-- [ ] Generate gambar/ilustrasi pesantren (Ganti placeholder icon)
-- [ ] Hubungkan tombol "Daftar Sekarang (PPDB)" ke `/ppdb`
-- [ ] Hubungkan tombol "Pelajari Program" ke section `#profil`
-- [ ] Tambahkan stagger animation yang lebih dramatis
+- [x] Tambahkan gambar asrama baru (Pengganti icon)
+- [x] Hubungkan tombol "Daftar Sekarang (PPDB)" ke `/ppdb`
+- [x] Hubungkan tombol "Pelajari Program" ke section `#profil`
+- [x] Tambahkan stagger animation yang lebih dramatis
 - [ ] Perbaiki responsive sizing circle element di mobile
 
 ### B3: About / Profil Section Polish
-- [ ] Tambahkan scroll-triggered animation (`whileInView`)
-- [ ] Tambahkan icon per item di "Kenapa Memilih Kami"
-- [ ] Pastikan responsive layout di tablet & mobile
+- [x] Tambahkan scroll-triggered animation (`whileInView`)
+- [x] Tambahkan icon per item di "Kenapa Memilih Kami"
+- [x] Pastikan responsive layout di tablet & mobile
 
 ### B4: Teachers Directory Enhancement (F02)
-- [ ] Generate/ganti avatar pengajar yang representatif
-- [ ] Tambahkan hover effect pada card (overlay info)
-- [ ] Perbaiki layout: 2 kolom di tablet, 1 kolom di mobile
+- [x] Generate/ganti avatar pengajar yang representatif
+- [x] Tambahkan hover effect pada card (overlay info)
+- [x] Perbaiki layout: 2 kolom di tablet, 1 kolom di mobile
 
 ### B5: Facilities Gallery + Carousel (F03)
-- [ ] Tambahkan **Bootstrap Carousel** sebagai slideshow utama
-- [ ] Pertahankan grid foto di bawah sebagai thumbnail gallery
-- [ ] Tambahkan lightbox/modal saat foto diklik
-- [ ] Generate gambar fasilitas pesantren yang representatif
-- [ ] Tambahkan caption deskriptif per foto
+- [x] Tambahkan **Bootstrap Carousel** sebagai slideshow utama
+- [x] Pertahankan grid foto di bawah sebagai thumbnail gallery
+- [x] Tambahkan lightbox/modal saat foto diklik
+- [x] Generate gambar fasilitas pesantren yang representatif
+- [x] Tambahkan caption deskriptif per foto
 
 ---
 
 ## 🤝 Fase Akhir: Final Polish — Bersama
-- [ ] **Responsiveness Audit** — Test di 375px, 768px, 1200px
-- [ ] Fix semua layout issues
-- [ ] Pastikan font sizing responsif
-- [ ] Tambahkan scroll-to-top button di `App.jsx`
-- [ ] Final review visual keseluruhan
+- [x] **Responsiveness Audit** — Test di 375px, 768px, 1200px
+- [x] Fix semua layout issues
+- [x] Pastikan font sizing responsif
+- [x] Tambahkan scroll-to-top button di `App.jsx`
+- [x] Final review visual keseluruhan
