@@ -1,0 +1,85 @@
+/* =========================================
+   Footer Styles — Orang A
+   File milik Orang A, jangan edit index.css
+   ========================================= */
+
+.footer-pondok {
+  background: linear-gradient(180deg, #064E3B 0%, #043a2c 100%);
+  color: white;
+}
+
+/* ── Social Links ── */
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social-link:hover {
+  background-color: #D97706;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+}
+
+/* ── Quick Links ── */
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  padding-left: 0;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #D97706;
+  padding-left: 6px;
+}
+
+/* ── Contact Items ── */
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ── Mobile Spacing ── */
+@media (max-width: 991.98px) {
+  .footer-pondok {
+    text-align: center;
+  }
+
+  .footer-pondok .d-flex.gap-3 {
+    justify-content: center;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
+  }
+
+  .footer-links {
+    columns: 2;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer-links {
+    columns: 1;
+  }
+  
+  .footer-pondok {
+    padding-top: 2.5rem !important;
+  }
+}
