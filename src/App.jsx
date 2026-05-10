@@ -3,6 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import PPDBPage from './pages/PPDBPage';
+import ProfilPage from './pages/ProfilPage';
+import PengajarPage from './pages/PengajarPage';
+import FasilitasPage from './pages/FasilitasPage';
+import ProgramPage from './pages/ProgramPage';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import ScrollToTop from './components/ScrollToTop';
@@ -15,6 +19,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ppdb" element={<PPDBPage />} />
+          <Route path="/profil" element={<ProfilPage />} />
+          <Route path="/program" element={<ProgramPage />} />
+          <Route path="/pengajar" element={<PengajarPage />} />
+          <Route path="/fasilitas" element={<FasilitasPage />} />
         </Routes>
       </main>
       <Footer />

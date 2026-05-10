@@ -56,7 +56,7 @@ const Hero = () => {
                 <Button as={Link} to="/ppdb" className="btn-accent-pondok px-5 py-3 fs-5 d-flex align-items-center shadow-lg">
                   Daftar Sekarang (PPDB) <ArrowRight className="ms-2" size={20} />
                 </Button>
-                <Button variant="outline-light" href="#profil" className="px-5 py-3 fs-5 border-2 fw-bold">
+                <Button variant="outline-light" as={Link} to="/program" className="px-5 py-3 fs-5 border-2 fw-bold">
                   Pelajari Program
                 </Button>
               </motion.div>
