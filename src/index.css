@@ -190,3 +190,58 @@ h1, h2, h3, h4, h5, h6 {
 .transition-all {
   transition: all 0.3s ease-in-out;
 }
+
+/* Custom Dropdown Animation & Caret */
+.navbar-pondok .dropdown-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-md);
+  pointer-events: none;
+  margin-top: 0.5rem;
+}
+
+.navbar-pondok .dropdown-menu.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.navbar-pondok .dropdown-item {
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: all 0.2s ease;
+}
+
+.navbar-pondok .dropdown-item:hover {
+  background-color: var(--bg-mint);
+  color: var(--primary-green);
+}
+
+/* Custom Caret */
+.navbar-pondok .dropdown-toggle::after {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0; /* Hidden by default */
+  transform: rotate(-90deg); /* Pointing right */
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.navbar-pondok .nav-item.dropdown:hover .dropdown-toggle::after {
+  opacity: 1; /* Show on hover */
+}
+
+.navbar-pondok .nav-item.dropdown .dropdown-toggle.show::after {
+  transform: rotate(0deg); /* Pointing down when open */
+  opacity: 1; /* Ensure visible when open */
+}

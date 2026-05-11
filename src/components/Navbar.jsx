@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Navbar, Nav, Container, Button } from 'react-bootstrap';
+import { Navbar, Nav, Container, Button, NavDropdown } from 'react-bootstrap';
 import logoMahad from '../assets/logo_mahad.png';
 
 const Header = () => {
@@ -45,9 +45,15 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center">
             <Nav.Link as={Link} to="/" className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Beranda</Nav.Link>
-            <Nav.Link href="/#profil" className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Profil</Nav.Link>
-            <Nav.Link href="/#pengajar" className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Pengajar</Nav.Link>
-            <Nav.Link href="/#fasilitas" className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Fasilitas</Nav.Link>
+            <NavDropdown 
+              title={<span className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Profil</span>} 
+              id="profil-nav-dropdown"
+            >
+              <NavDropdown.Item as={Link} to="/profil">Profil Pesantren</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/program">Program Pendidikan</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link as={Link} to="/pengajar" className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Pengajar</Nav.Link>
+            <Nav.Link as={Link} to="/fasilitas" className={`fw-medium ${shouldBeSolid ? 'text-dark' : 'text-white opacity-90'}`}>Fasilitas</Nav.Link>
             
             <Button 
               as={Link} 

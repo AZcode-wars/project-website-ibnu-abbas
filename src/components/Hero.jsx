@@ -36,7 +36,7 @@ const Hero = () => {
       }}
     >
       <div className="bg-pattern-light" style={{ opacity: 0.05 }}></div>
-      <Container className="position-relative" style={{ zIndex: 1 }}>
+      <Container className="position-relative" style={{ zIndex: 3 }}>
         <Row className="align-items-center">
           <Col lg={8} xl={7}>
             <motion.div
@@ -56,7 +56,7 @@ const Hero = () => {
                 <Button as={Link} to="/ppdb" className="btn-accent-pondok px-5 py-3 fs-5 d-flex align-items-center shadow-lg">
                   Daftar Sekarang (PPDB) <ArrowRight className="ms-2" size={20} />
                 </Button>
-                <Button variant="outline-light" href="#profil" className="px-5 py-3 fs-5 border-2 fw-bold">
+                <Button variant="outline-light" as={Link} to="/program" className="px-5 py-3 fs-5 border-2 fw-bold">
                   Pelajari Program
                 </Button>
               </motion.div>
@@ -64,6 +64,23 @@ const Hero = () => {
           </Col>
         </Row>
       </Container>
+      {/* Efek transisi smooth (blur & gradient) ke section bawahnya */}
+      <div 
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: '120px',
+          background: 'linear-gradient(to bottom, rgba(248, 249, 250, 0) 0%, rgba(248, 249, 250, 1) 100%)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          maskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',
+          pointerEvents: 'none',
+          zIndex: 2
+        }}
+      />
     </section>
   );
 };
