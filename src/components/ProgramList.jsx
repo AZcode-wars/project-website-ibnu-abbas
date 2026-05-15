@@ -1,36 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { BookOpen, GraduationCap, Library, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import programs from '../data/programsData';
 
 const ProgramList = () => {
-  const programs = [
-    {
-      title: "SMP Terpadu",
-      description: "Pendidikan menengah pertama yang menggabungkan kurikulum nasional (Kemdikbud) dengan kurikulum kepesantrenan dasar, membentuk santri yang cerdas secara akademik dan beradab.",
-      icon: <Users size={40} className="text-accent-gold mb-3" />
-    },
-    {
-      title: "SMA Terpadu",
-      description: "Pendidikan menengah atas dengan peminatan MIPA dan IPS, dibekali dengan kemampuan bahasa Arab & Inggris aktif serta tahfizh Al-Qur'an berkelanjutan.",
-      icon: <GraduationCap size={40} className="text-accent-gold mb-3" />
-    },
-    {
-      title: "Tahfizh Al-Qur'an Intensif",
-      description: "Program khusus bagi santri yang memiliki minat dan bakat dalam menghafal Al-Qur'an 30 Juz dengan target capaian mutqin bersanad.",
-      icon: <BookOpen size={40} className="text-accent-gold mb-3" />
-    },
-    {
-      title: "Madrasah Diniyah",
-      description: "Program pendalaman ilmu agama dan kitab kuning (Turots) untuk mencetak kader ulama masa depan yang tafaqquh fid-diin.",
-      icon: <Library size={40} className="text-accent-gold mb-3" />
-    }
-  ];
-
   return (
     <section className="section-padding bg-light bg-pattern-islamic">
       <Container>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -46,7 +25,7 @@ const ProgramList = () => {
 
         <Row>
           {programs.map((program, idx) => (
-            <Col key={idx} md={6} lg={6} className="mb-4">
+            <Col key={program.slug} md={6} lg={6} className="mb-4">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -55,12 +34,19 @@ const ProgramList = () => {
                 whileHover={{ y: -5 }}
                 className="h-100"
               >
-                <Card className="pondok-card h-100 p-4 border-0 text-center shadow-sm d-flex flex-column align-items-center justify-content-center">
+                <Card className="pondok-card h-100 p-4 border-0 text-center shadow-sm d-flex flex-column align-items-center">
                   <div>{program.icon}</div>
                   <Card.Title className="fw-bold fs-4 mb-3 text-primary-green">{program.title}</Card.Title>
-                  <Card.Text className="text-muted">
+                  <Card.Text className="text-muted flex-grow-1">
                     {program.description}
                   </Card.Text>
+                  <Link
+                    to={`/program/${program.slug}`}
+                    className="read-more-link mt-3"
+                    aria-label={`Baca selengkapnya tentang ${program.title}`}
+                  >
+                    Baca Selengkapnya <ArrowRight size={16} className="read-more-link__arrow" />
+                  </Link>
                 </Card>
               </motion.div>
             </Col>
