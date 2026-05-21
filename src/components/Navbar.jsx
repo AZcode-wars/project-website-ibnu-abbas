@@ -34,10 +34,12 @@ const Header = () => {
   }, []);
 
   const isHomePage = location.pathname === '/';
-  const shouldBeSolid = scrolled || !isHomePage;
+  const shouldBeSolid = scrolled || !isHomePage || expanded;
 
   return (
-    <Navbar 
+    <>
+      {expanded && <div className="custom-backdrop" onClick={() => setExpanded(false)} />}
+      <Navbar 
       expand="lg" 
       fixed="top" 
       expanded={expanded}
@@ -82,6 +84,7 @@ const Header = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </>
   );
 };
 
