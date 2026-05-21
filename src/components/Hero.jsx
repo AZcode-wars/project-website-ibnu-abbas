@@ -27,13 +27,19 @@ const Hero = () => {
       id="home" 
       className="overflow-hidden position-relative d-flex align-items-center hero-section" 
       style={{ 
-        backgroundImage: `linear-gradient(rgba(6, 78, 59, 0.75), rgba(6, 78, 59, 0.6)), url(${asramaImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        minHeight: '100vh', 
         paddingTop: '80px'
       }}
     >
+      {/* Background Layer - Menggunakan img + object-fit untuk stabilitas mobile */}
+      <div className="hero-background-wrapper">
+        <img
+          src={asramaImage}
+          alt="Background Asrama"
+          className="hero-bg-image"
+        />
+        <div className="hero-overlay-gradient" />
+      </div>
+
       <div className="bg-pattern-light" style={{ opacity: 0.05 }}></div>
       <Container className="position-relative" style={{ zIndex: 3 }}>
         <Row className="align-items-center">
@@ -43,19 +49,48 @@ const Hero = () => {
               initial="hidden"
               animate="visible"
             >
-              <motion.h5 variants={itemVariants} className="text-accent-gold fw-bold mb-3 shadow-text">Membangun Generasi Rabbani</motion.h5>
-              <motion.h1 variants={itemVariants} className="hero-title fw-bold mb-4 text-white shadow-text" style={{ lineHeight: '1.2' }}>
+              <motion.h5
+                variants={itemVariants}
+                className="text-accent-gold fw-bold mb-3 shadow-text"
+              >
+                Membangun Generasi Rabbani
+              </motion.h5>
+              <motion.h1
+                variants={itemVariants}
+                className="hero-title fw-bold mb-4 text-white shadow-text"
+                style={{ lineHeight: "1.2" }}
+              >
                 Selamat Datang di <br />
-                <span className="text-accent-gold">Pondok Pesantren Ibnu Abbas</span>
+                <span className="text-accent-gold">
+                  Pondok Pesantren Ibnu Abbas
+                </span>
               </motion.h1>
-              <motion.p variants={itemVariants} className="lead text-white-50 mb-4 mb-md-5 hero-subtitle shadow-text" style={{ maxWidth: '600px' }}>
-                Mencetak generasi yang berakhlaq mulia, cerdas, dan mandiri berlandaskan Al-Qur'an dan As-Sunnah.
+              <motion.p
+                variants={itemVariants}
+                className="lead text-white-50 mb-4 mb-md-5 hero-subtitle shadow-text"
+                style={{ maxWidth: "600px" }}
+              >
+                Mencetak generasi yang berakhlaq mulia, cerdas, dan mandiri
+                berlandaskan Al-Qur'an dan As-Sunnah.
               </motion.p>
-              <motion.div variants={itemVariants} className="d-flex flex-column flex-sm-row flex-wrap gap-3">
-                <Button as={Link} to="/ppdb" className="btn-accent-pondok hero-btn d-flex align-items-center justify-content-center shadow-lg">
-                  Daftar Sekarang (PPDB) <ArrowRight className="ms-2" size={20} />
+              <motion.div
+                variants={itemVariants}
+                className="d-flex flex-column flex-sm-row flex-wrap gap-3"
+              >
+                <Button
+                  as={Link}
+                  to="/ppdb"
+                  className="btn-accent-pondok hero-btn d-flex align-items-center justify-content-center shadow-lg"
+                >
+                  Daftar Sekarang (PPDB){" "}
+                  <ArrowRight className="ms-2" size={20} />
                 </Button>
-                <Button variant="outline-light" as={Link} to="/program" className="hero-btn-outline border-2 fw-bold text-center">
+                <Button
+                  variant="outline-light"
+                  as={Link}
+                  to="/program"
+                  className="hero-btn-outline border-2 fw-bold text-center"
+                >
                   Pelajari Program
                 </Button>
               </motion.div>
@@ -64,22 +99,7 @@ const Hero = () => {
         </Row>
       </Container>
       {/* Efek transisi smooth (blur & gradient) ke section bawahnya */}
-      <div 
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          width: '100%',
-          height: '120px',
-          background: 'linear-gradient(to bottom, rgba(248, 249, 250, 0) 0%, rgba(248, 249, 250, 1) 100%)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          maskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',
-          pointerEvents: 'none',
-          zIndex: 2
-        }}
-      />
+      <div className="hero-bottom-transition" style={{ zIndex: 2 }} />
     </section>
   );
 };
