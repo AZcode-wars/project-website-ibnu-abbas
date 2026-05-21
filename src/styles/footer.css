@@ -4,7 +4,9 @@
    ========================================= */
 
 .footer-pondok {
-  background: linear-gradient(180deg, #064E3B 0%, #043a2c 100%);
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(180deg, #064e3b 0%, #043a2c 100%);
   color: white;
 }
 
@@ -23,7 +25,7 @@
 }
 
 .footer-social-link:hover {
-  background-color: #D97706;
+  background-color: #d97706;
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
@@ -43,7 +45,7 @@
 }
 
 .footer-links a:hover {
-  color: #D97706;
+  color: #d97706;
   padding-left: 6px;
 }
 
@@ -78,7 +80,7 @@
   .footer-links {
     columns: 1;
   }
-  
+
   .footer-pondok {
     padding-top: 2.5rem !important;
   }
