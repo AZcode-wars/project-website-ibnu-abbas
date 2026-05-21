@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Brand & Social */}
           <Col lg={4} className="mb-lg-0">
             <h4 className="text-accent-gold fw-bold mb-4">Ibnu Abbas</h4>
-            <p className="mb-4 opacity-75">
+            <p className="mb-4 opacity-75 d-none d-md-block">
               Membangun peradaban Islam melalui pendidikan yang beraqidah shalihah dan berwawasan luas.
             </p>
             <div className="d-flex gap-3">
@@ -29,7 +29,7 @@ const Footer = () => {
           </Col>
           
           {/* Quick Links */}
-          <Col lg={4} className="mb-lg-0">
+          <Col lg={4} className="mb-lg-0 d-none d-md-block">
             <h5 className="fw-bold mb-4 text-white">Tautan Cepat</h5>
             <ul className="list-unstyled footer-links">
               <li><a href="#home">Beranda</a></li>

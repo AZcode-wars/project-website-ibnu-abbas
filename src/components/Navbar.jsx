@@ -45,15 +45,14 @@ const Header = () => {
       expanded={expanded}
       onToggle={setExpanded}
       ref={navRef}
-      className={`navbar-pondok py-3 ${shouldBeSolid ? 'scrolled shadow-sm py-2' : 'bg-transparent shadow-none'}`}
+      className={`navbar-pondok py-2 py-lg-3 ${shouldBeSolid ? 'scrolled shadow-sm py-1 py-lg-2' : 'bg-transparent shadow-none'}`}
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <img 
             src={logoMahad} 
             alt="Logo Ma'had" 
-            height="50" 
-            className="me-2"
+            className="me-2 logo-mahad"
           />
           <span className={`fw-bold fs-4 ${shouldBeSolid ? 'text-primary-green' : 'text-white'}`}>Ibnu Abbas</span>
         </Navbar.Brand>
