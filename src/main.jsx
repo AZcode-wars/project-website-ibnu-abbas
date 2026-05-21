@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/ibnu-abbas-website/">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
