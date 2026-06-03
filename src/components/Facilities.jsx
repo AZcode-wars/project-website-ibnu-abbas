@@ -5,6 +5,8 @@ import { Maximize2, X } from 'lucide-react';
 
 import asramaImg from '../assets/asrama.png';
 import masjidImg from '../assets/masjid.png';
+import kelasImg from '../assets/kelas.png'
+import maktabahImg from '../assets/maktabah.png'
 
 const Facilities = () => {
   const [showLightbox, setShowLightbox] = useState(false);
@@ -22,14 +24,14 @@ const Facilities = () => {
       img: masjidImg 
     },
     { 
-      title: "Ruang Kelas Digital", 
-      desc: "Kelas interaktif dengan fasilitas multimedia untuk pembelajaran modern.", 
-      img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1000" 
+      title: "Ruang Kelas Kondusif", 
+      desc: "Kelas interaktif dengan fasilitas-fasilitas pendukung untuk pembelajaran islami.", 
+      img: kelasImg 
     },
     { 
       title: "Perpustakaan & Maktabah", 
       desc: "Koleksi ribuan kitab kuning dan buku literatur umum yang lengkap.", 
-      img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80&w=1000" 
+      img: maktabahImg 
     }
   ];
 
