@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import programs from '../data/programsData';
 
 const ProgramList = () => {
@@ -34,20 +33,19 @@ const ProgramList = () => {
                 whileHover={{ y: -5 }}
                 className="h-100"
               >
-                <Card className="pondok-card h-100 p-4 border-0 text-center shadow-sm d-flex flex-column align-items-center">
-                  <div>{program.icon}</div>
-                  <Card.Title className="fw-bold fs-4 mb-3 text-primary-green">{program.title}</Card.Title>
-                  <Card.Text className="text-muted flex-grow-1">
-                    {program.description}
-                  </Card.Text>
-                  <Link
-                    to={`/program/${program.slug}`}
-                    className="read-more-link mt-3"
-                    aria-label={`Baca selengkapnya tentang ${program.title}`}
-                  >
-                    Baca Selengkapnya <ArrowRight size={16} className="read-more-link__arrow" />
-                  </Link>
-                </Card>
+                <Link
+                  to={`/program/${program.slug}`}
+                  className="text-decoration-none h-100 d-block"
+                  aria-label={`Lihat detail program ${program.title}`}
+                >
+                  <Card className="pondok-card h-100 p-4 border-0 text-center shadow-sm d-flex flex-column align-items-center">
+                    <div>{program.icon}</div>
+                    <Card.Title className="fw-bold fs-4 mb-3 text-primary-green">{program.title}</Card.Title>
+                    <Card.Text className="text-muted flex-grow-1">
+                      {program.description}
+                    </Card.Text>
+                  </Card>
+                </Link>
               </motion.div>
             </Col>
           ))}
