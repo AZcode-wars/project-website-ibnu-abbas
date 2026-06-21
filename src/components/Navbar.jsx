@@ -111,6 +111,14 @@ const Header = () => {
               >
                 Fasilitas
               </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/artikel"
+                onClick={() => setExpanded(false)}
+                className={`fw-medium ${shouldBeSolid ? "text-dark" : "text-white opacity-90"}`}
+              >
+                Artikel
+              </Nav.Link>
 
               <Button
                 as={Link}

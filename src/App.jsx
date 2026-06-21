@@ -8,6 +8,8 @@ import ProfilPage from "./pages/ProfilPage";
 import FasilitasPage from "./pages/FasilitasPage";
 import ProgramPage from "./pages/ProgramPage";
 import ProgramDetailPage from "./pages/ProgramDetailPage";
+import ArtikelPage from "./pages/ArtikelPage";
+import ArtikelDetailPage from "./pages/ArtikelDetailPage";
 import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import ScrollToTop from "./components/ScrollToTop";
@@ -35,6 +37,8 @@ function App() {
           <Route path="/program/:slug" element={<ProgramDetailPage />} />
           {/* <Route path="/pengajar" element={<PengajarPage />} /> */}
           <Route path="/fasilitas" element={<FasilitasPage />} />
+          <Route path="/artikel" element={<ArtikelPage />} />
+          <Route path="/artikel/:slug" element={<ArtikelDetailPage />} />
         </Routes>
       </main>
       <Footer />
