@@ -5,7 +5,6 @@ import AboutHome from "../components/AboutHome";
 import FeaturedPrograms from "../components/FeaturedPrograms";
 import FacilitiesHome from "../components/FacilitiesHome";
 import ContactHome from "../components/ContactHome";
-import "../index.css";
 
 const Home = () => {
   return (
