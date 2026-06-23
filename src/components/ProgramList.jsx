@@ -1,8 +1,8 @@
-import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import programs from '../data/programsData';
+import React from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import programs from "../data/programsData";
 
 const ProgramList = () => {
   return (
@@ -16,9 +16,19 @@ const ProgramList = () => {
           className="text-center mb-5"
         >
           <h5 className="text-accent-gold fw-bold mb-2">Pilihan Pendidikan</h5>
-          <h2 className="display-5 fw-bold section-title text-center">Program Kami</h2>
-          <p className="text-muted mt-3" style={{ maxWidth: '700px', margin: '0 auto' }}>
-            Pondok Pesantren Ibnu Abbas menawarkan berbagai jenjang dan program pendidikan yang dirancang khusus untuk mencetak generasi unggul yang seimbang antara IPTEK dan IMTAQ.
+          <h2
+            id="programkami"
+            className="display-5 fw-bold section-title text-center"
+          >
+            Program Kami
+          </h2>
+          <p
+            className="text-muted mt-3"
+            style={{ maxWidth: "700px", margin: "0 auto" }}
+          >
+            Pondok Pesantren Ibnu Abbas menawarkan berbagai jenjang dan program
+            pendidikan yang dirancang khusus untuk mencetak generasi unggul yang
+            seimbang antara IPTEK dan IMTAQ.
           </p>
         </motion.div>
 
@@ -40,7 +50,9 @@ const ProgramList = () => {
                 >
                   <Card className="pondok-card h-100 p-4 border-0 text-center shadow-sm d-flex flex-column align-items-center">
                     <div>{program.icon}</div>
-                    <Card.Title className="fw-bold fs-4 mb-3 text-primary-green">{program.title}</Card.Title>
+                    <Card.Title className="fw-bold fs-4 mb-3 text-primary-green">
+                      {program.title}
+                    </Card.Title>
                     <Card.Text className="text-muted flex-grow-1">
                       {program.description}
                     </Card.Text>

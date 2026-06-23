@@ -68,19 +68,19 @@ const Header = () => {
             className={shouldBeSolid ? "" : "navbar-dark"}
           />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto align-items-lg-center">
+            <Nav className="ms-auto align-items-lg-center gap-lg-3">
               <Nav.Link
                 as={Link}
                 to="/"
                 onClick={() => setExpanded(false)}
-                className={`fw-medium ${shouldBeSolid ? "text-dark" : "text-white opacity-90"}`}
+                className={`fw-medium ${shouldBeSolid ? "text-dark" : "text-white opacity-90"} me-3`}
               >
                 Beranda
               </Nav.Link>
               <NavDropdown
                 title={
                   <span
-                    className={`fw-medium ${shouldBeSolid ? "text-dark" : "text-white opacity-90"}`}
+                    className={`fw-medium ${shouldBeSolid ? "text-dark" : "text-white opacity-90"} `}
                   >
                     Profil
                   </span>
@@ -107,7 +107,7 @@ const Header = () => {
                 as={Link}
                 to="/fasilitas"
                 onClick={() => setExpanded(false)}
-                className={`fw-medium ${shouldBeSolid ? "text-dark" : "text-white opacity-90"}`}
+                className={`fw-medium ${shouldBeSolid ? "text-dark" : "text-white opacity-90"} me-3`}
               >
                 Fasilitas
               </Nav.Link>
@@ -124,7 +124,7 @@ const Header = () => {
                 as={Link}
                 to="/ppdb"
                 onClick={() => setExpanded(false)}
-                className="btn-accent-pondok ms-lg-3 mt-3 mt-lg-0 shadow-sm"
+                className="btn-accent-pondok mt-3 mt-lg-0 shadow-sm"
               >
                 Daftar Sekarang
               </Button>
