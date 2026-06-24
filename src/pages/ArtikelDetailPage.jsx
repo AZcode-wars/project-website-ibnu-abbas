@@ -7,6 +7,7 @@ import remarkGfm from 'remark-gfm';
 import { client, urlFor } from '../utils/sanity';
 import { motion } from 'framer-motion';
 import { User, Calendar, Tag } from 'lucide-react';
+import BackButton from '../components/BackButton';
 
 const ArtikelDetailPage = () => {
   const { slug } = useParams();
@@ -81,6 +82,7 @@ const ArtikelDetailPage = () => {
   return (
     <div style={{ paddingTop: '100px', paddingBottom: '50px' }}>
       <Container>
+        <BackButton to="/artikel" label="Kembali ke Artikel" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -89,9 +91,6 @@ const ArtikelDetailPage = () => {
           <Row className="justify-content-center">
             <Col lg={8}>
               <div className="text-center mb-4 mt-4">
-                <Button as={Link} to="/artikel" variant="outline-success" className="mb-4">
-                  &larr; Kembali ke Artikel
-                </Button>
                 <h1 className="display-4 fw-bold text-primary-green mb-3">{article.judul}</h1>
 
                 {article.excerpt && (

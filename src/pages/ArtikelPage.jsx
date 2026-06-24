@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Spinner } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { client, urlFor } from '../utils/sanity';
+import BackButton from '../components/BackButton';
 
 const ArtikelPage = () => {
   const [articles, setArticles] = useState([]);
@@ -63,6 +64,7 @@ const ArtikelPage = () => {
     <div style={{ paddingTop: '80px' }}>
       <section className="section-padding bg-light bg-pattern-islamic">
         <Container>
+          <BackButton to="/" label="Kembali ke Beranda" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

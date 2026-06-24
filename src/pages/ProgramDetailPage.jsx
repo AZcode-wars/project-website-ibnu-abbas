@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { ArrowLeft, Users, BookMarked, TableProperties } from "lucide-react";
 import programs from "../data/programsData";
-import FloatingBackButton from "../components/FloatingBackButton";
+import BackButton from "../components/BackButton";
 
 const ProgramDetailPage = () => {
   const { slug } = useParams();
@@ -37,8 +37,9 @@ const ProgramDetailPage = () => {
 
   return (
     <div className="program-detail-page">
-      {/* Floating Back Button */}
-      <FloatingBackButton to="/program" label="Kembali ke Program" />
+      <Container className="d-flex justify-content-start pt-3">
+        <BackButton to="/program" label="Kembali ke Program" />
+      </Container>
 
       {/* ── HERO BANNER ── */}
       <section className="program-detail-hero">
