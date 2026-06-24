@@ -32,9 +32,9 @@ const ProgramList = () => {
           </p>
         </motion.div>
 
-        <Row>
+        <Row className="justify-content-center">
           {programs.map((program, idx) => (
-            <Col key={program.slug} md={6} lg={6} className="mb-4">
+            <Col key={program.slug} md={6} lg={4} className="mb-4">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
