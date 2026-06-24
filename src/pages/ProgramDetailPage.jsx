@@ -37,14 +37,18 @@ const ProgramDetailPage = () => {
 
   return (
     <div className="program-detail-page">
-      <Container className="d-flex justify-content-start pt-3">
-        <BackButton to="/program" label="Kembali ke Program" />
-      </Container>
+      {/* <Container className="d-flex justify-content-start pt-3">
+      </Container> */}
 
       {/* ── HERO BANNER ── */}
       <section className="program-detail-hero">
         <div className="program-detail-hero__overlay" />
         <Container className="position-relative" style={{ zIndex: 2 }}>
+          <BackButton
+            to="/program"
+            label="Kembali ke Program"
+            variant="outline-light"
+          />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

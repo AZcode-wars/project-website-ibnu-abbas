@@ -66,20 +66,24 @@ const QuotaCard = ({ title, total, isOpen, icon: Icon, onClick }) => {
       style={{ cursor: isOpen ? "default" : "not-allowed" }}
     >
       <Card
-        className={`ppdb-quota-card border-0 p-4 mb-4 ${!isOpen ? 'bg-light text-muted' : ''}`}
+        className={`ppdb-quota-card border-0 p-4 mb-4 ${!isOpen ? "bg-light text-muted" : ""}`}
         style={{
-          filter: !isOpen ? 'grayscale(1)' : 'none',
+          filter: !isOpen ? "grayscale(1)" : "none",
           opacity: !isOpen ? 0.7 : 1,
-          transition: 'all 0.3s ease'
+          transition: "all 0.3s ease",
         }}
       >
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
-            <div className={`ppdb-icon-wrapper me-3 ${!isOpen ? 'bg-secondary' : ''}`}>
+            <div
+              className={`ppdb-icon-wrapper me-3 ${!isOpen ? "bg-secondary" : ""}`}
+            >
               <Icon size={24} color={isOpen ? undefined : "#6c757d"} />
             </div>
             <div>
-              <h5 className={`mb-0 fw-bold ${!isOpen ? 'text-muted' : ''}`}>{title}</h5>
+              <h5 className={`mb-0 fw-bold ${!isOpen ? "text-muted" : ""}`}>
+                {title}
+              </h5>
               <small className="text-muted">Total {total} kursi tersedia</small>
             </div>
           </div>
@@ -110,13 +114,14 @@ const PPDBDashboard = ({ settings }) => {
 
   return (
     <>
-      <Container className="d-flex justify-content-start" style={{ paddingTop: "20px" }}>
-        <BackButton to="/" label="Kembali ke Beranda" variant="outline-light" />
-      </Container>
-
       {/* Hero Banner PPDB */}
       <section className="ppdb-hero">
         <Container>
+          <BackButton
+            to="/"
+            label="Kembali ke Beranda"
+            variant="outline-light"
+          />
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -204,7 +209,9 @@ const PPDBDashboard = ({ settings }) => {
                     />
                   ))
                 ) : (
-                  <p className="text-muted">Informasi kuota sedang diperbarui.</p>
+                  <p className="text-muted">
+                    Informasi kuota sedang diperbarui.
+                  </p>
                 )}
               </div>
             </Col>
@@ -341,7 +348,11 @@ const PPDBDashboard = ({ settings }) => {
         </Container>
       </section>
 
-      <ToastContainer position="top-end" className="p-3" style={{ zIndex: 9999 }}>
+      <ToastContainer
+        position="top-end"
+        className="p-3"
+        style={{ zIndex: 9999 }}
+      >
         <Toast
           show={showToast}
           onClose={() => setShowToast(false)}

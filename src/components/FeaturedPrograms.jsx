@@ -1,8 +1,8 @@
-import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import programs from '../data/programsData';
+import React from "react";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import programs from "../data/programsData";
 
 const FeaturedPrograms = () => {
   // Get the first 3 programs for the featured section
@@ -22,9 +22,13 @@ const FeaturedPrograms = () => {
           <h2 className="display-5 fw-bold section-title text-center text-primary-green">
             Pendidikan Berkualitas
           </h2>
-          <p className="text-muted mt-3" style={{ maxWidth: "700px", margin: "0 auto" }}>
+          <p
+            className="text-muted mt-3"
+            style={{ maxWidth: "700px", margin: "0 auto" }}
+          >
             Kami menyediakan berbagai program pendidikan yang mengintegrasikan
-            kurikulum nasional dengan penguatan ilmu syar'i untuk mencetak generasi rabbani.
+            kurikulum nasional dengan penguatan ilmu syar'i untuk mencetak
+            generasi rabbani.
           </p>
         </motion.div>
 
@@ -68,21 +72,21 @@ const FeaturedPrograms = () => {
           >
             <Button
               as={Link}
-              to="/profil#programkami"
+              to="/program"
               variant="outline-primary-green"
               className="px-4 py-2 fw-bold rounded-pill border-2"
               style={{
-                borderColor: '#2e7d32',
-                color: '#2e7d32',
-                transition: 'all 0.3s ease'
+                borderColor: "#2e7d32",
+                color: "#2e7d32",
+                transition: "all 0.3s ease",
               }}
               onMouseEnter={(e) => {
-                e.target.style.backgroundColor = '#2e7d32';
-                e.target.style.color = 'white';
+                e.target.style.backgroundColor = "#2e7d32";
+                e.target.style.color = "white";
               }}
               onMouseLeave={(e) => {
-                e.target.style.backgroundColor = 'transparent';
-                e.target.style.color = '#2e7d32';
+                e.target.style.backgroundColor = "transparent";
+                e.target.style.color = "#2e7d32";
               }}
             >
               Lihat Semua Program

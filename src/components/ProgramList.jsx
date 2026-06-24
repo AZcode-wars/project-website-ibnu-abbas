@@ -3,11 +3,13 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import programs from "../data/programsData";
+import BackButton from "./BackButton";
 
 const ProgramList = () => {
   return (
     <section className="section-padding bg-light bg-pattern-islamic">
       <Container>
+        <BackButton to="/" label="Kembali ke Beranda" />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
