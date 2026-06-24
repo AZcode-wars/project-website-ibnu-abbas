@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 // Import candidate images for random selection
 import img1 from '../assets/asrama baru.jpeg';
@@ -39,6 +41,16 @@ const AboutHome = () => {
                 <p>
                   Kami berkomitmen untuk terus berinovasi dalam metode pembelajaran tanpa meninggalkan nilai-nilai luhur kepesantrenan. Fasilitas yang modern dan pengajar yang kompeten menjadi pilar utama kami.
                 </p>
+              </div>
+              <div className="mt-4">
+                <Button
+                  as={Link}
+                  to="/profil"
+                  className="btn-accent-pondok d-inline-flex align-items-center justify-content-center shadow-sm"
+                >
+                  Baca Selengkapnya
+                  <ArrowRight className="ms-2" size={18} />
+                </Button>
               </div>
             </motion.div>
           </Col>

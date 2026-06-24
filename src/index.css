@@ -127,7 +127,7 @@ h6 {
 }
 
 .section-padding {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-md) 0 var(--spacing-lg) 0;
 }
 
 /* Background Patterns */
@@ -154,7 +154,7 @@ h6 {
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-sm) 0 var(--spacing-md) 0;
   }
 
   body {
@@ -179,7 +179,7 @@ h6 {
 
 @media (max-width: 576px) {
   .section-padding {
-    padding: 2.5rem 0;
+    padding: 1.5rem 0 2rem 0;
   }
 
   .container {
@@ -530,14 +530,15 @@ h6 {
 }
 
 .program-class-tab:hover {
+  background-color: var(--primary-green);
   border-color: var(--primary-green);
-  color: var(--primary-green);
+  color: var(--white);
 }
 
 .program-class-tab--active {
-  background: var(--primary-green);
-  border-color: var(--primary-green);
-  color: #ffffff;
+  background: var(--primary-green) !important;
+  border-color: var(--primary-green) !important;
+  color: var(--white) !important;
 }
 
 /* Table */
