@@ -20,10 +20,9 @@ import {
   Users,
   Calendar,
   ClipboardList,
-  ArrowLeft,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import { urlFor } from "../utils/sanity";
+import BackButton from "./BackButton";
 import "../styles/ppdb.css";
 
 // ────────────────────────────────────────────
@@ -111,6 +110,10 @@ const PPDBDashboard = ({ settings }) => {
 
   return (
     <>
+      <Container className="d-flex justify-content-start" style={{ paddingTop: "20px" }}>
+        <BackButton to="/" label="Kembali ke Beranda" variant="outline-light" />
+      </Container>
+
       {/* Hero Banner PPDB */}
       <section className="ppdb-hero">
         <Container>
@@ -120,13 +123,6 @@ const PPDBDashboard = ({ settings }) => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <Link
-              to="/"
-              className="ppdb-back-link d-inline-flex align-items-center mb-4"
-            >
-              <ArrowLeft size={18} className="me-2" />
-              Kembali ke Beranda
-            </Link>
             <h5 className="text-accent-gold fw-bold mb-2">
               Pendaftaran Santri Baru
             </h5>
