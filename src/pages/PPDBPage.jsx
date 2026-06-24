@@ -5,6 +5,7 @@ import { AlertCircle, Loader2 } from 'lucide-react';
 
 const PPDBPage = () => {
   const [settings, setSettings] = useState(null);
+  const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
 
   // Scroll to top when page loaded
@@ -13,19 +14,23 @@ const PPDBPage = () => {
   }, []);
 
   useEffect(() => {
-    const fetchSettings = async () => {
+    const fetchData = async () => {
       try {
-        const query = '*[_type == "ppdbSettings"][0]{..., quotas}';
+        const query = `{
+          "settings": *[_type == "ppdbSettings"][0]{..., quotas},
+          "stats": *[_type == "statsBar"][0]
+        }`;
         const data = await client.fetch(query);
-        setSettings(data);
+        setSettings(data.settings);
+        setStats(data.stats);
       } catch (error) {
-        console.error('Error fetching PPDB settings:', error);
+        console.error('Error fetching PPDB data:', error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchSettings();
+    fetchData();
   }, []);
 
   if (loading) {
@@ -57,7 +62,7 @@ const PPDBPage = () => {
 
   return (
     <div className="ppdb-page-wrapper" style={{ minHeight: '80vh', paddingTop: '40px' }}>
-      <PPDBDashboard settings={settings} />
+      <PPDBDashboard settings={settings} stats={stats} />
     </div>
   );
 };
