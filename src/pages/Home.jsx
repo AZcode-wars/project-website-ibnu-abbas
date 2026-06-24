@@ -4,6 +4,7 @@ import IntroStats from "../components/IntroStats";
 import AboutHome from "../components/AboutHome";
 import FeaturedPrograms from "../components/FeaturedPrograms";
 import FacilitiesHome from "../components/FacilitiesHome";
+import KalenderPendidikan from "../components/KalenderPendidikan";
 import ContactHome from "../components/ContactHome";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <AboutHome />
       <FeaturedPrograms />
       <FacilitiesHome />
+      <KalenderPendidikan />
       <ContactHome />
     </>
   );

@@ -6,7 +6,7 @@ import BackButton from "../components/BackButton";
 
 const ProgramPage = () => {
   return (
-    <div style={{ paddingTop: "60px" }}>
+    <div style={{ paddingTop: "80px" }}>
       <ProgramList />
       <Teachers />
     </div>

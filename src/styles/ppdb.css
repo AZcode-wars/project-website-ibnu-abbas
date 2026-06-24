@@ -292,6 +292,39 @@
   transform: translateY(-1px);
 }
 
+/* ── Poster Hover Overlay ── */
+.ppdb-poster-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.ppdb-poster-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ppdb-poster-wrapper:hover .ppdb-poster-overlay {
+  opacity: 1;
+}
+
+/* ── Zoom Modal ── */
+.ppdb-zoom-modal .modal-content {
+  background: transparent;
+  border: none;
+}
+
+.ppdb-zoom-modal .btn-close,
+.ppdb-zoom-modal .modal-header {
+  display: none;
+}
+
 /* ── Responsive ── */
 @media (max-width: 991.98px) {
   .ppdb-hero {

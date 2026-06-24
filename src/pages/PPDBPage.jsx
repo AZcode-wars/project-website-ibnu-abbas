@@ -44,15 +44,15 @@ const PPDBPage = () => {
     );
   }
 
-  if (!settings || settings.isOpen === false) {
+  if (!settings) {
     return (
       <div className="ppdb-page-wrapper" style={{ minHeight: '100vh', paddingTop: '100px', display: 'flex', alignItems: 'center' }}>
         <div className="container text-center">
           <div className="ppdb-closed-container p-5 rounded-4 shadow-sm bg-white" style={{ maxWidth: '700px', margin: '0 auto' }}>
             <AlertCircle size={80} className="text-danger mb-4" />
-            <h2 className="fw-bold mb-3 text-dark">Pendaftaran Ditutup</h2>
+            <h2 className="fw-bold mb-3 text-dark">Informasi Tidak Tersedia</h2>
             <p className="lead text-muted mb-0">
-              {settings?.closedMessage || 'Mohon maaf, pendaftaran peserta didik baru saat ini belum dibuka atau sudah ditutup.'}
+              Mohon maaf, informasi pendaftaran saat ini sedang tidak dapat dimuat. Silakan coba lagi nanti.
             </p>
           </div>
         </div>
@@ -62,7 +62,7 @@ const PPDBPage = () => {
 
   return (
     <div className="ppdb-page-wrapper" style={{ minHeight: '80vh', paddingTop: '40px' }}>
-      <PPDBDashboard settings={settings} stats={stats} />
+      <PPDBDashboard settings={settings} stats={stats} isClosed={settings.isOpen === false} />
     </div>
   );
 };
