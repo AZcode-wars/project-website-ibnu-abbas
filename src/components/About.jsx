@@ -16,14 +16,14 @@ import BackButton from "./BackButton";
 const About = () => {
   const cards = [
     {
-      icon: <Target size={40} className="text-accent-gold mb-3" />,
-      title: "Misi",
-      desc: "Menyelenggarakan pendidikan Islam yang integratif, menggabungkan sains dan ilmu agama.",
-    },
-    {
       icon: <Eye size={40} className="text-accent-gold mb-3" />,
       title: "Visi",
       desc: "Menjadi lembaga pendidikan Islam rujukan dalam mencetak kader ulama yang intelek.",
+    },
+    {
+      icon: <Target size={40} className="text-accent-gold mb-3" />,
+      title: "Misi",
+      desc: "Menyelenggarakan pendidikan Islam yang integratif, menggabungkan sains dan ilmu agama.",
     },
     {
       icon: <ShieldCheck size={40} className="text-accent-gold mb-3" />,
@@ -84,17 +84,21 @@ const About = () => {
             >
               <h3 className="mb-4 text-primary-green">Perjalanan Kami</h3>
               <p className="text-muted lead" style={{ textAlign: "justify" }}>
-                Pondok Pesantren Ibnu Abbas didirikan pada tahun 1995 dengan
-                semangat untuk menyediakan pendidikan Islam yang berkualitas dan
-                terjangkau. Berawal dari sebuah musholla kecil, kini kami telah
-                berkembang menjadi lembaga pendidikan yang membina ratusan
-                santri dari berbagai penjuru nusantara.
+                Ma'had Ibnu Abbas Banjarnegara berdiri pada tahun 2012 sebagai
+                respons atas kebutuhan masyarakat akan lembaga pendidikan Islam
+                yang serius — tidak hanya dalam teori, tetapi juga dalam praktik
+                ibadah sehari-hari. Setelah beberapa kali berpindah lokasi,
+                ma'had kini berdiri di Dusun Kayunan, Desa Banjarmangu,
+                Kecamatan Banjarmangu, Kabupaten Banjarnegara, Jawa Tengah.
+                Sejak awal berdiri hingga kini, ma'had terus tumbuh dalam
+                kepercayaan umat — berkembang dari segi jumlah santri, tenaga
+                pengajar, maupun fasilitas pendukung pembelajaran.
               </p>
               <p className="text-muted" style={{ textAlign: "justify" }}>
-                Kami berkomitmen untuk terus berinovasi dalam metode
-                pembelajaran tanpa meninggalkan nilai-nilai luhur kepesantrenan.
-                Fasilitas yang modern dan pengajar yang kompeten menjadi pilar
-                utama kami.
+                Ma'had Ibnu Abbas berkomitmen untuk mendidik setiap santri
+                sesuai dengan tahap usia dan tumbuh kembangnya — memastikan
+                mereka memiliki bekal ilmu, kemampuan, dan karakter yang tepat
+                di setiap fase pertumbuhan mereka.
               </p>
             </motion.div>
           </Col>

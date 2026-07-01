@@ -1,15 +1,15 @@
-import React, { useMemo } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React, { useMemo } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 // Import candidate images for random selection
-import img1 from '../assets/asrama baru.jpeg';
-import img2 from '../assets/asrama.png';
-import img3 from '../assets/masjid.png';
-import img4 from '../assets/kelas.png';
-import img5 from '../assets/maktabah.png';
+import img1 from "../assets/asrama baru.jpeg";
+import img2 from "../assets/asrama.png";
+import img3 from "../assets/masjid.png";
+import img4 from "../assets/kelas.png";
+import img5 from "../assets/maktabah.png";
 
 const AboutHome = () => {
   // Stable random image selection to prevent flickering on re-renders
@@ -34,12 +34,19 @@ const AboutHome = () => {
               <h2 className="display-6 fw-bold text-primary-green mb-4">
                 Mengenal Ma'had Ibnu Abbas
               </h2>
-              <div className="text-muted lead" style={{ textAlign: 'justify', lineHeight: '1.8' }}>
+              <div
+                className="text-muted lead"
+                style={{ textAlign: "justify", lineHeight: "1.8" }}
+              >
                 <p>
-                  Pondok Pesantren Ibnu Abbas didirikan pada tahun 1995 dengan semangat untuk menyediakan pendidikan Islam yang berkualitas dan terjangkau. Berawal dari sebuah musholla kecil, kini kami telah berkembang menjadi lembaga pendidikan yang membina ratusan santri dari berbagai penjuru nusantara.
-                </p>
-                <p>
-                  Kami berkomitmen untuk terus berinovasi dalam metode pembelajaran tanpa meninggalkan nilai-nilai luhur kepesantrenan. Fasilitas yang modern dan pengajar yang kompeten menjadi pilar utama kami.
+                  Ma'had Ibnu Abbas Banjarnegara berdiri pada tahun 2012 sebagai
+                  respons atas kebutuhan masyarakat akan lembaga pendidikan
+                  Islam yang serius. Setelah beberapa kali berpindah lokasi,
+                  ma'had kini berdiri di Dusun Kayunan, Desa Banjarmangu,
+                  Kecamatan Banjarmangu, Kabupaten Banjarnegara, Jawa Tengah.
+                  Sejak awal berdiri hingga kini, ma'had terus tumbuh dalam
+                  kepercayaan umat — berkembang dari segi jumlah santri, tenaga
+                  pengajar, maupun fasilitas pendukung pembelajaran.
                 </p>
               </div>
               <div className="mt-4">
@@ -70,17 +77,17 @@ const AboutHome = () => {
                   alt="Profil Ma'had Ibnu Abbas"
                   className="img-fluid w-100 rounded-4"
                   style={{
-                    maxHeight: '450px',
-                    objectFit: 'cover',
-                    display: 'block'
+                    maxHeight: "450px",
+                    objectFit: "cover",
+                    display: "block",
                   }}
                 />
                 {/* Decorative element to match the aesthetic */}
                 <div
                   className="position-absolute bottom-0 start-0 w-100 h-25 bg-gradient-overlay"
                   style={{
-                    background: 'linear-gradient(transparent, rgba(0,0,0,0.3))',
-                    zIndex: 1
+                    background: "linear-gradient(transparent, rgba(0,0,0,0.3))",
+                    zIndex: 1,
                   }}
                 />
               </div>
