@@ -69,7 +69,7 @@ const KalenderPendidikan = () => {
 
   if (loading) {
     return (
-      <section className="section-padding bg-light">
+      <section className="section-padding bg-white bg-pattern-islamic">
         <Container>
           <div className="text-center py-5">
             <Loader2
@@ -90,7 +90,7 @@ const KalenderPendidikan = () => {
   const currentBulan = dataKalender[currentIndex];
 
   return (
-    <section className="section-padding bg-light position-relative">
+    <section className="section-padding bg-light position-relative bg-pattern-islamic">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

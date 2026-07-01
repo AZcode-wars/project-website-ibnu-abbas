@@ -59,7 +59,7 @@ const Header = () => {
             <span
               className={`fw-bold fs-4 ${shouldBeSolid ? "text-primary-green" : "text-white"}`}
             >
-              Ibnu Abbas
+              Ibnu Abbas Banjarnegara
             </span>
           </Navbar.Brand>
 
