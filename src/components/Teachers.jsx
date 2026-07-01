@@ -21,7 +21,7 @@ const Teachers = () => {
       role: "Kepala Madrasah",
       education: [
         "S2 Manajemen Pendidikan - UIN Sunan Kalijaga",
-        "S1 Pendidikan Agama Islam - UIN Sunan Kalijaga"
+        "S1 Pendidikan Agama Islam - UIN Sunan Kalijaga",
       ],
       specialty: "Manajemen Pendidikan",
     },
@@ -30,7 +30,7 @@ const Teachers = () => {
       role: "Koordinator Tahfizh",
       education: [
         "S1 Ilmu Al-Qur'an & Tafsir - PTIQ Jakarta",
-        "Sertifikasi Tahfizh 30 Juz"
+        "Sertifikasi Tahfizh 30 Juz",
       ],
       specialty: "Tahfizh & Qira'at",
     },
@@ -39,7 +39,7 @@ const Teachers = () => {
       role: "Pengasuh Santri",
       education: [
         "S1 Pendidikan Bahasa Arab - LIPIA Jakarta",
-        "Kajian Kitab Kuning - Pesantren Salafiyah"
+        "Kajian Kitab Kuning - Pesantren Salafiyah",
       ],
       specialty: "Bahasa Arab & Adab",
     },
@@ -74,35 +74,52 @@ const Teachers = () => {
           <Card className="pondok-card border-0 shadow-lg overflow-hidden">
             <Row className="g-0 align-items-stretch">
               {/* Left Side: Rehal Icon and Name */}
-              <Col md={4} className="bg-primary-green text-white text-center py-5 px-4 d-flex flex-column align-items-center justify-content-center">
+              <Col
+                md={4}
+                className="bg-primary-green text-white text-center py-5 px-4 d-flex flex-column align-items-center justify-content-center"
+              >
                 <div
                   className="bg-white bg-opacity-10 p-4 rounded-circle mb-3 d-inline-flex"
-                  style={{ border: '2px solid var(--accent-gold)' }}
+                  style={{ border: "2px solid var(--accent-gold)" }}
                 >
                   <BookOpen size={64} className="text-accent-gold" />
                 </div>
-                <h4 className="fw-bold mb-0" style={{ fontFamily: 'var(--font-heading)' }}>
+                <h4
+                  className="fw-bold mb-0"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
                   {mudir.name}
                 </h4>
                 <p className="text-white-50 small mb-0">{mudir.role}</p>
               </Col>
 
               {/* Right Side: Full Profile & Education Timeline */}
-              <Col md={8} className="p-4 p-md-5 bg-white d-flex flex-column justify-content-center">
+              <Col
+                md={8}
+                className="p-4 p-md-5 bg-white d-flex flex-column justify-content-center"
+              >
                 <div className="mb-4">
-                  <h3 className="fw-bold text-primary-green mb-1">{mudir.name}</h3>
+                  <h3 className="fw-bold text-primary-green mb-1">
+                    {mudir.name}
+                  </h3>
                   <p className="text-accent-gold fw-bold mb-4">{mudir.role}</p>
                 </div>
 
                 <div className="position-relative">
                   <h6 className="fw-bold text-primary-green mb-4 d-flex align-items-center">
-                    <GraduationCap size={20} className="me-2 text-accent-gold" />
+                    <GraduationCap
+                      size={20}
+                      className="me-2 text-accent-gold"
+                    />
                     Riwayat Pendidikan
                   </h6>
 
                   <div className="d-flex flex-column gap-3">
                     {mudir.education.map((edu, idx) => (
-                      <div key={idx} className="p-3 rounded-3 bg-light border-start border-accent-gold border-4">
+                      <div
+                        key={idx}
+                        className="p-3 rounded-3 bg-light border-start border-accent-gold border-4"
+                      >
                         <p className="mb-0 fw-medium text-dark">{edu}</p>
                       </div>
                     ))}
@@ -114,7 +131,7 @@ const Teachers = () => {
         </motion.div>
 
         {/* Teachers Grid - Simplified Cards */}
-        <Row className="g-4">
+        {/* <Row className="g-4">
           {staff.map((member, idx) => (
             <Col key={idx} lg={4} md={6} sm={12}>
               <motion.div
@@ -148,7 +165,7 @@ const Teachers = () => {
               </motion.div>
             </Col>
           ))}
-        </Row>
+        </Row> */}
       </Container>
     </section>
   );

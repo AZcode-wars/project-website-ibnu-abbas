@@ -154,9 +154,9 @@ const ProgramDetailPage = () => {
                             No.
                           </th>
                           <th>Mata Pelajaran / Kajian</th>
-                          <th className="program-curriculum-table__th--hours">
+                          {/* <th className="program-curriculum-table__th--hours">
                             Jam/Minggu
-                          </th>
+                          </th> */}
                         </tr>
                       </thead>
                       <tbody>
@@ -171,29 +171,9 @@ const ProgramDetailPage = () => {
                           >
                             <td className="text-center text-muted">{i + 1}</td>
                             <td>{s.subject}</td>
-                            <td className="text-center">
-                              <span className="program-hours-badge">
-                                {s.hoursPerWeek}
-                              </span>
-                            </td>
                           </tr>
                         ))}
                       </tbody>
-                      <tfoot>
-                        <tr>
-                          <td
-                            colSpan={2}
-                            className="program-curriculum-table__total-label"
-                          >
-                            Total Jam Per Minggu
-                          </td>
-                          <td className="text-center">
-                            <span className="program-hours-badge program-hours-badge--total">
-                              {totalHours}
-                            </span>
-                          </td>
-                        </tr>
-                      </tfoot>
                     </motion.table>
                   </div>
                 </div>
