@@ -97,7 +97,7 @@ const JadwalPenjengukan = () => {
               <ul className="list-unstyled mb-4">
                 {[
                   "Penjengukan hanya pada hari dan jam yang ditentukan",
-                  "Wajib lapor di pos jaga sebelum menemui santri",
+                  "Wajib lapor di pos jaga   sebelum menemui santri",
                   "Penjenguk wajib berpakaian sopan, dan menutup aurat",
                   "Pertemuan hanya di tempat yang disediakan (aula/ruang tamu).",
                   "Dilarang membuang sampah sembarangan di area pondok.",
