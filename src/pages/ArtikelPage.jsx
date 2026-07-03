@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Spinner } from "react-bootstrap";
+import { Container, Row, Col, Card, Spinner, Badge } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { client, urlFor } from "../utils/sanity";
 import BackButton from "../components/BackButton";
+import { Zap, Clock } from "lucide-react";
 
 const ArtikelPage = () => {
   const [articles, setArticles] = useState([]);
+  const [urgentArticles, setUrgentArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const truncateContent = (konten) => {
@@ -33,15 +35,34 @@ const ArtikelPage = () => {
     const fetchArticles = async () => {
       try {
         const today = new Date().toISOString().split("T")[0];
-        const query = `*[_type == "artikel" && (!tanggalRilis || tanggalRilis <= $today)]{
+
+        const articlesQuery = `*[_type == "artikel" && showHidden != false && (!tanggalRilis || tanggalRilis <= $today)] | order(tanggalRilis desc){
           judul,
           "slug": slug.current,
           excerpt,
           konten,
-          gambarUtama
+          gambarUtama,
+          isUrgent,
+          urgentPublishedAt,
+          urgentDuration
         }`;
-        const data = await client.fetch(query, { today });
-        setArticles(data);
+
+        const articlesData = await client.fetch(articlesQuery, { today });
+
+        // Filter artikel urgent yang masih aktif berdasarkan urgentDuration per artikel
+        const now = new Date();
+        const urgentArticlesData = articlesData.filter((article) => {
+          if (!article.isUrgent || !article.urgentPublishedAt) return false;
+
+          const publishedAt = new Date(article.urgentPublishedAt);
+          const duration = article.urgentDuration || 24; // default 24 jam
+          const expiryTime = publishedAt.getTime() + duration * 60 * 60 * 1000;
+
+          return now.getTime() < expiryTime;
+        });
+
+        setArticles(articlesData);
+        setUrgentArticles(urgentArticlesData);
       } catch (error) {
         console.error("Error fetching articles:", error);
       } finally {
@@ -88,6 +109,121 @@ const ArtikelPage = () => {
             </p>
           </motion.div>
 
+          {/* Info Penting Section - Grid Cards */}
+          {urgentArticles.length > 0 && (
+            <div className="urgent-section-wrapper mb-5">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-4"
+              >
+                <div
+                  className="urgent-badge-gold fs-6 px-3 py-2 mb-2"
+                  style={{ letterSpacing: "0.5px" }}
+                >
+                  <Zap size={18} className="me-2" />
+                  INFO PENTING
+                </div>
+                <h3
+                  className="fw-bold text-accent-gold mb-0"
+                  style={{ fontSize: "1.5rem" }}
+                >
+                  Informasi Penting Terbaru
+                </h3>
+              </motion.div>
+
+              <Row className="g-3">
+                {urgentArticles.map((article, idx) => (
+                  <Col
+                    key={article.slug}
+                    xs={12}
+                    sm={6}
+                    lg={4}
+                    className="mb-2"
+                  >
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: idx * 0.1 }}
+                      whileHover={{ y: -8, scale: 1.02 }}
+                      className="h-100"
+                    >
+                      <Link
+                        to={`/artikel/${article.slug}`}
+                        className="text-decoration-none h-100 d-block"
+                      >
+                        <Card className="pondok-card urgent-card h-100 border-0 shadow-lg overflow-hidden d-flex flex-column">
+                          <div
+                            style={{
+                              height: "200px",
+                              overflow: "hidden",
+                              position: "relative",
+                            }}
+                          >
+                            <img
+                              src={
+                                article.gambarUtama
+                                  ? urlFor(article.gambarUtama)
+                                      .width(500)
+                                      .height(300)
+                                      .url()
+                                  : "https://via.placeholder.com/500x300?text=Info+Penting"
+                              }
+                              alt={article.judul}
+                              className="w-100 h-100"
+                              style={{ objectFit: "cover" }}
+                            />
+                            <div className="position-absolute top-0 end-0 m-2">
+                              <Badge className="urgent-badge-gold">
+                                INFO PENTING
+                              </Badge>
+                            </div>
+                          </div>
+                          <Card.Body className="p-3 d-flex flex-column">
+                            <Card.Title
+                              className="fw-bold fs-5 mb-2 text-primary-green"
+                              style={{ fontSize: "1.1rem" }}
+                            >
+                              {article.judul}
+                            </Card.Title>
+                            <Card.Text className="text-muted small flex-grow-1">
+                              {article.excerpt ||
+                                truncateContent(article.konten) ||
+                                "Informasi penting dari pondok pesantren."}
+                            </Card.Text>
+                            <div className="mt-2 d-flex align-items-center justify-content-between gap-3">
+                              <small className="text-accent-gold fw-bold">
+                                <Clock size={15} className="me-2" />
+                                {article.urgentPublishedAt
+                                  ? new Date(
+                                      article.urgentPublishedAt,
+                                    ).toLocaleString("id-ID", {
+                                      day: "2-digit",
+                                      month: "short",
+                                      year: "numeric",
+                                      hour: "2-digit",
+                                      minute: "2-digit",
+                                    })
+                                  : "Baru saja"}
+                              </small>
+                              <span className="text-accent-gold fw-bold small text-nowrap">
+                                Baca &rarr;
+                              </span>
+                            </div>
+                          </Card.Body>
+                        </Card>
+                      </Link>
+                    </motion.div>
+                  </Col>
+                ))}
+              </Row>
+            </div>
+          )}
+
+          {/* Regular Articles Section */}
           <Row>
             {articles.length > 0 ? (
               articles.map((article, idx) => (
