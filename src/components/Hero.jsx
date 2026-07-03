@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { motion } from 'framer-motion';
-import { GraduationCap, Users, Calendar, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { GraduationCap, Users, Calendar, ArrowRight } from "lucide-react";
 
-import asramaImage from '../assets/asrama baru.jpeg';
+import asramaImage from "../assets/asrama baru.jpeg";
 
 const Hero = () => {
   const containerVariants = {
@@ -23,11 +23,11 @@ const Hero = () => {
   };
 
   return (
-    <section 
-      id="home" 
-      className="overflow-hidden position-relative d-flex align-items-center hero-section" 
-      style={{ 
-        paddingTop: '80px'
+    <section
+      id="home"
+      className="overflow-hidden position-relative d-flex align-items-center hero-section"
+      style={{
+        paddingTop: "80px",
       }}
     >
       {/* Background Layer - Menggunakan img + object-fit untuk stabilitas mobile */}
@@ -67,7 +67,7 @@ const Hero = () => {
               </motion.h1>
               <motion.p
                 variants={itemVariants}
-                className="lead text-white-50 mb-4 mb-md-5 hero-subtitle shadow-text"
+                className="lead  text-white mb-4 mb-md-5 hero-subtitle "
                 style={{ maxWidth: "600px" }}
               >
                 Mencetak generasi yang berakhlaq mulia, cerdas, dan mandiri
@@ -82,8 +82,7 @@ const Hero = () => {
                   to="/ppdb"
                   className="btn-accent-pondok hero-btn d-flex align-items-center justify-content-center shadow-lg"
                 >
-                  Daftar Sekarang (PPDB){" "}
-                  <ArrowRight className="ms-2" size={20} />
+                  Daftar Sekarang <ArrowRight className="ms-2" size={20} />
                 </Button>
                 <Button
                   variant="outline-light"
