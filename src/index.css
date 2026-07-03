@@ -152,65 +152,6 @@ h6 {
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  .section-padding {
-    padding: var(--spacing-sm) 0 var(--spacing-md) 0;
-  }
-
-  body {
-    font-size: 0.95rem;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.6rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  .hero-image-container {
-    width: 300px !important;
-    height: 300px !important;
-    margin-top: 2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .section-padding {
-    padding: 1.5rem 0 2rem 0;
-  }
-
-  .container {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-
-  body {
-    font-size: 0.9rem;
-  }
-  h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  .hero-image-container {
-    width: 250px !important;
-    height: 250px !important;
-  }
-  .btn-primary-pondok,
-  .btn-accent-pondok {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-}
-
 /* Navbar Custom */
 .custom-backdrop {
   position: fixed;
@@ -266,36 +207,6 @@ h6 {
 }
 
 /* Custom Dropdown Animation & Caret */
-@media (min-width: 992px) {
-  .navbar-pondok .dropdown-menu {
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: none;
-    box-shadow: var(--shadow-lg);
-    border-radius: var(--radius-md);
-    pointer-events: none;
-    margin-top: 0.5rem;
-  }
-
-  .navbar-pondok .dropdown-menu.show {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-}
-
-@media (max-width: 991px) {
-  .navbar-pondok .dropdown-menu {
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-  }
-}
-
 .navbar-pondok .dropdown-item {
   padding: 0.5rem 1.5rem;
   font-weight: 500;
@@ -334,7 +245,7 @@ h6 {
 
 /* ═══════════════════════════════════════════
    READ MORE LINK (ProgramList Cards)
-═══════════════════════════════════════════ */
+  ═══════════════════════════════════════════ */
 .read-more-link {
   display: inline-flex;
   align-items: center;
@@ -362,7 +273,7 @@ h6 {
 
 /* ═══════════════════════════════════════════
    PROGRAM DETAIL PAGE
-═══════════════════════════════════════════ */
+  ═══════════════════════════════════════════ */
 
 /* Not Found State */
 .program-not-found {
@@ -667,77 +578,8 @@ h6 {
 }
 
 /* ═══════════════════════════════════════════
-   RESPONSIVE — MOBILE FIRST
-═══════════════════════════════════════════ */
-
-@media (max-width: 575px) {
-  .program-detail-hero {
-    padding: 110px 0 50px;
-  }
-
-  .program-section-card {
-    padding: 1.25rem;
-  }
-
-  .program-detail-cta {
-    padding: 2rem 1.25rem;
-  }
-
-  .program-class-tabs {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 4px;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .program-class-tab {
-    flex-shrink: 0;
-  }
-
-  /* Prevent hero image in Hero.jsx from causing horizontal overflow */
-  .hero-image-container {
-    max-width: 100%;
-  }
-
-  /* Teachers card image height on mobile */
-  .pondok-card img {
-    height: 240px !important;
-  }
-
-  /* Facilities carousel height on mobile */
-  .facility-carousel .carousel-item > div {
-    height: 260px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Ensure nothing overflows its container */
-  .program-detail-page,
-  .pondok-card,
-  .program-section-card {
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  /* Table always scrollable, never overflow page */
-  .program-table-wrapper {
-    max-width: 100%;
-  }
-
-  /* Facilities carousel height on tablet */
-  .facility-carousel .carousel-item > div {
-    height: 320px !important;
-  }
-
-  /* Teachers thumbnails */
-  .pondok-card img {
-    height: 280px !important;
-  }
-}
-
-/* ═══════════════════════════════════════════
    HERO & NAVBAR RESPONSIVE UPDATES
-═══════════════════════════════════════════ */
+  ═══════════════════════════════════════════ */
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -780,19 +622,10 @@ h6 {
     rgba(248, 249, 250, 1) 100%
   );
   pointer-events: none;
-  /* Backdrop filter dimatikan di mobile jika performa berat */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-}
-
-@media (min-width: 992px) {
-  .hero-bg-image {
-    /* Efek parallax yang stabil hanya di desktop */
-    position: fixed;
-    height: 100vh;
-  }
 }
 
 .hero-title {
@@ -811,17 +644,132 @@ h6 {
   transition: height 0.3s ease;
 }
 
+/* ═══════════════════════════════════════════
+   ARTIKEL URGENT (INFO PENTING)
+  ═══════════════════════════════════════════ */
+.urgent-section-wrapper {
+  background-color: var(--bg-mint);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.urgent-section-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l15 30-15 30-15-30z' fill='%23d97706' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.urgent-badge-gold {
+  background-color: var(--accent-gold);
+  color: var(--white) !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.urgent-card {
+  border: 2px solid var(--accent-gold) !important;
+  background: var(--white);
+}
+
+.urgent-card .card-title {
+  color: var(--primary-green);
+}
+.intro-stats-description {
+  font-size: 1.2rem;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+  ═══════════════════════════════════════════ */
+
+/* Desktop Only */
+@media (min-width: 992px) {
+  .navbar-pondok .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+    pointer-events: none;
+    margin-top: 0.5rem;
+  }
+  .navbar-pondok .dropdown-menu.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .hero-bg-image {
+    position: fixed;
+    height: 100vh;
+  }
+}
+
+/* Large Tablet / Desktop Transition */
+@media (max-width: 992px) {
+  .navbar-pondok .dropdown-menu {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+
+/* Tablet */
 @media (max-width: 768px) {
+  .section-padding {
+    padding: var(--spacing-sm) 0 var(--spacing-md) 0;
+  }
+  body {
+    font-size: 0.95rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  .hero-image-container {
+    width: 300px !important;
+    height: 300px !important;
+    margin-top: 2rem;
+  }
+  .program-detail-page,
+  .pondok-card,
+  .program-section-card {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .program-table-wrapper {
+    max-width: 100%;
+  }
+  .facility-carousel .carousel-item > div {
+    height: 320px !important;
+  }
+  .pondok-card img {
+    height: 280px !important;
+  }
   .hero-section {
     min-height: 100svh !important;
   }
-
   .hero-bottom-transition {
-    /* Mengurangi beban render pada mobile */
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
-
   .hero-title {
     font-size: clamp(2rem, 8vw, 2.5rem);
   }
@@ -830,12 +778,73 @@ h6 {
   }
 }
 
+/* Mobile */
 @media (max-width: 576px) {
+  .section-padding {
+    padding: 1.5rem 0 2rem 0;
+  }
+  .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  body {
+    font-size: 0.9rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .hero-image-container {
+    width: 250px !important;
+    height: 250px !important;
+    max-width: 100%;
+  }
+  .btn-primary-pondok,
+  .btn-accent-pondok {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .program-detail-hero {
+    padding: 110px 0 50px;
+  }
+  .program-section-card {
+    padding: 1.25rem;
+  }
+  .program-detail-cta {
+    padding: 2rem 1.25rem;
+  }
+  .program-class-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .program-class-tab {
+    flex-shrink: 0;
+  }
+  .pondok-card img {
+    height: 240px !important;
+  }
+  .facility-carousel .carousel-item > div {
+    height: 260px !important;
+  }
   .hero-btn,
   .hero-btn-outline {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     width: 100%;
     margin-bottom: 0.5rem;
+  }
+  .urgent-section-wrapper {
+    padding: 1.25rem;
+  }
+  .intro-stats-description {
+    font-size: 1rem;
+    text-align: justify;
   }
 }
