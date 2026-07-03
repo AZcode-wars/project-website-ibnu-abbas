@@ -153,7 +153,7 @@ const PPDBDashboard = ({ settings, stats, isClosed }) => {
               Pendaftaran Santri Baru
             </h5>
             <h1 className="display-4 fw-bold text-white mb-3">
-              PPDB Center 2025/2026
+              PSB Tahun Ajaran 2025-2026
             </h1>
             <p
               className="lead text-white opacity-75 mx-auto"
@@ -233,7 +233,10 @@ const PPDBDashboard = ({ settings, stats, isClosed }) => {
                       <h3 className="fw-bold mb-3 text-dark">
                         Pendaftaran Ditutup
                       </h3>
-                      <p className="lead text-muted mb-0 text-center" style={{ maxWidth: "400px" }}>
+                      <p
+                        className="lead text-muted mb-0 text-center"
+                        style={{ maxWidth: "400px" }}
+                      >
                         {settings?.closedMessage ||
                           "Mohon maaf, pendaftaran peserta didik baru saat ini belum dibuka atau sudah ditutup."}
                       </p>
@@ -271,131 +274,144 @@ const PPDBDashboard = ({ settings, stats, isClosed }) => {
           {/* Row 2: Panduan & CTA — hanya tampil saat pendaftaran dibuka */}
           {!isClosed && (
             <Row className="g-5">
-            <Col lg={7}>
-              <div className="mb-4">
-                <h3 className="mb-4">Panduan Pendaftaran</h3>
-                <Accordion defaultActiveKey="0" className="ppdb-accordion">
-                  <Accordion.Item eventKey="0" className="ppdb-accordion-item">
-                    <Accordion.Header>
-                      <ClipboardList
-                        size={18}
-                        className="me-2 text-primary-green"
-                      />
-                      Syarat Pendaftaran
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      <ul className="ppdb-checklist">
-                        <li>Fotokopi Akta Kelahiran & KK</li>
-                        <li>
-                          Fotokopi Ijazah terakhir/Rapor 3 semester terakhir
-                        </li>
-                        <li>Pas foto 3x4 (4 lembar)</li>
-                        <li>Surat keterangan sehat</li>
-                      </ul>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="1" className="ppdb-accordion-item">
-                    <Accordion.Header>
-                      <Calendar size={18} className="me-2 text-primary-green" />
-                      Prosedur Tes Seleksi
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      <ol className="ppdb-steps">
-                        <li>Tes Membaca Al-Qur'an (Tahsin/Tahfizh)</li>
-                        <li>Tes Akademik (Matematika, IPA, B. Inggris)</li>
-                        <li>Wawancara Orang Tua & Calon Santri</li>
-                      </ol>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                  <Accordion.Item eventKey="2" className="ppdb-accordion-item">
-                    <Accordion.Header>
-                      <Info size={18} className="me-2 text-primary-green" />
-                      Biaya Pendidikan
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      Informasi biaya lengkap dapat diunduh melalui brosur
-                      digital kami atau ditanyakan langsung via WhatsApp admin.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
-              </div>
-            </Col>
+              <Col lg={7}>
+                <div className="mb-4">
+                  <h3 className="mb-4">Panduan Pendaftaran</h3>
+                  <Accordion defaultActiveKey="0" className="ppdb-accordion">
+                    <Accordion.Item
+                      eventKey="0"
+                      className="ppdb-accordion-item"
+                    >
+                      <Accordion.Header>
+                        <ClipboardList
+                          size={18}
+                          className="me-2 text-primary-green"
+                        />
+                        Syarat Pendaftaran
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        <ul className="ppdb-checklist">
+                          <li>Fotokopi Akta Kelahiran & KK</li>
+                          <li>
+                            Fotokopi Ijazah terakhir/Rapor 3 semester terakhir
+                          </li>
+                          <li>Pas foto 3x4 (4 lembar)</li>
+                          <li>Surat keterangan sehat</li>
+                        </ul>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item
+                      eventKey="1"
+                      className="ppdb-accordion-item"
+                    >
+                      <Accordion.Header>
+                        <Calendar
+                          size={18}
+                          className="me-2 text-primary-green"
+                        />
+                        Prosedur Tes Seleksi
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        <ol className="ppdb-steps">
+                          <li>Tes Membaca Al-Qur'an (Tahsin/Tahfizh)</li>
+                          <li>Tes Akademik (Matematika, IPA, B. Inggris)</li>
+                          <li>Wawancara Orang Tua & Calon Santri</li>
+                        </ol>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item
+                      eventKey="2"
+                      className="ppdb-accordion-item"
+                    >
+                      <Accordion.Header>
+                        <Info size={18} className="me-2 text-primary-green" />
+                        Biaya Pendidikan
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        Informasi biaya lengkap dapat diunduh melalui brosur
+                        digital kami atau ditanyakan langsung via WhatsApp
+                        admin.
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Accordion>
+                </div>
+              </Col>
 
-            <Col lg={5}>
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="ppdb-cta-card position-relative overflow-hidden">
-                  <div className="position-relative" style={{ zIndex: 2 }}>
-                    <h2 className="text-accent-gold mb-3 fw-bold">
-                      Daftar Sekarang!
-                    </h2>
-                    <p className="lead mb-4 text-white opacity-85">
-                      Klik tombol di bawah untuk terhubung langsung dengan
-                      panitia pendaftaran melalui WhatsApp.
-                    </p>
+              <Col lg={5}>
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="ppdb-cta-card position-relative overflow-hidden">
+                    <div className="position-relative" style={{ zIndex: 2 }}>
+                      <h2 className="text-accent-gold mb-3 fw-bold">
+                        Daftar Sekarang!
+                      </h2>
+                      <p className="lead mb-4 text-white opacity-85">
+                        Klik tombol di bawah untuk terhubung langsung dengan
+                        panitia pendaftaran melalui WhatsApp.
+                      </p>
 
-                    <div className="mb-4">
-                      {[
-                        "Respon Cepat & Ramah",
-                        "Konsultasi Program Gratis",
-                        "Bantuan Teknis Pendaftaran",
-                      ].map((text, idx) => (
-                        <motion.div
-                          key={idx}
-                          className="d-flex align-items-center mb-3"
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ delay: idx * 0.15 }}
-                          viewport={{ once: true }}
-                        >
-                          <CheckCircle
-                            className="text-accent-gold me-3 flex-shrink-0"
-                            size={20}
-                          />
-                          <span className="text-white">{text}</span>
-                        </motion.div>
-                      ))}
+                      <div className="mb-4">
+                        {[
+                          "Respon Cepat & Ramah",
+                          "Konsultasi Program Gratis",
+                          "Bantuan Teknis Pendaftaran",
+                        ].map((text, idx) => (
+                          <motion.div
+                            key={idx}
+                            className="d-flex align-items-center mb-3"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ delay: idx * 0.15 }}
+                            viewport={{ once: true }}
+                          >
+                            <CheckCircle
+                              className="text-accent-gold me-3 flex-shrink-0"
+                              size={20}
+                            />
+                            <span className="text-white">{text}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+
+                      <Button
+                        href={settings?.registrationLink || "#"}
+                        target="_blank"
+                        className="ppdb-reg-button w-100 py-3 fs-5 d-flex align-items-center justify-content-center mb-3"
+                        style={{
+                          backgroundColor: "#fff",
+                          color: "#006d5b",
+                          fontWeight: "bold",
+                          border: "2px solid #006d5b",
+                          transition: "all 0.3s ease",
+                        }}
+                      >
+                        <ClipboardList className="me-2" size={20} />
+                        Isi Formulir Pendaftaran
+                      </Button>
+
+                      <Button
+                        href="https://wa.me/628123456789?text=Assalamualaikum,%20saya%20ingin%20bertanya%20mengenai%20pendaftaran%20santri%20baru%20di%20Ibnu%20Abbas."
+                        target="_blank"
+                        className="ppdb-wa-button w-100 py-3 fs-5 d-flex align-items-center justify-content-center"
+                        style={{ transition: "all 0.3s ease" }}
+                      >
+                        <Send className="me-2" size={20} />
+                        Hubungi Admin PPDB
+                      </Button>
                     </div>
 
-                    <Button
-                      href={settings?.registrationLink || "#"}
-                      target="_blank"
-                      className="ppdb-reg-button w-100 py-3 fs-5 d-flex align-items-center justify-content-center mb-3"
-                      style={{
-                        backgroundColor: "#fff",
-                        color: "#006d5b",
-                        fontWeight: "bold",
-                        border: "2px solid #006d5b",
-                        transition: "all 0.3s ease",
-                      }}
-                    >
-                      <ClipboardList className="me-2" size={20} />
-                      Isi Formulir Pendaftaran
-                    </Button>
-
-                    <Button
-                      href="https://wa.me/628123456789?text=Assalamualaikum,%20saya%20ingin%20bertanya%20mengenai%20pendaftaran%20santri%20baru%20di%20Ibnu%20Abbas."
-                      target="_blank"
-                      className="ppdb-wa-button w-100 py-3 fs-5 d-flex align-items-center justify-content-center"
-                      style={{ transition: "all 0.3s ease" }}
-                    >
-                      <Send className="me-2" size={20} />
-                      Hubungi Admin PPDB
-                    </Button>
+                    {/* Decorative elements */}
+                    <div className="ppdb-cta-decoration">
+                      <Send size={280} />
+                    </div>
+                    <div className="ppdb-cta-glow"></div>
                   </div>
-
-                  {/* Decorative elements */}
-                  <div className="ppdb-cta-decoration">
-                    <Send size={280} />
-                  </div>
-                  <div className="ppdb-cta-glow"></div>
-                </div>
-              </motion.div>
-            </Col>
+                </motion.div>
+              </Col>
             </Row>
           )}
         </Container>
