@@ -25,11 +25,6 @@ const About = () => {
       title: "Misi",
       desc: "Menyelenggarakan pendidikan Islam yang integratif, menggabungkan sains dan ilmu agama.",
     },
-    {
-      icon: <ShieldCheck size={40} className="text-accent-gold mb-3" />,
-      title: "Nilai Utama",
-      desc: "Keikhlasan, Kemandirian, Kesederhanaan, dan Ukhuwah Islamiyah.",
-    },
   ];
 
   const features = [
@@ -133,7 +128,7 @@ const About = () => {
 
         <Row id="visi-misi">
           {cards.map((card, idx) => (
-            <Col key={idx} md={4} className="mb-4">
+            <Col key={idx} md={6} className="mb-4">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

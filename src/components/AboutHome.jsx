@@ -35,7 +35,7 @@ const AboutHome = () => {
                 Mengenal Ma'had Ibnu Abbas
               </h2>
               <div
-                className="text-muted lead"
+                className="text-muted intro-stats-description"
                 style={{ textAlign: "justify", lineHeight: "1.8" }}
               >
                 <p>
