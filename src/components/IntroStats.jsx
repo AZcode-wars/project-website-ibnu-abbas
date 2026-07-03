@@ -65,15 +65,24 @@ const IntroStats = () => {
               <h3 className="text-primary-green fw-bold mb-4">
                 Sekilas Tentang Ma'had
               </h3>
-              <p className="lead text-muted mb-0" style={{ lineHeight: "1.8" }}>
+              <p
+                className=" text-muted mb-4 intro-stats-description"
+                style={{ lineHeight: "1.8" }}
+              >
                 Ma'had Ibnu Abbas Banjarnegara hadir sebagai lembaga pendidikan
                 Islam yang berkomitmen membentuk generasi yang benar dalam
                 akidah, sahih dalam ibadah, dan mulia dalam akhlak — berpijak
-                teguh pada Al-Qur'an dan Sunnah. Berdiri sejak 2012 dan
-                berlokasi di Dusun Kayunan, Banjarmangu, Banjarnegara, Jawa
-                Tengah, ma'had ini terus tumbuh dan berkembang dalam kepercayaan
-                umat — mencetak generasi muda yang berilmu, bertakwa, dan siap
-                membawa manfaat bagi agama, keluarga, dan masyarakat.
+                teguh pada Al-Qur'an dan Sunnah.
+              </p>
+              <p
+                className=" text-muted intro-stats-description mb-0"
+                style={{ lineHeight: "1.8" }}
+              >
+                Berdiri sejak 2012 dan berlokasi di Dusun Kayunan, Banjarmangu,
+                Banjarnegara, Jawa Tengah, ma'had ini terus tumbuh dan
+                berkembang dalam kepercayaan umat — mencetak generasi muda yang
+                berilmu, bertakwa, dan siap membawa manfaat bagi agama,
+                keluarga, dan masyarakat.
               </p>
             </Col>
           </Row>
