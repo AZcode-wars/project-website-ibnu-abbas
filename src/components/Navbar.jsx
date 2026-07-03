@@ -57,9 +57,16 @@ const Header = () => {
               className="me-2 logo-mahad"
             />
             <span
-              className={`fw-bold fs-4 ${shouldBeSolid ? "text-primary-green" : "text-white"}`}
+              className={`d-flex flex-column mb-0 fw-bold fs-4 ${shouldBeSolid ? "text-primary-green" : "text-white"}`}
+              style={{ lineHeight: "1.1" }}
             >
-              Ibnu Abbas Banjarnegara
+              <span>Ibnu Abbas</span>
+              <span
+                className="fs-small"
+                style={{ fontSize: "0.75rem", opacity: 0.9 }}
+              >
+                Banjarnegara
+              </span>
             </span>
           </Navbar.Brand>
 
