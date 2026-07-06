@@ -9,7 +9,7 @@ const FeaturedPrograms = () => {
   const featuredPrograms = programs.slice(0, 3);
 
   return (
-    <section className="section-padding bg-pattern-islamic position-relative overflow-hidden">
+    <section className="section-padding  position-relative overflow-hidden">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

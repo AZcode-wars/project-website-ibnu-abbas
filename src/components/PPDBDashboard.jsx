@@ -166,7 +166,7 @@ const PPDBDashboard = ({ settings, stats, isClosed }) => {
         </Container>
       </section>
       {/* Stats Bar */}
-      <section className="ppdb-stats-bar mb-5">
+      <section className="ppdb-stats-bar ">
         <Container>
           <Row className="g-3">
             {dynamicStats.map((stat, idx) => (
@@ -189,7 +189,7 @@ const PPDBDashboard = ({ settings, stats, isClosed }) => {
       </section>
 
       {/* Main Content */}
-      <section id="ppdb" className="section-padding ppdb-main-section">
+      <section id="ppdb" className="section-padding bg-pattern-islamic">
         <Container>
           {/* Row 1: Poster & Kuota / Alert Ditutup */}
           <Row className="g-5 mb-5 align-items-center">
@@ -227,7 +227,7 @@ const PPDBDashboard = ({ settings, stats, isClosed }) => {
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="border-0 p-4 p-md-5 rounded-4 shadow-sm bg-white text-center">
+                  <Card className="border-0 p-4 p-md-5 rounded-4 shadow-sm text-center">
                     <div className="d-flex flex-column align-items-center">
                       <AlertCircle size={72} className="text-danger mb-4" />
                       <h3 className="fw-bold mb-3 text-dark">

@@ -19,7 +19,7 @@ const AboutHome = () => {
   }, []);
 
   return (
-    <section className="section-padding bg-pattern-islamic position-relative overflow-hidden">
+    <section className="section-padding position-relative overflow-hidden">
       <Container>
         <Row className="align-items-center gy-5">
           {/* Text Section - Appears first on mobile, left on desktop */}

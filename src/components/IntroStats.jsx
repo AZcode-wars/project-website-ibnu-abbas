@@ -50,7 +50,7 @@ const IntroStats = () => {
   ];
 
   return (
-    <section className="bg-light py-5 position-relative" style={{ zIndex: 10 }}>
+    <section className=" py-5 position-relative" style={{ zIndex: 10 }}>
       <Container>
         <motion.div
           className="bg-white rounded-4 shadow-xl p-4 p-md-5"

@@ -42,7 +42,7 @@ const Facilities = () => {
   };
 
   return (
-    <section id="fasilitas" className="section-padding bg-white">
+    <section id="fasilitas" className="section-padding">
       <Container>
         <BackButton to="/" label="Kembali ke Beranda" />
         <motion.div

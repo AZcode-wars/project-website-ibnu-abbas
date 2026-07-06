@@ -26,7 +26,7 @@ function App() {
   }, [pathname]);
 
   return (
-    <div className="app-container">
+    <div className="app-container bg-pattern-islamic">
       <Navbar />
       <main>
         <Routes>

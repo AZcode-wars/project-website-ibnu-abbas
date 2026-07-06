@@ -1,39 +1,39 @@
-import React from 'react';
-import { Container, Carousel } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Container, Carousel } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 // Import assets from Facilities component for consistency
-import asramaImg from '../assets/asrama.png';
-import masjidImg from '../assets/masjid.png';
-import kelasImg from '../assets/kelas.png';
-import maktabahImg from '../assets/maktabah.png';
+import asramaImg from "../assets/asrama.png";
+import masjidImg from "../assets/masjid.png";
+import kelasImg from "../assets/kelas.png";
+import maktabahImg from "../assets/maktabah.png";
 
 const FacilitiesHome = () => {
   const facilities = [
     {
       title: "Asrama Santri Modern",
       desc: "Kamar tidur yang nyaman dan bersih untuk mendukung istirahat santri.",
-      img: asramaImg
+      img: asramaImg,
     },
     {
       title: "Masjid Jami' Ibnu Abbas",
       desc: "Pusat kegiatan ibadah dan kajian keislaman dengan arsitektur menawan.",
-      img: masjidImg
+      img: masjidImg,
     },
     {
       title: "Ruang Kelas Kondusif",
       desc: "Kelas interaktif dengan fasilitas-fasilitas pendukung untuk pembelajaran islami.",
-      img: kelasImg
+      img: kelasImg,
     },
     {
       title: "Perpustakaan & Maktabah",
       desc: "Koleksi ribuan kitab kuning dan buku literatur umum yang lengkap.",
-      img: maktabahImg
-    }
+      img: maktabahImg,
+    },
   ];
 
   return (
-    <section className="section-padding bg-pattern-islamic position-relative overflow-hidden">
+    <section className="section-padding  position-relative overflow-hidden">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ const FacilitiesHome = () => {
           >
             {facilities.map((f, i) => (
               <Carousel.Item key={i}>
-                <div style={{ height: '500px', position: 'relative' }}>
+                <div style={{ height: "500px", position: "relative" }}>
                   <img
                     className="d-block w-100 h-100 object-fit-cover"
                     src={f.img}
@@ -70,9 +70,10 @@ const FacilitiesHome = () => {
                   <Carousel.Caption
                     className="text-start start-0 bottom-0 w-100 p-5"
                     style={{
-                      background: 'linear-gradient(transparent, rgba(0,0,0,0.8))',
+                      background:
+                        "linear-gradient(transparent, rgba(0,0,0,0.8))",
                       left: 0,
-                      bottom: 0
+                      bottom: 0,
                     }}
                   >
                     <h3 className="text-accent-gold fw-bold">{f.title}</h3>

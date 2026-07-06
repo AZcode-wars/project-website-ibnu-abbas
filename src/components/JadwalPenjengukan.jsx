@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const JadwalPenjengukan = () => {
   return (
     <section
-      className="section-padding bg-white bg-pattern-islamic"
+      className="section-padding"
       style={{ position: "relative", zIndex: 1 }}
     >
       <Container>

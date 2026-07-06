@@ -90,7 +90,7 @@ const KalenderPendidikan = () => {
   const currentBulan = dataKalender[currentIndex];
 
   return (
-    <section className="section-padding bg-light position-relative bg-pattern-islamic">
+    <section className="section-padding position-relative">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

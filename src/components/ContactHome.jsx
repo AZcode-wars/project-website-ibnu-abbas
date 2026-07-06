@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { motion } from 'framer-motion';
-import { MessageCircle, Mail, Phone, MapPin } from 'lucide-react';
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { MessageCircle, Mail, Phone, MapPin } from "lucide-react";
 
 const ContactHome = () => {
   const [formData, setFormData] = useState({
-    nama: '',
-    phone: '',
-    email: '',
-    pesan: ''
+    nama: "",
+    phone: "",
+    email: "",
+    pesan: "",
   });
 
   const handleChange = (e) => {
@@ -18,13 +18,15 @@ const ContactHome = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Simulation: Log to console and show alert
-    console.log('Form submitted:', formData);
-    alert(`Terima kasih, ${formData.nama}! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.`);
-    setFormData({ nama: '', phone: '', email: '', pesan: '' });
+    console.log("Form submitted:", formData);
+    alert(
+      `Terima kasih, ${formData.nama}! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.`,
+    );
+    setFormData({ nama: "", phone: "", email: "", pesan: "" });
   };
 
   return (
-    <section className="section-padding bg-pattern-islamic position-relative overflow-hidden">
+    <section className="section-padding position-relative overflow-hidden">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,9 +38,12 @@ const ContactHome = () => {
           <h2 className="display-5 fw-bold section-title text-center text-primary-green">
             Sampaikan Aspirasi Anda
           </h2>
-          <p className="text-muted mt-3" style={{ maxWidth: "700px", margin: "0 auto" }}>
-            Punya pertanyaan tentang pendaftaran atau ingin mengenal kami lebih jauh?
-            Kami siap membantu Anda dengan sepenuh hati.
+          <p
+            className="text-muted mt-3"
+            style={{ maxWidth: "700px", margin: "0 auto" }}
+          >
+            Punya pertanyaan tentang pendaftaran atau ingin mengenal kami lebih
+            jauh? Kami siap membantu Anda dengan sepenuh hati.
           </p>
         </motion.div>
 
@@ -50,9 +55,13 @@ const ContactHome = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="p-4 p-md-5 rounded-4 bg-primary-green text-white h-100 shadow-xl"
-              style={{ background: 'linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)' }}
+              style={{
+                background: "linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)",
+              }}
             >
-              <h3 className="fw-bold mb-4 text-accent-gold">Informasi Kontak</h3>
+              <h3 className="fw-bold mb-4 text-accent-gold">
+                Informasi Kontak
+              </h3>
 
               <div className="d-flex align-items-start mb-4">
                 <div className="me-3 bg-white bg-opacity-25 p-2 rounded-circle">
@@ -60,7 +69,9 @@ const ContactHome = () => {
                 </div>
                 <div>
                   <p className="mb-0 fw-bold">Alamat</p>
-                  <p className="text-white-50 mb-0">Jl. Raya Pondok Pesantren, Kabupaten/Kota, Provinsi</p>
+                  <p className="text-white-50 mb-0">
+                    Jl. Raya Pondok Pesantren, Kabupaten/Kota, Provinsi
+                  </p>
                 </div>
               </div>
 
@@ -90,7 +101,11 @@ const ContactHome = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-100 py-3 rounded-pill fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2"
-                style={{ backgroundColor: '#25D366', border: 'none', color: 'white' }}
+                style={{
+                  backgroundColor: "#25D366",
+                  border: "none",
+                  color: "white",
+                }}
               >
                 <MessageCircle size={20} />
                 WhatsApp Admin
@@ -110,7 +125,9 @@ const ContactHome = () => {
                 <Row>
                   <Col md={6} className="mb-4">
                     <Form.Group controlId="formNama">
-                      <Form.Label className="fw-medium text-primary-green">Nama Lengkap</Form.Label>
+                      <Form.Label className="fw-medium text-primary-green">
+                        Nama Lengkap
+                      </Form.Label>
                       <Form.Control
                         type="text"
                         name="nama"
@@ -124,7 +141,9 @@ const ContactHome = () => {
                   </Col>
                   <Col md={6} className="mb-4">
                     <Form.Group controlId="formPhone">
-                      <Form.Label className="fw-medium text-primary-green">No. HP / WhatsApp</Form.Label>
+                      <Form.Label className="fw-medium text-primary-green">
+                        No. HP / WhatsApp
+                      </Form.Label>
                       <Form.Control
                         type="tel"
                         name="phone"
@@ -139,7 +158,9 @@ const ContactHome = () => {
                 </Row>
 
                 <Form.Group controlId="formEmail" className="mb-4">
-                  <Form.Label className="fw-medium text-primary-green">Alamat Email</Form.Label>
+                  <Form.Label className="fw-medium text-primary-green">
+                    Alamat Email
+                  </Form.Label>
                   <Form.Control
                     type="email"
                     name="email"
@@ -152,7 +173,9 @@ const ContactHome = () => {
                 </Form.Group>
 
                 <Form.Group controlId="formPesan" className="mb-4">
-                  <Form.Label className="fw-medium text-primary-green">Pesan</Form.Label>
+                  <Form.Label className="fw-medium text-primary-green">
+                    Pesan
+                  </Form.Label>
                   <Form.Control
                     as="textarea"
                     name="pesan"
@@ -169,7 +192,11 @@ const ContactHome = () => {
                   <Button
                     type="submit"
                     className="px-5 py-2 rounded-pill fw-bold shadow-sm"
-                    style={{ backgroundColor: '#2e7d32', border: 'none', color: 'white' }}
+                    style={{
+                      backgroundColor: "#2e7d32",
+                      border: "none",
+                      color: "white",
+                    }}
                   >
                     Kirim Pesan
                   </Button>
