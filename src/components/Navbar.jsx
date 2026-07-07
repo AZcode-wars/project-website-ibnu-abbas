@@ -60,10 +60,19 @@ const Header = () => {
               className={`d-flex flex-column mb-0 fw-bold fs-4 ${shouldBeSolid ? "text-primary-green" : "text-white"}`}
               style={{ lineHeight: "1.1" }}
             >
-              <span>Ibnu Abbas</span>
+              <h1
+                className="mb-0 fw-bold"
+                style={{ fontSize: "1.5rem", opacity: 0.9 }}
+              >
+                Ibnu Abbas
+              </h1>
               <span
-                className="fs-small"
-                style={{ fontSize: "0.75rem", opacity: 0.9 }}
+                className="fs-small fw-bold"
+                style={{
+                  fontSize: "0.75rem",
+                  opacity: 0.9,
+                  fontFamily: "Lora, sans-serif",
+                }}
               >
                 Banjarnegara
               </span>
