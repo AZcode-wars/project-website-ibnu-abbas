@@ -43,9 +43,7 @@ const JadwalPenjengukan = () => {
                   <Calendar className="text-accent-gold mb-3" size={40} />
                   <Card.Title className="fw-bold">Hari Kunjungan</Card.Title>
                   <Card.Text className="text-muted">
-                    Senin – Sabtu
-                    <br />
-                    (Minggu & Hari Libur Nasional: Tutup)
+                    Jum'at
                   </Card.Text>
                 </Card>
               </Col>
@@ -55,9 +53,9 @@ const JadwalPenjengukan = () => {
                   <Clock className="text-accent-gold mb-3" size={40} />
                   <Card.Title className="fw-bold">Jam Kunjungan</Card.Title>
                   <Card.Text className="text-muted">
-                    08:00 – 11:00 WIB
+                    08:00 – 10:00 WIB
                     <br />
-                    13:30 – 16:00 WIB
+                    10:00 – 12:00 WIB
                   </Card.Text>
                 </Card>
               </Col>
@@ -69,7 +67,7 @@ const JadwalPenjengukan = () => {
                   <Card.Text className="text-muted">
                     ± 60 – 90 menit
                     <br />
-                    (Termasuk tur fasilitas & tanya jawab)
+                    (Termasuk tur fasilitas & tanya jawab) kotak ini hapus aja ganti apa ya?
                   </Card.Text>
                 </Card>
               </Col>

@@ -3,12 +3,12 @@ import React from 'react';
 
 const programs = [
   {
-    slug: 'smp-terpadu',
-    title: 'SMP Terpadu',
+    slug: 'tarbiyah-awlad',
+    title: 'TA (Tarbiytul Awlad)',
     icon: React.createElement(Users, { size: 40, className: 'text-accent-gold mb-3' }),
     description:
-      "Pendidikan menengah pertama yang menggabungkan kurikulum nasional (Kemdikbud) dengan kurikulum kepesantrenan dasar, membentuk santri yang cerdas secara akademik dan beradab.",
-    ageGroup: '12 – 15 tahun (Setara Kelas 7, 8, 9)',
+      "Program TA dirancang khusus sebagai pondasi awal anak untuk tumbuh menjadi pribadi yang cerdas dan beradab. Dengan memadukan Kurikulum Nasional (Kemdikbud) dan nilai dasar kepesantrenan, kami membangun kesiapan akademik sekaligus membentuk akhlak mulia sejak dini.",
+    ageGroup: '5 – 6 tahun',
     generalCurriculum: [
       'Kurikulum Nasional (Kemdikbud)',
       'Bahasa Arab Aktif & Komunikatif',
@@ -21,7 +21,7 @@ const programs = [
     ],
     classCurriculum: [
       {
-        className: 'Kelas 7',
+        className: 'TA A',
         subjects: [
           { subject: 'Matematika', hoursPerWeek: 5 },
           { subject: 'Bahasa Indonesia', hoursPerWeek: 4 },
@@ -36,7 +36,7 @@ const programs = [
         ],
       },
       {
-        className: 'Kelas 8',
+        className: 'TA B',
         subjects: [
           { subject: 'Matematika', hoursPerWeek: 5 },
           { subject: 'Bahasa Indonesia', hoursPerWeek: 4 },
@@ -50,31 +50,16 @@ const programs = [
           { subject: 'PPKn', hoursPerWeek: 2 },
         ],
       },
-      {
-        className: 'Kelas 9',
-        subjects: [
-          { subject: 'Matematika', hoursPerWeek: 6 },
-          { subject: 'Bahasa Indonesia', hoursPerWeek: 4 },
-          { subject: 'IPA (Fisika & Biologi)', hoursPerWeek: 6 },
-          { subject: 'IPS Terpadu', hoursPerWeek: 4 },
-          { subject: 'Bahasa Inggris', hoursPerWeek: 5 },
-          { subject: 'Bahasa Arab', hoursPerWeek: 6 },
-          { subject: 'Al-Qur\'an & Tahfizh', hoursPerWeek: 6 },
-          { subject: 'Nahwu-Sharaf Lanjutan', hoursPerWeek: 2 },
-          { subject: 'Fiqih Muamalah', hoursPerWeek: 2 },
-          { subject: 'Persiapan UN/Ujian Pesantren', hoursPerWeek: 3 },
-        ],
-      },
     ],
   },
 
   {
-    slug: 'sma-terpadu',
-    title: 'SMA Terpadu',
+    slug: 'madrasah-ibtida\'i',
+    title: 'Madrasah Ibtida\'i',
     icon: React.createElement(GraduationCap, { size: 40, className: 'text-accent-gold mb-3' }),
     description:
-      "Pendidikan menengah atas dengan peminatan MIPA dan IPS, dibekali dengan kemampuan bahasa Arab & Inggris aktif serta tahfizh Al-Qur'an berkelanjutan.",
-    ageGroup: '15 – 18 tahun (Setara Kelas 10, 11, 12)',
+      "Pendidikan tingkat dasar yang menggabungkan kurikulum nasional (Kemdikbud) dengan kurikulum kepesantrenan, membentuk santri yang cerdas, mandiri, dan religius.",
+    ageGroup: '7 – 12 tahun (Setara Kelas 1, 2, 3, 4, 5, 6)',
     generalCurriculum: [
       'Kurikulum Nasional (Kemdikbud) – Peminatan MIPA & IPS',
       'Bahasa Arab Aktif Tingkat Lanjut',
@@ -87,7 +72,7 @@ const programs = [
     ],
     classCurriculum: [
       {
-        className: 'Kelas 10',
+        className: 'Kelas 1',
         subjects: [
           { subject: 'Matematika Wajib', hoursPerWeek: 4 },
           { subject: 'Fisika / Ekonomi (Peminatan)', hoursPerWeek: 4 },
@@ -102,7 +87,7 @@ const programs = [
         ],
       },
       {
-        className: 'Kelas 11',
+        className: 'Kelas 2',
         subjects: [
           { subject: 'Matematika Peminatan', hoursPerWeek: 5 },
           { subject: 'Fisika / Ekonomi (Peminatan)', hoursPerWeek: 5 },
@@ -116,7 +101,49 @@ const programs = [
         ],
       },
       {
-        className: 'Kelas 12',
+        className: 'Kelas 3',
+        subjects: [
+          { subject: 'Matematika Peminatan', hoursPerWeek: 5 },
+          { subject: 'Fisika / Ekonomi (Peminatan)', hoursPerWeek: 5 },
+          { subject: 'Kimia / Sosiologi (Peminatan)', hoursPerWeek: 5 },
+          { subject: 'Biologi / Geografi (Peminatan)', hoursPerWeek: 5 },
+          { subject: 'Bahasa Inggris Akademik', hoursPerWeek: 4 },
+          { subject: 'Bahasa Arab Tingkat Tinggi', hoursPerWeek: 6 },
+          { subject: 'Al-Qur\'an & Tahfizh', hoursPerWeek: 6 },
+          { subject: 'Karya Tulis Ilmiah (KTI)', hoursPerWeek: 2 },
+          { subject: 'Persiapan SNBT & Beasiswa', hoursPerWeek: 3 },
+        ],
+      },
+      {
+        className: 'Kelas 4',
+        subjects: [
+          { subject: 'Matematika Peminatan', hoursPerWeek: 5 },
+          { subject: 'Fisika / Ekonomi (Peminatan)', hoursPerWeek: 5 },
+          { subject: 'Kimia / Sosiologi (Peminatan)', hoursPerWeek: 5 },
+          { subject: 'Biologi / Geografi (Peminatan)', hoursPerWeek: 5 },
+          { subject: 'Bahasa Inggris Akademik', hoursPerWeek: 4 },
+          { subject: 'Bahasa Arab Tingkat Tinggi', hoursPerWeek: 6 },
+          { subject: 'Al-Qur\'an & Tahfizh', hoursPerWeek: 6 },
+          { subject: 'Karya Tulis Ilmiah (KTI)', hoursPerWeek: 2 },
+          { subject: 'Persiapan SNBT & Beasiswa', hoursPerWeek: 3 },
+        ],
+      },
+      {
+        className: 'Kelas 5',
+        subjects: [
+          { subject: 'Matematika Peminatan', hoursPerWeek: 5 },
+          { subject: 'Fisika / Ekonomi (Peminatan)', hoursPerWeek: 5 },
+          { subject: 'Kimia / Sosiologi (Peminatan)', hoursPerWeek: 5 },
+          { subject: 'Biologi / Geografi (Peminatan)', hoursPerWeek: 5 },
+          { subject: 'Bahasa Inggris Akademik', hoursPerWeek: 4 },
+          { subject: 'Bahasa Arab Tingkat Tinggi', hoursPerWeek: 6 },
+          { subject: 'Al-Qur\'an & Tahfizh', hoursPerWeek: 6 },
+          { subject: 'Karya Tulis Ilmiah (KTI)', hoursPerWeek: 2 },
+          { subject: 'Persiapan SNBT & Beasiswa', hoursPerWeek: 3 },
+        ],
+      },
+      {
+        className: 'Kelas 6',
         subjects: [
           { subject: 'Matematika Peminatan', hoursPerWeek: 5 },
           { subject: 'Fisika / Ekonomi (Peminatan)', hoursPerWeek: 5 },
@@ -187,62 +214,7 @@ const programs = [
     ],
   },
 
-  {
-    slug: 'madrasah-diniyah',
-    title: 'Madrasah Diniyah',
-    icon: React.createElement(Library, { size: 40, className: 'text-accent-gold mb-3' }),
-    description:
-      "Program pendalaman ilmu agama dan kitab kuning (Turots) untuk mencetak kader ulama masa depan yang tafaqquh fid-diin.",
-    ageGroup: '13 – 20 tahun (Program 3 Jenjang)',
-    generalCurriculum: [
-      'Kitab Kuning (Turots Ulama Klasik)',
-      'Nahwu & Sharaf (Gramatika Arab)',
-      'Fiqih Syafi\'i & Perbandingan Madzhab',
-      'Akidah Ahlus Sunnah wal Jama\'ah',
-      'Hadits & Ilmu Musthalalah Hadits',
-      'Tafsir Al-Qur\'an Klasik',
-      'Ushul Fiqh & Kaidah Fiqhiyyah',
-      'Tarikh Islam & Sirah Nabawiyah',
-    ],
-    classCurriculum: [
-      {
-        className: 'Tingkat Ula (Dasar)',
-        subjects: [
-          { subject: 'Nahwu (Kitab Al-Ajurumiyah)', hoursPerWeek: 4 },
-          { subject: 'Sharaf (Matan Bina & Amtsilah)', hoursPerWeek: 4 },
-          { subject: 'Fiqih (Safinah & Taqrib)', hoursPerWeek: 4 },
-          { subject: 'Akidah (Aqidatul Awam)', hoursPerWeek: 2 },
-          { subject: 'Hadits Arbain Nawawi', hoursPerWeek: 2 },
-          { subject: 'Tarikh Islam Dasar', hoursPerWeek: 2 },
-          { subject: 'Tahsin & Al-Qur\'an', hoursPerWeek: 4 },
-        ],
-      },
-      {
-        className: 'Tingkat Wustho (Menengah)',
-        subjects: [
-          { subject: 'Nahwu (Alfiyah Ibnu Malik)', hoursPerWeek: 6 },
-          { subject: 'Sharaf Lanjutan (Qawa\'id)', hoursPerWeek: 4 },
-          { subject: 'Fiqih (Minhaj Al-Thalibin)', hoursPerWeek: 6 },
-          { subject: 'Akidah (Aqidah Thahawiyah)', hoursPerWeek: 2 },
-          { subject: 'Musthalah Hadits', hoursPerWeek: 2 },
-          { subject: 'Tafsir Jalalain', hoursPerWeek: 4 },
-          { subject: 'Ushul Fiqh Dasar (Waraqat)', hoursPerWeek: 2 },
-        ],
-      },
-      {
-        className: 'Tingkat Ulya (Tinggi)',
-        subjects: [
-          { subject: 'Alfiyah Ibnu Malik Lanjutan', hoursPerWeek: 6 },
-          { subject: 'Balaghah (Jawahir Al-Balaghah)', hoursPerWeek: 4 },
-          { subject: 'Fiqih Muqaran (Perbandingan Madzhab)', hoursPerWeek: 6 },
-          { subject: 'Akidah (Syarh Aqidah Thahawiyah)', hoursPerWeek: 2 },
-          { subject: 'Ulumul Qur\'an Lanjutan', hoursPerWeek: 2 },
-          { subject: 'Tafsir Ibnu Katsir', hoursPerWeek: 4 },
-          { subject: 'Ushul Fiqh Lanjutan (Jam\' Al-Jawami\')', hoursPerWeek: 4 },
-        ],
-      },
-    ],
-  },
+  
 ];
 
 export default programs;

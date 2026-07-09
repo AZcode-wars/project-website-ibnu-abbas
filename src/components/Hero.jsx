@@ -51,7 +51,7 @@ const Hero = () => {
             >
               <motion.h5
                 variants={itemVariants}
-                className="text-accent-gold fw-bold mb-3 shadow-text"
+                className="text-white fw-bold mb-3 shadow-text"
               >
                 Membangun Generasi Rabbani
               </motion.h5>
