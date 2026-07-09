@@ -9,6 +9,7 @@ import {
   Trees,
   GraduationCap,
   Trophy,
+  School,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import BackButton from "./BackButton";
@@ -18,31 +19,27 @@ const About = () => {
     {
       icon: <Eye size={40} className="text-accent-gold mb-3" />,
       title: "Visi",
-      desc: "Menjadi lembaga pendidikan Islam rujukan dalam mencetak kader ulama yang intelek.",
+      desc: "Mewujudkan generasi muslim yang berilmu, berakhlak mulia, dan istiqamah dalam mengamalkan ajaran Islam berdasarkan Al-Qur'an dan Sunnah.",
     },
     {
       icon: <Target size={40} className="text-accent-gold mb-3" />,
       title: "Misi",
-      desc: "Menyelenggarakan pendidikan Islam yang integratif, menggabungkan sains dan ilmu agama.",
+      desc: "Menyelenggarakan pendidikan dan pembinaan keislaman yang intensif untuk membentuk santri yang sahih dalam ibadah, lurus dalam akidah, dan mulia dalam akhlak.",
     },
   ];
 
   const features = [
     {
-      icon: <BookOpen className="text-accent-gold me-3" />,
-      text: "Kurikulum Nasional & Kepesantrenan Terpadu",
+      icon: <School className="text-accent-gold me-3" />,
+      text: "Sistem Kemusyrifan yang Terstruktur & Terkelola",
     },
     {
-      icon: <Trees className="text-accent-gold me-3" />,
-      text: "Lingkungan Asri & Mendukung Pembelajaran",
+      icon: <BookOpen className="text-accent-gold me-3" />,
+      text: "Pendidikan Berbasis: Pengetahuan, Pemahaman, dan Praktik",
     },
     {
       icon: <GraduationCap className="text-accent-gold me-3" />,
-      text: "Program Tahfizh Al-Qur'an Intensif",
-    },
-    {
-      icon: <Trophy className="text-accent-gold me-3" />,
-      text: "Ekstrakurikuler Beragam & Berprestasi",
+      text: "Visi Pembudayaan Nilai-Nilai Islam yang Kuat",
     },
   ];
 
@@ -88,12 +85,14 @@ const About = () => {
                 Sejak awal berdiri hingga kini, ma'had terus tumbuh dalam
                 kepercayaan umat — berkembang dari segi jumlah santri, tenaga
                 pengajar, maupun fasilitas pendukung pembelajaran.
-              </p>
-              <p className="text-muted" style={{ textAlign: "justify" }}>
+                <br/><br />
                 Ma'had Ibnu Abbas berkomitmen untuk mendidik setiap santri
                 sesuai dengan tahap usia dan tumbuh kembangnya — memastikan
                 mereka memiliki bekal ilmu, kemampuan, dan karakter yang tepat
                 di setiap fase pertumbuhan mereka.
+              </p>
+              <p className="text-muted" style={{ textAlign: "justify" }}>
+                
               </p>
             </motion.div>
           </Col>
@@ -135,6 +134,7 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.2 }}
                 whileHover={{ y: -10 }}
+                className="h-100"
               >
                 <Card className="pondok-card h-100 p-4 border-0 text-center">
                   <div className="mx-auto">{card.icon}</div>

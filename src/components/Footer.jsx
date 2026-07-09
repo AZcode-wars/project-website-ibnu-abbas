@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import '../styles/footer.css';
 
@@ -13,17 +13,11 @@ const Footer = () => {
           <Col lg={4} className="mb-lg-0">
             <h4 className="text-accent-gold fw-bold mb-4">Ibnu Abbas</h4>
             <p className="mb-4 opacity-75 d-none d-md-block">
-              Membangun peradaban Islam melalui pendidikan yang beraqidah shalihah dan berwawasan luas.
+              Mencetak generasi yang berakhlaq mulia, cerdas, dan mandiri berlandaskan Al-Qur'an dan As-Sunnah.
             </p>
             <div className="d-flex gap-3">
-              <a href="#" className="footer-social-link" aria-label="Facebook Pondok Pesantren Ibnu Abbas">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="footer-social-link" aria-label="Instagram Pondok Pesantren Ibnu Abbas">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="footer-social-link" aria-label="YouTube Pondok Pesantren Ibnu Abbas">
-                <Youtube size={20} />
+              <a href="https://maps.google.com/?q=Ma'had+Ibnu+Abbas+Banjarnegara+Dusun+Kayunan,+RT.05/RW.04,+Banjermangu,+Banjarmangu,+Kec.+Banjarmangu,+Kab.+Banjarnegara,+Jawa+Tengah+53452" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Lokasi Google Maps Pondok Pesantren Ibnu Abbas">
+                <MapPin size={20} />
               </a>
             </div>
           </Col>
@@ -45,7 +39,7 @@ const Footer = () => {
             <h5 className="fw-bold mb-4 text-white">Kontak Kami</h5>
             <div className="footer-contact-item">
               <MapPin className="text-accent-gold me-3 flex-shrink-0" size={20} />
-              <span>Jl. Raya Pendidikan No. 123, Klaten, Jawa Tengah</span>
+              <span>Dusun Kayunan, RT.05/RW.04, Banjermangu, Banjarmangu, Kec. Banjarmangu, Kab. Banjarnegara, Jawa Tengah 53452</span>
             </div>
             <div className="footer-contact-item">
               <Phone className="text-accent-gold me-3 flex-shrink-0" size={20} />
