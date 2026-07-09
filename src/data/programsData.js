@@ -3,8 +3,8 @@ import React from 'react';
 
 const programs = [
   {
-    slug: 'tarbiyah-awlad',
-    title: 'TA (Tarbiytul Awlad)',
+    slug: 'tarbiyatul-aulad',
+    title: 'Tarbiyatul Aulad (Banin & Banat)',
     icon: React.createElement(Users, { size: 40, className: 'text-accent-gold mb-3' }),
     description:
       "Program TA dirancang khusus sebagai pondasi awal anak untuk tumbuh menjadi pribadi yang cerdas dan beradab. Dengan memadukan Kurikulum Nasional (Kemdikbud) dan nilai dasar kepesantrenan, kami membangun kesiapan akademik sekaligus membentuk akhlak mulia sejak dini.",
@@ -53,9 +53,10 @@ const programs = [
     ],
   },
 
+  // Madrasah Ibtidaiyah
   {
-    slug: 'madrasah-ibtida\'i',
-    title: 'Madrasah Ibtida\'i',
+    slug: 'marhalah-ibtida\'iyah',
+    title: 'Marhalah Ibtidaiyah (Banin & Banat)',
     icon: React.createElement(GraduationCap, { size: 40, className: 'text-accent-gold mb-3' }),
     description:
       "Pendidikan tingkat dasar yang menggabungkan kurikulum nasional (Kemdikbud) dengan kurikulum kepesantrenan, membentuk santri yang cerdas, mandiri, dan religius.",
@@ -159,19 +160,26 @@ const programs = [
     ],
   },
 
+  
   {
-    slug: 'tahfizh-intensif',
-    title: "Tahfizh Al-Qur'an Intensif",
+    slug: 'mutawasithoh',
+    title: "Marhalah Wustho (Banin & Banat)",
     icon: React.createElement(BookOpen, { size: 40, className: 'text-accent-gold mb-3' }),
     description:
-      "Program khusus bagi santri yang memiliki minat dan bakat dalam menghafal Al-Qur'an 30 Juz dengan target capaian mutqin bersanad.",
-    ageGroup: '13 – 20 tahun (Program 3 Tahun)',
+      "Marhalah mutawassithoh adalah jenjang pendidikan lanjutan setelah marhalah ibtida'iyah yang ditempuh selama 3 tahun. Pada jenjang ini, santri akan mendapatkan pendidikan yang lebih mendalam dan komprehensif dalam berbagai bidang ilmu alat dan agama.",
+    ageGroup: '12 - 15 tahun (Program 3 Tahun)',
     generalCurriculum: [
-      'Menghafal Al-Qur\'an 30 Juz (Target Mutqin)',
-      'Sanad Tilawah & Riwayat Hafs',
-      'Ilmu Tajwid Teoritis & Praktis',
-      'Tahsin Qira\'ah (perbaikan bacaan)',
-      'Tafsir Juz Amma & Ayat-Ayat Pilihan',
+      'Aqidah & Akhlaq',
+      'Fiqih Ibadah & Mu\'amalah',
+      'Tafsir & Ilmu Tafsir',
+      'Hadits & Ilmu Hadits',
+      'Ushul Fiqh & Kaidah Fiqhiyyah',
+      'Balaghah & Sastra Arab',
+      'Nahwu-Sharaf',
+      'Ilmu Manthiq',
+      'Sejarah Islam & Peradaban',
+      'Bahasa Arab Lisan & Tulisan',
+      'Bahasa Inggris',
       'Murajaah Terstruktur (Pengulangan Hafalan)',
       'Adab Hamalat Al-Qur\'an',
       'Bahasa Arab Dasar untuk Memahami Al-Qur\'an',

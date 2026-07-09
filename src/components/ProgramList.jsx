@@ -28,9 +28,7 @@ const ProgramList = () => {
             className="text-muted mt-3"
             style={{ maxWidth: "700px", margin: "0 auto" }}
           >
-            Pondok Pesantren Ibnu Abbas menawarkan berbagai jenjang dan program
-            pendidikan yang dirancang khusus untuk mencetak generasi unggul yang
-            seimbang antara IPTEK dan IMTAQ.
+            Pondok Pesantren Ibnu Abbas menawarkan beberapa jenjang dan program pendidikan yang alhamdulillah sudah bisa kami jalankan dan telah melalui berbagai macam evaluasi.
           </p>
         </motion.div>
 

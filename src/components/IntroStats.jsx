@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Users, Building } from "lucide-react";
 import { motion, useInView, animate } from "framer-motion";
+import { client } from "../utils/sanity";
 
 const CountUpNumber = ({ value }) => {
   const ref = useRef(null);
@@ -36,18 +37,43 @@ const CountUpNumber = ({ value }) => {
 };
 
 const IntroStats = () => {
-  const stats = [
+  const [stats, setStats] = useState([
     {
       icon: <Users size={48} className="text-accent-gold mb-3" />,
-      number: "850+",
+      number: "0",
       label: "Santri Aktif",
     },
     {
       icon: <Building size={48} className="text-accent-gold mb-3" />,
-      number: "1995",
+      number: "2012",
       label: "Tahun Berdiri",
     },
-  ];
+  ]);
+
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const data = await client.fetch(`*[_type == "statsBar"][0]`);
+        if (data) {
+          setStats([
+            {
+              icon: <Users size={48} className="text-accent-gold mb-3" />,
+              number: String(data.santriAktif || "0"),
+              label: "Santri Aktif",
+            },
+            {
+              icon: <Building size={48} className="text-accent-gold mb-3" />,
+              number: data.tahunBerdiri || "2012",
+              label: "Tahun Berdiri",
+            },
+          ]);
+        }
+      } catch (error) {
+        console.error("Error fetching stats:", error);
+      }
+    };
+    fetchStats();
+  }, []);
 
   return (
     <section className=" py-5 position-relative" style={{ zIndex: 10 }}>

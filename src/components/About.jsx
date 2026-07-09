@@ -30,15 +30,15 @@ const About = () => {
 
   const features = [
     {
-      icon: <School className="text-accent-gold me-3" />,
+      icon: <School size={32} className="text-accent-gold me-3 flex-shrink-0" />,
       text: "Sistem Kemusyrifan yang Terstruktur & Terkelola",
     },
     {
-      icon: <BookOpen className="text-accent-gold me-3" />,
+      icon: <BookOpen size={32} className="text-accent-gold me-3 flex-shrink-0" />,
       text: "Pendidikan Berbasis: Pengetahuan, Pemahaman, dan Praktik",
     },
     {
-      icon: <GraduationCap className="text-accent-gold me-3" />,
+      icon: <GraduationCap size={32} className="text-accent-gold me-3 flex-shrink-0" />,
       text: "Visi Pembudayaan Nilai-Nilai Islam yang Kuat",
     },
   ];
@@ -65,65 +65,76 @@ const About = () => {
           </h2>
         </motion.div>
 
-        <Row id="sejarah" className="mb-5 align-items-center">
-          <Col lg={6}>
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="pe-lg-5"
-            >
-              <h3 className="mb-4 text-primary-green">Perjalanan Kami</h3>
-              <p className="text-muted lead" style={{ textAlign: "justify" }}>
-                Ma'had Ibnu Abbas Banjarnegara berdiri pada tahun 2012 sebagai
-                respons atas kebutuhan masyarakat akan lembaga pendidikan Islam
-                yang serius — tidak hanya dalam teori, tetapi juga dalam praktik
-                ibadah sehari-hari. Setelah beberapa kali berpindah lokasi,
-                ma'had kini berdiri di Dusun Kayunan, Desa Banjarmangu,
-                Kecamatan Banjarmangu, Kabupaten Banjarnegara, Jawa Tengah.
-                Sejak awal berdiri hingga kini, ma'had terus tumbuh dalam
-                kepercayaan umat — berkembang dari segi jumlah santri, tenaga
-                pengajar, maupun fasilitas pendukung pembelajaran.
-                <br/><br />
+        <div id="sejarah" className="mb-5">
+          <Row className="align-items-center">
+            <Col lg={6} className="order-1 mb-4">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="pe-lg-5"
+              >
+                <h3 className="mb-4 text-primary-green">Perjalanan Kami</h3>
+                <p className="text-muted lead" style={{ textAlign: "justify" }}>
+                  Ma'had Ibnu Abbas Banjarnegara berdiri pada tahun 2012 sebagai
+                  respons atas kebutuhan masyarakat akan lembaga pendidikan Islam
+                  yang serius — tidak hanya dalam teori, tetapi juga dalam praktik
+                  ibadah sehari-hari. Setelah beberapa kali berpindah lokasi,
+                  ma'had kini berdiri di Dusun Kayunan, Desa Banjarmangu,
+                  Kecamatan Banjarmangu, Kabupaten Banjarnegara, Jawa Tengah.
+                  Sejak awal berdiri hingga kini, ma'had terus tumbuh dalam
+                  kepercayaan umat — berkembang dari segi jumlah santri, tenaga
+                  pengajar, maupun fasilitas pendukung pembelajaran.
+                </p>
+              </motion.div>
+            </Col>
+
+            <Col lg={12} className="order-2 order-lg-3 mb-4">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-muted lead" 
+                style={{ textAlign: "justify" }}
+              >
                 Ma'had Ibnu Abbas berkomitmen untuk mendidik setiap santri
                 sesuai dengan tahap usia dan tumbuh kembangnya — memastikan
                 mereka memiliki bekal ilmu, kemampuan, dan karakter yang tepat
                 di setiap fase pertumbuhan mereka.
-              </p>
-              <p className="text-muted" style={{ textAlign: "justify" }}>
-                
-              </p>
-            </motion.div>
-          </Col>
-          <Col lg={6}>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="bg-primary-green rounded-4 p-5 text-white shadow-xl"
-            >
-              <h3 className="text-accent-gold mb-4 fw-bold">
-                Kenapa Memilih Kami?
-              </h3>
-              <ul className="list-unstyled">
-                {features.map((f, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                    className="mb-4 d-flex align-items-center"
-                  >
-                    {f.icon}
-                    <div className="fs-5">{f.text}</div>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-          </Col>
-        </Row>
+              </motion.p>
+            </Col>
+
+            <Col lg={6} className="order-3 order-lg-2 mb-4">
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="bg-primary-green rounded-4 p-4 p-lg-5 text-white shadow-xl"
+              >
+                <h3 className="text-accent-gold mb-4 fw-bold">
+                  Kenapa Memilih Kami?
+                </h3>
+                <ul className="list-unstyled">
+                  {features.map((f, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                      className="mb-4 d-flex align-items-center"
+                    >
+                      {f.icon}
+                      <div className="fs-5">{f.text}</div>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            </Col>
+          </Row>
+        </div>
 
         <Row id="visi-misi">
           {cards.map((card, idx) => (

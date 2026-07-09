@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import '../styles/footer.css';
 
@@ -11,13 +11,16 @@ const Footer = () => {
         <Row className="mb-5 gy-4">
           {/* Brand & Social */}
           <Col lg={4} className="mb-lg-0">
-            <h4 className="text-accent-gold fw-bold mb-4">Ibnu Abbas</h4>
+            <h4 className="text-accent-gold fw-bold mb-4">Situs Resmi Ponpes Ibnu Abbas Banjarnegara</h4>
             <p className="mb-4 opacity-75 d-none d-md-block">
               Mencetak generasi yang berakhlaq mulia, cerdas, dan mandiri berlandaskan Al-Qur'an dan As-Sunnah.
             </p>
             <div className="d-flex gap-3">
               <a href="https://maps.google.com/?q=Ma'had+Ibnu+Abbas+Banjarnegara+Dusun+Kayunan,+RT.05/RW.04,+Banjermangu,+Banjarmangu,+Kec.+Banjarmangu,+Kab.+Banjarnegara,+Jawa+Tengah+53452" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Lokasi Google Maps Pondok Pesantren Ibnu Abbas">
                 <MapPin size={20} />
+              </a>
+              <a href="https://t.me/ponpesibnuabbasbanjarnegara" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Telegram Pondok Pesantren Ibnu Abbas">
+                <Send size={20} />
               </a>
             </div>
           </Col>
