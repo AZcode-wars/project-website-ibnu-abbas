@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, Users, Calendar, ArrowRight } from "lucide-react";
 
 import asramaImage from "../assets/asrama baru.jpeg";
+import Marquee from "./Marquee";
 
 const Hero = () => {
   const containerVariants = {
@@ -23,11 +24,12 @@ const Hero = () => {
   };
 
   return (
+    <>
     <section
       id="home"
       className="overflow-hidden position-relative d-flex align-items-center hero-section"
       style={{
-        paddingTop: "80px",
+        paddingTop: 0,
       }}
     >
       {/* Background Layer - Menggunakan img + object-fit untuk stabilitas mobile */}
@@ -100,6 +102,8 @@ const Hero = () => {
       {/* Efek transisi smooth (blur & gradient) ke section bawahnya */}
       <div className="hero-bottom-transition" style={{ zIndex: 2 }} />
     </section>
+      <Marquee />
+    </>
   );
 };
 
