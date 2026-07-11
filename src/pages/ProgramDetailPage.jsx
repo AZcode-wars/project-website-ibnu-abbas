@@ -58,7 +58,14 @@ const ProgramDetailPage = () => {
               {program.icon}
             </div>
 
-            <h1 className="program-detail-hero__title">{program.title}</h1>
+            <h1 className="program-detail-hero__title">
+              {program.title}
+              {program.subtitle && (
+                <span className="d-block fs-4 fw-medium opacity-75 mt-1">
+                  {program.subtitle}
+                </span>
+              )}
+            </h1>
 
             <p className="program-detail-hero__desc">{program.description}</p>
 
@@ -194,14 +201,14 @@ const ProgramDetailPage = () => {
             </h3>
             <p className="program-detail-cta__desc">
               Daftarkan putra/putri Anda sekarang melalui jalur Penerimaan
-              Peserta Didik Baru (PPDB) kami.
+              Peserta Didik Baru (PSB) kami.
             </p>
             <div className="program-detail-cta__actions">
               <Link
                 to="/ppdb"
                 className="btn-accent-pondok text-decoration-none d-inline-flex align-items-center gap-2"
               >
-                Daftar Sekarang (PPDB)
+                Daftar Sekarang (PSB)
               </Link>
               <Link to="/program" className="program-detail-cta__back-link">
                 <ArrowLeft size={16} /> Lihat Program Lainnya

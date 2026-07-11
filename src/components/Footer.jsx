@@ -56,7 +56,7 @@ const Footer = () => {
         </Row>
         <hr className="opacity-25" />
         <div className="text-center opacity-50 small mt-4 pb-2">
-          &copy; {new Date().getFullYear()} Pondok Pesantren Ibnu Abbas. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Pondok Pesantren Ibnu Abbas. <span className="d-block d-md-inline">All Rights Reserved.</span>
         </div>
       </Container>
     </footer>

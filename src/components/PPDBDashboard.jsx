@@ -150,7 +150,7 @@ const PPDBDashboard = ({ settings, stats, isClosed }) => {
             className="text-center"
           >
             <h5 className="text-accent-gold fw-bold mb-2">
-              Pendaftaran Santri Baru
+              Penerimaan Santri Baru
             </h5>
             <h1 className="display-4 fw-bold text-white mb-3">
               PSB Tahun Ajaran 2025-2026

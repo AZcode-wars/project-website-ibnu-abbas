@@ -4,10 +4,11 @@ import React from 'react';
 const programs = [
   {
     slug: 'tarbiyatul-aulad',
-    title: 'Tarbiyatul Aulad (Banin & Banat)',
+    title: 'Tarbiyatul Aulad',
+    subtitle: 'Banin & Banat',
     icon: React.createElement(Users, { size: 40, className: 'text-accent-gold mb-3' }),
     description:
-      "Program TA dirancang khusus sebagai pondasi awal anak untuk tumbuh menjadi pribadi yang cerdas dan beradab. Dengan memadukan Kurikulum Nasional (Kemdikbud) dan nilai dasar kepesantrenan, kami membangun kesiapan akademik sekaligus membentuk akhlak mulia sejak dini.",
+      "Pendidikan untuk anak usia dini (5-6 tahun) yang terfokus pada sisi pembentukan kebiasaan baik, penanaman adab, dan kemandirian sebagai fondasi kepribadian Islami.",
     ageGroup: '5 – 6 tahun',
     generalCurriculum: [
       'Kurikulum Nasional (Kemdikbud)',
@@ -55,11 +56,12 @@ const programs = [
 
   // Madrasah Ibtidaiyah
   {
-    slug: 'marhalah-ibtida\'iyah',
-    title: 'Marhalah Ibtidaiyah (Banin & Banat)',
+    slug: 'marhalah-ibtida\'i',
+    title: 'Marhalah Ibtida\'i',
+    subtitle: 'Banin & Banat',
     icon: React.createElement(GraduationCap, { size: 40, className: 'text-accent-gold mb-3' }),
     description:
-      "Pendidikan tingkat dasar yang menggabungkan kurikulum nasional (Kemdikbud) dengan kurikulum kepesantrenan, membentuk santri yang cerdas, mandiri, dan religius.",
+      "Pendidikan untuk anak usia 7-12 tahun yang menekankan tentang penguatan karakter, pembiasaan ibadah, kedisiplinan, dan dasar dasar ilmu sebagai bekal menjadi muslim yang salih.",
     ageGroup: '7 – 12 tahun (Setara Kelas 1, 2, 3, 4, 5, 6)',
     generalCurriculum: [
       'Kurikulum Nasional (Kemdikbud) – Peminatan MIPA & IPS',
@@ -163,10 +165,11 @@ const programs = [
   
   {
     slug: 'mutawasithoh',
-    title: "Marhalah Wustho (Banin & Banat)",
+    title: 'Marhalah Wustho',
+    subtitle: 'Banin',
     icon: React.createElement(BookOpen, { size: 40, className: 'text-accent-gold mb-3' }),
     description:
-      "Marhalah mutawassithoh adalah jenjang pendidikan lanjutan setelah marhalah ibtida'iyah yang ditempuh selama 3 tahun. Pada jenjang ini, santri akan mendapatkan pendidikan yang lebih mendalam dan komprehensif dalam berbagai bidang ilmu alat dan agama.",
+      "Pendidikan untuk anak usia 13-15 tahun yang menargetkan terbentuknya pribadi muslim yang berintegritas, bertanggung jawab, dan siap melanjutkan pendidikannya.",
     ageGroup: '12 - 15 tahun (Program 3 Tahun)',
     generalCurriculum: [
       'Aqidah & Akhlaq',
