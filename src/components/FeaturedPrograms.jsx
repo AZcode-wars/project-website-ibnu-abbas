@@ -18,17 +18,15 @@ const FeaturedPrograms = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-5"
         >
-          <h5 className="text-accent-gold fw-bold mb-2">Program Unggulan</h5>
+          <h5 className="text-accent-gold fw-bold mb-2">Jenjang Pendidikan</h5>
           <h2 className="display-5 fw-bold section-title text-center text-primary-green">
-            Pendidikan Berkualitas
+            Pendidikan yang Kami Jalankan
           </h2>
           <p
             className="text-muted mt-3"
             style={{ maxWidth: "700px", margin: "0 auto" }}
           >
-            Kami menyediakan berbagai program pendidikan yang mengintegrasikan
-            kurikulum nasional dengan penguatan ilmu syar'i untuk mencetak
-            generasi rabbani.
+            Alhamdulillah, kami menjalankan beberapa jenjang pendidikan yang menekankan penguatan ilmu syar'i, untuk mengantarkan santri menjadi generasi yang rabbani.
           </p>
         </motion.div>
 
@@ -52,6 +50,11 @@ const FeaturedPrograms = () => {
                     <div className="mb-3">{program.icon}</div>
                     <Card.Title className="fw-bold fs-4 mb-3 text-primary-green">
                       {program.title}
+                      {program.subtitle && (
+                        <span className="d-block fs-6 fw-medium text-muted mt-1">
+                          {program.subtitle}
+                        </span>
+                      )}
                     </Card.Title>
                     <Card.Text className="text-muted flex-grow-1">
                       {program.description}
@@ -70,7 +73,7 @@ const FeaturedPrograms = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Button
+            {/* <Button
               as={Link}
               to="/program"
               variant="outline-primary-green"
@@ -90,7 +93,7 @@ const FeaturedPrograms = () => {
               }}
             >
               Lihat Semua Program
-            </Button>
+            </Button> */}
           </motion.div>
         </div>
       </Container>

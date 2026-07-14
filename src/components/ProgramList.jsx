@@ -52,6 +52,11 @@ const ProgramList = () => {
                     <div>{program.icon}</div>
                     <Card.Title className="fw-bold fs-4 mb-3 text-primary-green">
                       {program.title}
+                      {program.subtitle && (
+                        <span className="d-block fs-6 fw-medium text-muted mt-1">
+                          {program.subtitle}
+                        </span>
+                      )}
                     </Card.Title>
                     <Card.Text className="text-muted flex-grow-1">
                       {program.description}
