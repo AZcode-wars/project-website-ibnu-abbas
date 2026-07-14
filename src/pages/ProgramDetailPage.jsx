@@ -93,7 +93,7 @@ const ProgramDetailPage = () => {
                   <div className="program-section-card__header">
                     <BookMarked size={22} />
                     <h2 className="program-section-card__title">
-                      Kurikulum Umum
+                      Program Unggulan
                     </h2>
                   </div>
                   <ul className="program-curriculum-list">

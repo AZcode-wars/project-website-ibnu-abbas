@@ -33,7 +33,7 @@ const Footer = () => {
               <li><a href="#tentang-kami">Profil Pondok</a></li>
               <li><a href="#pengajar">Dewan Guru</a></li>
               <li><a href="#fasilitas">Fasilitas</a></li>
-              <li><Link to="/ppdb">Pendaftaran Santri (PPDB)</Link></li>
+              <li><Link to="/ppdb">Pendaftaran Santri (PSB)</Link></li>
             </ul>
           </Col>
           
