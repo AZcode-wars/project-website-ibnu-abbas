@@ -43,7 +43,8 @@ const Marquee = () => {
 
   if (!isActive) return null;
 
-  const allText = data.items.map((item) => item.teks).join("   •   ");
+  const base = data.items.map((item) => item.teks).join("   •   ");
+  const allText = (base + "   •   ").repeat(3);
 
   return (
     <div className="marquee-bar" role="marquee" aria-label="Pengumuman">

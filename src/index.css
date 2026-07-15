@@ -649,16 +649,21 @@ h6 {
    ARTIKEL URGENT (INFO PENTING)
   ═══════════════════════════════════════════ */
 .urgent-section-wrapper {
-  background-color: rgba(236, 253, 245, 0.65);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1.5px solid rgba(217, 119, 6, 0.35);
+  background-color: var(--bg-mint);
+  border: 1px solid rgba(217, 119, 6, 0.25);
   border-radius: var(--radius-xl);
   padding: 2rem;
   margin-bottom: 3rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px 0 rgba(6, 78, 59, 0.05);
+}
+
+.urgent-section-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l15 30-15 30-15-30z' fill='%23d97706' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  pointer-events: none;
 }
 
 .urgent-badge-gold {
@@ -861,7 +866,7 @@ h6 {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--primary-green);
+  background: var(--accent-gold);
   color: #fff;
   font-size: 0.85rem;
   font-weight: 500;
@@ -870,11 +875,11 @@ h6 {
 }
 
 .marquee-track {
-  display: inline-flex;
+  display: flex;
   white-space: nowrap;
-  animation: marquee-scroll 32s linear infinite;
+  animation: marquee-scroll 30s linear infinite;
   will-change: transform;
-  padding-left: 100%;
+  /* padding-left: 100%; */
 }
 
 .marquee-bar:hover .marquee-track {
@@ -890,7 +895,7 @@ h6 {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
