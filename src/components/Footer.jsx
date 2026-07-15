@@ -33,7 +33,7 @@ const Footer = () => {
               <li><a href="#tentang-kami">Profil Pondok</a></li>
               <li><a href="#pengajar">Dewan Guru</a></li>
               <li><a href="#fasilitas">Fasilitas</a></li>
-              <li><Link to="/ppdb">Pendaftaran Santri (PPDB)</Link></li>
+              <li><Link to="/ppdb">Pendaftaran Santri (PSB)</Link></li>
             </ul>
           </Col>
           
@@ -56,7 +56,7 @@ const Footer = () => {
         </Row>
         <hr className="opacity-25" />
         <div className="text-center opacity-50 small mt-4 pb-2">
-          &copy; {new Date().getFullYear()} Pondok Pesantren Ibnu Abbas. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Pondok Pesantren Ibnu Abbas. <span className="d-block d-md-inline">All Rights Reserved.</span>
         </div>
       </Container>
     </footer>
