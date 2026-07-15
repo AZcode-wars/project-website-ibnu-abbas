@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Spinner, Button } from 'react-bootstrap';
-import { useParams, Link } from 'react-router-dom';
-import { PortableText } from '@portabletext/react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import { client, urlFor } from '../utils/sanity';
-import { motion } from 'framer-motion';
-import { User, Calendar, Tag } from 'lucide-react';
-import BackButton from '../components/BackButton';
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col, Spinner, Button } from "react-bootstrap";
+import { useParams, Link } from "react-router-dom";
+import { PortableText } from "@portabletext/react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { client, urlFor } from "../utils/sanity";
+import { motion } from "framer-motion";
+import { User, Calendar, Tag } from "lucide-react";
+import BackButton from "../components/BackButton";
 
 const ArtikelDetailPage = () => {
   const { slug } = useParams();
   const [article, setArticle] = useState(null);
-  const [fileContent, setFileContent] = useState('');
+  const [fileContent, setFileContent] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const ArtikelDetailPage = () => {
         const data = await client.fetch(query, { slug });
         setArticle(data);
 
-        if (data?.kontenTipe === 'Upload File' && data?.fileUrl) {
+        if (data?.kontenTipe === "Upload File" && data?.fileUrl) {
           try {
             const response = await fetch(data.fileUrl);
             const text = await response.text();
@@ -54,7 +54,10 @@ const ArtikelDetailPage = () => {
 
   if (loading) {
     return (
-      <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '80vh', paddingTop: '80px' }}>
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ minHeight: "80vh", paddingTop: "80px" }}
+      >
         <Spinner animation="border" variant="success" />
       </div>
     );
@@ -62,25 +65,32 @@ const ArtikelDetailPage = () => {
 
   if (!article) {
     return (
-      <div className="text-center" style={{ minHeight: '80vh', paddingTop: '80px' }}>
+      <div
+        className="text-center"
+        style={{ minHeight: "80vh", paddingTop: "80px" }}
+      >
         <h2 className="fw-bold">Artikel Tidak Ditemukan</h2>
-        <p className="text-muted mb-4">Maaf, artikel yang Anda cari tidak tersedia.</p>
-        <Button as={Link} to="/artikel" variant="success">Kembali ke Daftar Artikel</Button>
+        <p className="text-muted mb-4">
+          Maaf, artikel yang Anda cari tidak tersedia.
+        </p>
+        <Button as={Link} to="/artikel" variant="success">
+          Kembali ke Daftar Artikel
+        </Button>
       </div>
     );
   }
 
   const formatDate = (dateString) => {
-    if (!dateString) return '-';
-    return new Date(dateString).toLocaleDateString('id-ID', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
+    if (!dateString) return "-";
+    return new Date(dateString).toLocaleDateString("id-ID", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
     });
   };
 
   return (
-    <div style={{ paddingTop: '100px', paddingBottom: '50px' }}>
+    <div style={{ paddingTop: "110px", paddingBottom: "50px" }}>
       <Container>
         <BackButton to="/artikel" label="Kembali ke Artikel" />
         <motion.div
@@ -91,7 +101,9 @@ const ArtikelDetailPage = () => {
           <Row className="justify-content-center">
             <Col lg={8}>
               <div className="text-center mb-4 mt-4">
-                <h1 className="display-4 fw-bold text-primary-green mb-3">{article.judul}</h1>
+                <h1 className="display-4 fw-bold text-primary-green mb-3">
+                  {article.judul}
+                </h1>
 
                 {article.excerpt && (
                   <p className="lead text-muted mb-4">{article.excerpt}</p>
@@ -104,7 +116,11 @@ const ArtikelDetailPage = () => {
                     src={urlFor(article.gambarUtama).width(1200).url()}
                     alt={article.judul}
                     className="w-100"
-                    style={{ height: 'auto', maxHeight: '600px', objectFit: 'cover' }}
+                    style={{
+                      height: "auto",
+                      maxHeight: "600px",
+                      objectFit: "cover",
+                    }}
                   />
                 </div>
               )}
@@ -113,20 +129,31 @@ const ArtikelDetailPage = () => {
                 <div className="article-meta-bottom mb-4">
                   <div className="meta-item">
                     <User size={16} className="me-1" />
-                    <span><strong className="text-dark">Penulis:</strong> <i className="text-muted">{article.penulis || '-'}</i></span>
+                    <span>
+                      <strong className="text-dark">Penulis:</strong>{" "}
+                      <i className="text-muted">{article.penulis || "-"}</i>
+                    </span>
                   </div>
                   <div className="meta-item">
                     <Calendar size={16} className="me-1" />
-                    <span><strong className="text-dark">Tanggal:</strong> <i className="text-muted">{formatDate(article.tanggalRilis)}</i></span>
+                    <span>
+                      <strong className="text-dark">Tanggal:</strong>{" "}
+                      <i className="text-muted">
+                        {formatDate(article.tanggalRilis)}
+                      </i>
+                    </span>
                   </div>
                   <div className="meta-item">
                     <Tag size={16} className="me-1" />
-                    <span><strong className="text-dark">Tema:</strong> <i className="text-muted">{article.tema || '-'}</i></span>
+                    <span>
+                      <strong className="text-dark">Tema:</strong>{" "}
+                      <i className="text-muted">{article.tema || "-"}</i>
+                    </span>
                   </div>
                 </div>
 
                 <div className="portable-text-wrapper">
-                  {article.kontenTipe === 'Upload File' ? (
+                  {article.kontenTipe === "Upload File" ? (
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
                       {fileContent}
                     </ReactMarkdown>
