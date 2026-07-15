@@ -5,12 +5,15 @@ import { BookOpen, Award, GraduationCap } from "lucide-react";
 
 const Teachers = () => {
   const mudir = {
-    name: "KH. Ahmad Fauzi, Lc",
+    titleName: "Ustadz Abu Yahya",
+    fullName: "A'ang Andriansyah Siregar S.Pd",
     role: "Mudir Pondok Pesantren Ibnu Abbas",
     education: [
-      "S1 Syariah - Al-Azhar University, Cairo",
-      "Kulliyatul Syariah - Al-Azhar University, Cairo",
-      "Pendidikan Pesantren Modern Gontor",
+      "D2 PGSD Universitas Negeri Yogyakarta",
+      "Pondok Pesantren Darul Atsar Temanggung",
+      "Darul Hadits Fiyush Yaman",
+      "S1 Tarbiyah STIT Bandung",
+
     ],
     specialty: "Fiqh & Ushul Fiqh",
   };
@@ -85,12 +88,13 @@ const Teachers = () => {
                   <BookOpen size={64} className="text-accent-gold" />
                 </div>
                 <h4
-                  className="fw-bold mb-0"
+                  className="fw-bold mb-1"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
-                  {mudir.name}
+                  {mudir.titleName}
                 </h4>
-                <p className="text-white-50 small mb-0">{mudir.role}</p>
+                <p className="text-white opacity-75 mb-2" style={{ fontSize: "0.95rem" }}>{mudir.fullName}</p>
+                <p className="text-accent-gold fw-semibold small mb-0">{mudir.role}</p>
               </Col>
 
               {/* Right Side: Full Profile & Education Timeline */}
@@ -100,8 +104,9 @@ const Teachers = () => {
               >
                 <div className="mb-4">
                   <h3 className="fw-bold text-primary-green mb-1">
-                    {mudir.name}
+                    {mudir.titleName}
                   </h3>
+                  <p className="text-muted fs-5 mb-3">{mudir.fullName}</p>
                   <p className="text-accent-gold fw-bold mb-4">{mudir.role}</p>
                 </div>
 

@@ -394,7 +394,7 @@ const PPDBDashboard = ({ settings, stats, isClosed }) => {
                       </Button>
 
                       <Button
-                        href="https://wa.me/628123456789?text=Assalamualaikum,%20saya%20ingin%20bertanya%20mengenai%20pendaftaran%20santri%20baru%20di%20Ibnu%20Abbas."
+                        href="https://wa.me/6282376582633?text=Assalamualaikum,%20saya%20ingin%20bertanya%20mengenai%20pendaftaran%20santri%20baru%20di%20Ibnu%20Abbas."
                         target="_blank"
                         className="ppdb-wa-button w-100 py-3 fs-5 d-flex align-items-center justify-content-center"
                         style={{ transition: "all 0.3s ease" }}

@@ -70,7 +70,7 @@ const ContactHome = () => {
                 <div>
                   <p className="mb-0 fw-bold">Alamat</p>
                   <p className="text-white-50 mb-0">
-                    Jl. Raya Pondok Pesantren, Kabupaten/Kota, Provinsi
+                    Dusun Kayunan, RT.05/RW.04, Banjermangu, Banjarmangu, Kec. Banjarmangu, Kab. Banjarnegara, Jawa Tengah 53452
                   </p>
                 </div>
               </div>
@@ -81,7 +81,7 @@ const ContactHome = () => {
                 </div>
                 <div>
                   <p className="mb-0 fw-bold">Telepon</p>
-                  <p className="text-white-50 mb-0">+62 812 3456 789</p>
+                  <p className="text-white-50 mb-0">+62 823 7658 2633</p>
                 </div>
               </div>
 
@@ -91,13 +91,13 @@ const ContactHome = () => {
                 </div>
                 <div>
                   <p className="mb-0 fw-bold">Email</p>
-                  <p className="text-white-50 mb-0">info@ibnuabbas.sch.id</p>
+                  <p className="text-white-50 mb-0">ibnuabbasbna1445@gmail.com</p>
                 </div>
               </div>
 
               <Button
                 as="a"
-                href="https://wa.me/628123456789?text=Assalamualaikum"
+                href="https://wa.me/6282376582633?text=Assalamualaikum"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-100 py-3 rounded-pill fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2"

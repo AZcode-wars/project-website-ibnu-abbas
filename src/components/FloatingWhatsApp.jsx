@@ -28,7 +28,7 @@ const FloatingWhatsApp = () => {
 
       {/* Button */}
       <motion.a
-        href="https://wa.me/628123456789?text=Assalamualaikum"
+        href="https://wa.me/6282376582633?text=Assalamualaikum"
         target="_blank"
         rel="noopener noreferrer"
         className="floating-wa-button"
