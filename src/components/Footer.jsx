@@ -46,11 +46,11 @@ const Footer = () => {
             </div>
             <div className="footer-contact-item">
               <Phone className="text-accent-gold me-3 flex-shrink-0" size={20} />
-              <span>+62 812 3456 789</span>
+              <span>+62 823 7658 2633</span>
             </div>
             <div className="footer-contact-item">
               <Mail className="text-accent-gold me-3 flex-shrink-0" size={20} />
-              <span>info@ibnuabbas.sch.id</span>
+              <span>ibnuabbasbna1445@gmail.com</span>
             </div>
           </Col>
         </Row>
