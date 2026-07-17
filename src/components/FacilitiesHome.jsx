@@ -67,17 +67,11 @@ const FacilitiesHome = () => {
                     src={f.img}
                     alt={f.title}
                   />
-                  <Carousel.Caption
-                    className="text-start start-0 bottom-0 w-100 p-5"
-                    style={{
-                      background:
-                        "linear-gradient(transparent, rgba(0,0,0,0.8))",
-                      left: 0,
-                      bottom: 0,
-                    }}
-                  >
-                    <h3 className="text-accent-gold fw-bold">{f.title}</h3>
-                    <p className="fs-5 text-white">{f.desc}</p>
+                  <Carousel.Caption className="text-start start-0 bottom-0 w-100 p-5 carousel-caption">
+                    <h3 className="text-accent-gold fw-bold carousel-title">
+                      {f.title}
+                    </h3>
+                    <p className="fs-5 text-white carousel-text">{f.desc}</p>
                   </Carousel.Caption>
                 </div>
               </Carousel.Item>
