@@ -866,7 +866,7 @@ h6 {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--accent-gold);
+  background: var(--primary-green);
   color: #fff;
   font-size: 0.85rem;
   font-weight: 500;
