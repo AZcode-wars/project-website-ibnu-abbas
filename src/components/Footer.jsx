@@ -16,7 +16,7 @@ const Footer = () => {
               Mencetak generasi yang berakhlaq mulia, cerdas, dan mandiri berlandaskan Al-Qur'an dan As-Sunnah.
             </p>
             <div className="d-flex gap-3">
-              <a href="https://maps.google.com/?q=Ma'had+Ibnu+Abbas+Banjarnegara+Dusun+Kayunan,+RT.05/RW.04,+Banjermangu,+Banjarmangu,+Kec.+Banjarmangu,+Kab.+Banjarnegara,+Jawa+Tengah+53452" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Lokasi Google Maps Pondok Pesantren Ibnu Abbas">
+              <a href="https://maps.google.com/?q=Ma'had+Ibnu+Abbas+Banjarnegara+Dusun+Kayunan,+RT.05/RW.04,Ds.+Banjarmangu,+Kec.+Banjarmangu,+Kab.+Banjarnegara,+Jawa+Tengah+53452" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Lokasi Google Maps Pondok Pesantren Ibnu Abbas">
                 <MapPin size={20} />
               </a>
               <a href="https://t.me/ponpesibnuabbasbanjarnegara" target="_blank" rel="noopener noreferrer" className="footer-social-link" aria-label="Telegram Pondok Pesantren Ibnu Abbas">
@@ -42,7 +42,7 @@ const Footer = () => {
             <h5 className="fw-bold mb-4 text-white">Kontak Kami</h5>
             <div className="footer-contact-item">
               <MapPin className="text-accent-gold me-3 flex-shrink-0" size={20} />
-              <span>Dusun Kayunan, RT.05/RW.04, Banjermangu, Banjarmangu, Kec. Banjarmangu, Kab. Banjarnegara, Jawa Tengah 53452</span>
+              <span>Dusun Kayunan, RT.05/RW.04,Ds. Banjarmangu, Kec. Banjarmangu, Kab. Banjarnegara, Jawa Tengah 53452</span>
             </div>
             <div className="footer-contact-item">
               <Phone className="text-accent-gold me-3 flex-shrink-0" size={20} />
