@@ -206,7 +206,7 @@ const ProgramDetailPage = () => {
             <div className="program-detail-cta__actions">
               <Link
                 to="/ppdb"
-                className="btn-accent-pondok text-decoration-none d-inline-flex align-items-center gap-2"
+                className="btn-accent-pondok text-decoration-none d-inline-flex align-items-center justify-content-center gap-2"
               >
                 Daftar Sekarang (PSB)
               </Link>
