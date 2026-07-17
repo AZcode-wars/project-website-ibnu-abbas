@@ -73,15 +73,19 @@ const Facilities = () => {
                     src={f.img}
                     alt={f.title}
                   />
-                  <Carousel.Caption
-                    className="text-start start-0 bottom-0 w-100 p-5"
-                    style={{
-                      background:
-                        "linear-gradient(transparent, rgba(0,0,0,0.8))",
-                    }}
-                  >
-                    <h3 className="text-accent-gold fw-bold">{f.title}</h3>
-                    <p className="fs-5">{f.desc}</p>
+                  <Carousel.Caption className="text-start start-0 bottom-0 w-100 p-5 carousel-caption">
+                    <h3
+                      className="text-accent-gold fw-bold carousel-title"
+                      style={{ textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)" }}
+                    >
+                      {f.title}
+                    </h3>
+                    <p
+                      className="carousel-text"
+                      style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}
+                    >
+                      {f.desc}
+                    </p>
                   </Carousel.Caption>
                 </div>
               </Carousel.Item>
