@@ -87,6 +87,9 @@ h6 {
 .bg-primary-green {
   background-color: var(--primary-green) !important;
 }
+.bg-primary-green-light {
+  background-color: var(--primary-green-light) !important;
+}
 .text-accent-gold {
   color: var(--accent-gold) !important;
 }

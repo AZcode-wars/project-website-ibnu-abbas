@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import programs from "../data/programsData";
@@ -26,7 +27,9 @@ const FeaturedPrograms = () => {
             className="text-muted mt-3"
             style={{ maxWidth: "700px", margin: "0 auto" }}
           >
-            Alhamdulillah, kami menjalankan beberapa jenjang pendidikan yang menekankan penguatan ilmu syar'i, untuk mengantarkan santri menjadi generasi yang rabbani.
+            Alhamdulillah, kami menjalankan beberapa jenjang pendidikan yang
+            menekankan penguatan ilmu syar'i, untuk mengantarkan santri menjadi
+            generasi yang rabbani.
           </p>
         </motion.div>
 
@@ -73,27 +76,28 @@ const FeaturedPrograms = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            {/* <Button
+            <Button
               as={Link}
               to="/program"
               variant="outline-primary-green"
-              className="px-4 py-2 fw-bold rounded-pill border-2"
+              className="px-4 py-2 fw-bold rounded-3 border-2"
               style={{
-                borderColor: "#2e7d32",
-                color: "#2e7d32",
+                borderColor: "#065f46",
+                color: "#065f46",
                 transition: "all 0.3s ease",
               }}
               onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#2e7d32";
+                e.target.style.backgroundColor = "#065f46";
                 e.target.style.color = "white";
               }}
               onMouseLeave={(e) => {
                 e.target.style.backgroundColor = "transparent";
-                e.target.style.color = "#2e7d32";
+                e.target.style.color = "#065f46";
               }}
             >
               Lihat Semua Program
-            </Button> */}
+              <ArrowRight size={18} className="ms-2" />
+            </Button>
           </motion.div>
         </div>
       </Container>

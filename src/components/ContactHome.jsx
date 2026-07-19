@@ -54,10 +54,7 @@ const ContactHome = () => {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="p-4 p-md-5 rounded-4 bg-primary-green text-white h-100 shadow-xl"
-              style={{
-                background: "linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%)",
-              }}
+              className="p-4 p-md-5 rounded-4 bg-primary-green-light text-white h-100 shadow-xl"
             >
               <h3 className="fw-bold mb-4 text-accent-gold">
                 Informasi Kontak
@@ -70,7 +67,8 @@ const ContactHome = () => {
                 <div>
                   <p className="mb-0 fw-bold">Alamat</p>
                   <p className="text-white-50 mb-0">
-                    Dusun Kayunan, RT.05/RW.04, Banjermangu, Banjarmangu, Kec. Banjarmangu, Kab. Banjarnegara, Jawa Tengah 53452
+                    Dusun Kayunan, RT.05/RW.04, Banjermangu, Banjarmangu, Kec.
+                    Banjarmangu, Kab. Banjarnegara, Jawa Tengah 53452
                   </p>
                 </div>
               </div>
@@ -91,7 +89,9 @@ const ContactHome = () => {
                 </div>
                 <div>
                   <p className="mb-0 fw-bold">Email</p>
-                  <p className="text-white-50 mb-0">ibnuabbasbna1445@gmail.com</p>
+                  <p className="text-white-50 mb-0">
+                    ibnuabbasbna1445@gmail.com
+                  </p>
                 </div>
               </div>
 
@@ -100,11 +100,9 @@ const ContactHome = () => {
                 href="https://wa.me/6282376582633?text=Assalamualaikum"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-100 py-3 rounded-pill fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2"
+                className="w-100 py-3 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2 btn-accent-pondok bg-accent-gold"
                 style={{
-                  backgroundColor: "#25D366",
                   border: "none",
-                  color: "white",
                 }}
               >
                 <MessageCircle size={20} />
@@ -191,11 +189,9 @@ const ContactHome = () => {
                 <div className="text-end">
                   <Button
                     type="submit"
-                    className="px-5 py-2 rounded-pill fw-bold shadow-sm"
+                    className="px-5 py-2 btn-accent-pondok bg-accent-gold fw-bold shadow-sm"
                     style={{
-                      backgroundColor: "#2e7d32",
                       border: "none",
-                      color: "white",
                     }}
                   >
                     Kirim Pesan

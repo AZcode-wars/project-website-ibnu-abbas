@@ -1,6 +1,6 @@
-import { Row, Col, Card } from "react-bootstrap";
+import { Row, Col, Card, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { CalendarClock, ArrowRight } from "lucide-react";
+import { CalendarClock, ArrowUpRight } from "lucide-react";
 
 const LINK_EKSTERNAL = "https://..."; // TODO: ganti dengan URL jadwal & tata tertib klien
 
@@ -29,15 +29,16 @@ const InfoKunjunganBanner = () => {
               </p>
             </Col>
             <Col lg={4} className="text-lg-end">
-              <a
+              <Button
+                as="a"
                 href={LINK_EKSTERNAL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-light text-primary-green fw-bold rounded-4 px-4 py-2 text-decoration-none d-inline-flex align-items-center"
+                className="btn btn-light text-primary-green fw-bold rounded-3 px-4 py-2 text-decoration-none d-inline-flex align-items-center"
               >
                 Lihat Jadwal Selengkapnya
-                <ArrowRight size={18} className="ms-2" />
-              </a>
+                <ArrowUpRight size={18} className="ms-2" />
+              </Button>
             </Col>
           </Row>
         </Card.Body>
