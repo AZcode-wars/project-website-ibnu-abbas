@@ -779,8 +779,9 @@ h6 {
   .program-table-wrapper {
     max-width: 100%;
   }
-  .facility-carousel .carousel-item > div {
-    height: 320px !important;
+  .facility-carousel .carousel-item > div,
+  .facility-home-carousel .carousel-item > div {
+    height: 400px !important;
   }
   .pondok-card img {
     height: 280px !important;
@@ -852,9 +853,9 @@ h6 {
   .pondok-card img {
     height: 240px !important;
   }
-  .facility-carousel .carousel-item > div {
+  /* .facility-carousel .carousel-item > div {
     height: 260px !important;
-  }
+  } */
   .hero-btn,
   .hero-btn-outline {
     padding: 0.75rem 1.5rem;
@@ -870,16 +871,16 @@ h6 {
     text-align: justify;
   }
   .carousel-text {
-    font-size: 0.1rem;
+    font-size: 0.8rem;
   }
   .carousel-title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   .carousel-caption {
     background: linear-gradient(
       to top,
       rgba(6, 78, 59, 0.85) 0%,
-      rgba(6, 78, 59, 0.85) 20%,
+      rgba(6, 78, 59, 0.85) 30%,
       transparent 100%
     );
   }

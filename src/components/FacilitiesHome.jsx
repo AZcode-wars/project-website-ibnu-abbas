@@ -71,7 +71,7 @@ const FacilitiesHome = () => {
                     <h3 className="text-accent-gold fw-bold carousel-title">
                       {f.title}
                     </h3>
-                    <p className="fs-5 text-white carousel-text">{f.desc}</p>
+                    <p className=" text-white carousel-text">{f.desc}</p>
                   </Carousel.Caption>
                 </div>
               </Carousel.Item>
