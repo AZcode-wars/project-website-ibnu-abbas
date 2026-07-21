@@ -126,6 +126,36 @@ h6 {
   box-shadow: var(--shadow-lg);
 }
 
+/* CTA Link Buttons */
+.btn-primary-green {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
+  color: var(--white) !important;
+  border: none;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(6, 78, 59, 0.3);
+}
+
+.btn-primary-green:hover {
+  background: linear-gradient(135deg, var(--primary-green-light) 0%, #047857 100%);
+  color: var(--white) !important;
+  box-shadow: 0 8px 25px rgba(6, 78, 59, 0.4);
+  transform: translateY(-3px);
+}
+
+.btn-primary-green:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(6, 78, 59, 0.3);
+}
+
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+}
+
 .section-padding {
   padding: var(--spacing-md) 0 var(--spacing-lg) 0;
 }
@@ -578,12 +608,7 @@ h6 {
   color: #ffffff;
 }
 
-/* ═══════════════════════════════════════════
-<<<<<<< Updated upstream
-=======
-   FACILITIES CAROUSEL
-  ═══════════════════════════════════════════ */
-
+/* Facilities Carousel */
 .carousel-text {
   font-size: 1.25rem;
   margin-bottom: 0;
@@ -870,8 +895,7 @@ h6 {
     font-size: 1rem;
     text-align: justify;
   }
-<<<<<<< Updated upstream
-=======
+
   .carousel-text {
     font-size: 0.95rem;
     color: #ffffff;
@@ -942,5 +966,4 @@ h6 {
   :root {
     --navbar-h: 70px;
   }
->>>>>>> Stashed changes
 }

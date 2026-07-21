@@ -20,8 +20,6 @@ const programs = [
       {
         className: 'TA A',
         subjects: [
-            { subject: "Doa Pagi & Hafalan", hoursPerWeek: 0 },
-            { subject: "Praktek Sholat", hoursPerWeek: 0 },
             { subject: "Menulis & Membaca", hoursPerWeek: 0 },
             { subject: "Berbahasa", hoursPerWeek: 0 },
             { subject: "Aqidah", hoursPerWeek: 0 },
@@ -31,8 +29,6 @@ const programs = [
             { subject: "Bahasa Arab", hoursPerWeek: 0 },
             { subject: "Kognitif", hoursPerWeek: 0 },
             { subject: "Seni", hoursPerWeek: 0 },
-            { subject: "Belajar di Rumah", hoursPerWeek: 0 },
-            { subject: "Doa Pagi", hoursPerWeek: 0 },
             { subject: "EXTRA", hoursPerWeek: 0 },
             { subject: "Siroh", hoursPerWeek: 0 },
 ]
