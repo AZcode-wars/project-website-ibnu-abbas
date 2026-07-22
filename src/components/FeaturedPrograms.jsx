@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -27,7 +28,9 @@ const FeaturedPrograms = () => {
             className="text-muted mt-3"
             style={{ maxWidth: "700px", margin: "0 auto" }}
           >
-            Alhamdulillah, kami menjalankan beberapa jenjang pendidikan yang menekankan penguatan ilmu syar'i, untuk mengantarkan santri menjadi generasi yang rabbani.
+            Alhamdulillah, kami menjalankan beberapa jenjang pendidikan yang
+            menekankan penguatan ilmu syar'i, untuk mengantarkan santri menjadi
+            generasi yang rabbani.
           </p>
         </motion.div>
 

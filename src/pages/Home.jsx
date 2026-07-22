@@ -6,7 +6,6 @@ import FeaturedPrograms from "../components/FeaturedPrograms";
 import FacilitiesHome from "../components/FacilitiesHome";
 import KalenderPendidikan from "../components/KalenderPendidikan";
 import ContactHome from "../components/ContactHome";
-import JadwalPenjengukan from "../components/JadwalPenjengukan";
 const Home = () => {
   return (
     <>
@@ -16,7 +15,6 @@ const Home = () => {
       <FeaturedPrograms />
       <FacilitiesHome />
       <KalenderPendidikan />
-      <JadwalPenjengukan />
       <ContactHome />
     </>
   );

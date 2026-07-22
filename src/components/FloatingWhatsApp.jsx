@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle } from 'lucide-react';
-import '../styles/floating-wa.css';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { MessageCircle } from "lucide-react";
+import "../styles/floating-wa.css";
 
 const FloatingWhatsApp = () => {
   const [hovered, setHovered] = useState(false);

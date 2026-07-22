@@ -4,7 +4,7 @@ import Facilities from "../components/Facilities";
 
 const FasilitasPage = () => {
   return (
-    <div style={{ paddingTop: "80px" }}>
+    <div style={{ paddingTop: "80px " }}>
       <Facilities />
     </div>
   );

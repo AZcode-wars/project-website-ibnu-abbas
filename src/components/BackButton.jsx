@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button } from 'react-bootstrap';
-import { useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import React from "react";
+import { Button } from "react-bootstrap";
+import { useNavigate, Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const BackButton = ({ to, label = "Kembali", variant = "outline-success" }) => {
   const navigate = useNavigate();

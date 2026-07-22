@@ -33,6 +33,25 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Sync tinggi navbar ke CSS var --navbar-h agar marquee sticky pas di bawahnya
+  useEffect(() => {
+    const navEl = navRef.current;
+    if (!navEl) return;
+    const update = () =>
+      document.documentElement.style.setProperty(
+        "--navbar-h",
+        `${navEl.offsetHeight}px`,
+      );
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(navEl);
+    window.addEventListener("scroll", update, { passive: true });
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("scroll", update);
+    };
+  }, []);
+
   const isHomePage = location.pathname === "/";
   const shouldBeSolid = scrolled || !isHomePage || expanded;
 

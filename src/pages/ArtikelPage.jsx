@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { client, urlFor } from "../utils/sanity";
 import BackButton from "../components/BackButton";
+import InfoKunjunganBanner from "../components/InfoKunjunganBanner";
 import { Zap, Clock } from "lucide-react";
 
 const ArtikelPage = () => {
@@ -108,6 +109,8 @@ const ArtikelPage = () => {
               pendidikan Islam serta kehidupan pesantren.
             </p>
           </motion.div>
+
+          <InfoKunjunganBanner />
 
           {/* Info Penting Section - Grid Cards */}
           {urgentArticles.length > 0 && (
