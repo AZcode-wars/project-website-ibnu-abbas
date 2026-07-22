@@ -99,7 +99,7 @@ const ContactHome = () => {
                 href="https://wa.me/6282376582633?text=Assalamualaikum"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-100 py-3 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2 btn-accent-pondok bg-accent-gold"
+                className="w-100 py-3 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2 btn-primary-pondok"
                 style={{
                   border: "none",
                 }}
@@ -188,7 +188,7 @@ const ContactHome = () => {
                 <div className="text-end">
                   <Button
                     type="submit"
-                    className="px-5 py-2 btn-accent-pondok bg-accent-gold fw-bold shadow-sm"
+                    className="px-5 py-2 btn-primary-pondok fw-bold shadow-sm"
                     style={{
                       border: "none",
                     }}

@@ -1,22 +1,12 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-// Import candidate images for random selection
-import img1 from "../assets/asrama baru.jpeg";
-import img2 from "../assets/asrama.png";
-import img3 from "../assets/masjid.png";
-import img4 from "../assets/kelas.png";
-import img5 from "../assets/maktabah.png";
+import pondokImage from "../assets/pondok tampak jalan.jpeg";
 
 const AboutHome = () => {
-  // Stable random image selection to prevent flickering on re-renders
-  const selectedImage = useMemo(() => {
-    const images = [img1, img2, img3, img4, img5];
-    return images[Math.floor(Math.random() * images.length)];
-  }, []);
 
   return (
     <section className="section-padding position-relative overflow-hidden">
@@ -53,7 +43,7 @@ const AboutHome = () => {
                 <Button
                   as={Link}
                   to="/profil"
-                  className="btn-accent-pondok d-inline-flex align-items-center justify-content-center shadow-sm"
+                  className="btn-primary-pondok d-inline-flex align-items-center justify-content-center shadow-sm"
                 >
                   Baca Selengkapnya
                   <ArrowRight className="ms-2" size={18} />
@@ -73,7 +63,7 @@ const AboutHome = () => {
             >
               <div className="image-wrapper rounded-4 overflow-hidden shadow-xl">
                 <img
-                  src={selectedImage}
+                  src={pondokImage}
                   alt="Profil Ma'had Ibnu Abbas"
                   className="img-fluid w-100 rounded-4"
                   style={{
