@@ -1,48 +1,65 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Carousel, Modal, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { Maximize2, X } from "lucide-react";
+import { Maximize2, X, Images } from "lucide-react";
 import BackButton from "./BackButton";
 
-import asramaImg from "../assets/asrama.png";
-import masjidImg from "../assets/masjid.png";
-import kelasImg from "../assets/kelas.png";
-import maktabahImg from "../assets/maktabah.png";
+import asramaBaruImg from "../assets/asrama baru.jpeg";
+import masjidDalamImg from "../assets/masjid dalam.jpeg";
+import masjidLuarImg from "../assets/masjid luar.jpeg";
+import gedungTaImg from "../assets/gedung ta.jpeg";
+import kmBaruImg from "../assets/km baru.jpeg";
+import kmBaruPotraitImg from "../assets/km baru potrait.jpeg";
+import kmTaImg from "../assets/km ta.jpeg";
+import parkirImg from "../assets/area parkir luas.jpeg";
+import pondokJalanImg from "../assets/pondok tampak jalan.jpeg";
+import kandangImg from "../assets/kandang.jpeg";
+import kelasDua from "../assets/kelas dua.jpeg";
 
 const Facilities = () => {
   const [showLightbox, setShowLightbox] = useState(false);
-  const [activeImg, setActiveImg] = useState(0);
+  const [activeAlbum, setActiveAlbum] = useState(0);
 
-  const facilities = [
+  const albums = [
     {
-      title: "Asrama Santri Modern",
-      desc: "Kamar tidur yang nyaman dan bersih untuk mendukung istirahat santri.",
-      img: asramaImg,
+      title: "Masjid Aqil Al Ghollab",
+      desc: "Pusat kegiatan ibadah dan kajian keislaman pondok pesantren.",
+      thumbnail: masjidLuarImg,
+      images: [masjidLuarImg, masjidDalamImg],
     },
     {
-      title: "Masjid Jami' Ibnu Abbas",
-      desc: "Pusat kegiatan ibadah dan kajian keislaman dengan arsitektur menawan.",
-      img: masjidImg,
+      title: "Asrama Santri Baru",
+      desc: "Kamar tidur yang nyaman dan representatif untuk mendukung istirahat santri.",
+      thumbnail: asramaBaruImg,
+      images: [asramaBaruImg],
     },
     {
-      title: "Ruang Kelas Kondusif",
-      desc: "Kelas interaktif dengan fasilitas-fasilitas pendukung untuk pembelajaran islami.",
-      img: kelasImg,
+      title: "Gedung & Kelas",
+      desc: "Fasilitas gedung yang memadai untuk mendukung kelancaran program tahfizh.",
+      thumbnail: kelasDua,
+      images: [kelasDua, gedungTaImg, pondokJalanImg],
     },
     {
-      title: "Perpustakaan & Maktabah",
-      desc: "Koleksi ribuan kitab kuning dan buku literatur umum yang lengkap.",
-      img: maktabahImg,
+      title: "Fasilitas Kamar Mandi",
+      desc: "Fasilitas sanitasi yang bersih dan memadai demi kenyamanan seluruh santri.",
+      thumbnail: kmBaruImg,
+      images: [kmBaruImg, kmBaruPotraitImg, kmTaImg],
     },
+    {
+      title: "Area Publik & Fasilitas",
+      desc: "Fasilitas pendukung area parkir yang luas dan peternakan.",
+      thumbnail: parkirImg,
+      images: [parkirImg, kandangImg],
+    }
   ];
 
   const handleOpenLightbox = (index) => {
-    setActiveImg(index);
+    setActiveAlbum(index);
     setShowLightbox(true);
   };
 
   return (
-    <section id="fasilitas" className="section-padding">
+    <section id="fasilitas" className="section-padding bg-light">
       <Container>
         <BackButton to="/" label="Kembali ke Beranda" />
         <motion.div
@@ -53,70 +70,45 @@ const Facilities = () => {
         >
           <h5 className="text-accent-gold fw-bold mb-2">Fasilitas Pondok</h5>
           <h2 className="display-5 fw-bold section-title text-center">
-            Sarana & Prasarana
+            Galeri Sarana & Prasarana
           </h2>
         </motion.div>
 
-        {/* Main Carousel */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="mb-5 shadow-xl rounded-4 overflow-hidden"
-        >
-          <Carousel indicators={true} fade className="facility-carousel">
-            {facilities.map((f, i) => (
-              <Carousel.Item key={i}>
-                <div style={{ height: "500px", position: "relative" }}>
-                  <img
-                    className="d-block w-100 h-100 object-fit-cover"
-                    src={f.img}
-                    alt={f.title}
-                  />
-                  <Carousel.Caption className="text-start start-0 bottom-0 w-100 p-5 carousel-caption">
-                    <h3
-                      className="text-accent-gold fw-bold carousel-title"
-                      style={{ textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)" }}
-                    >
-                      {f.title}
-                    </h3>
-                    <p
-                      className="carousel-text"
-                      style={{ textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}
-                    >
-                      {f.desc}
-                    </p>
-                  </Carousel.Caption>
-                </div>
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        </motion.div>
-
-        {/* Thumbnail Gallery */}
-        <Row className="g-4">
-          {facilities.map((f, i) => (
-            <Col key={i} md={3}>
+        {/* Thumbnail Gallery (Albums) */}
+        <Row className="g-4 justify-content-center">
+          {albums.map((album, i) => (
+            <Col key={i} md={4} sm={6}>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="position-relative overflow-hidden rounded-3 cursor-pointer group shadow-sm"
+                whileHover={{ scale: 1.02, y: -5 }}
+                className="position-relative overflow-hidden rounded-4 cursor-pointer group shadow-sm bg-white border border-light"
                 onClick={() => handleOpenLightbox(i)}
-                style={{ height: "180px", cursor: "pointer" }}
+                style={{ cursor: "pointer" }}
               >
-                <img
-                  src={f.img}
-                  alt={f.title}
-                  className="w-100 h-100 object-fit-cover"
-                />
-                <div className="position-absolute top-0 start-0 w-100 h-100 bg-primary-green bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 group-hover-opacity-100 transition-all duration-300">
-                  <Maximize2 className="text-white" />
+                <div style={{ height: "200px", position: "relative" }}>
+                  <img
+                    src={album.thumbnail}
+                    alt={album.title}
+                    className="w-100 h-100 object-fit-cover"
+                  />
+                  <div className="position-absolute top-0 start-0 w-100 h-100 bg-primary-green bg-opacity-50 d-flex align-items-center justify-content-center opacity-0 group-hover-opacity-100 transition-all duration-300">
+                    <Maximize2 className="text-white" size={32} />
+                  </div>
+                  {/* Photo count indicator */}
+                  <div className="position-absolute bottom-0 end-0 m-3 bg-dark bg-opacity-75 text-white px-2 py-1 rounded-3 small d-flex align-items-center gap-2 shadow">
+                    <Images size={16} />
+                    <span className="fw-bold">{album.images.length}</span>
+                  </div>
+                </div>
+                <div className="p-4 text-center">
+                  <h5 className="fw-bold text-primary-green mb-2">{album.title}</h5>
+                  <p className="text-muted small mb-0">{album.desc}</p>
                 </div>
               </motion.div>
             </Col>
           ))}
         </Row>
 
-        {/* Lightbox Modal */}
+        {/* Lightbox Modal with Carousel */}
         <Modal
           show={showLightbox}
           onHide={() => setShowLightbox(false)}
@@ -132,17 +124,34 @@ const Facilities = () => {
             >
               <X size={32} />
             </Button>
-            <img
-              src={facilities[activeImg].img}
-              alt="Preview"
-              className="w-100 rounded-3 shadow-2xl"
-            />
-            <div className="bg-white p-4 rounded-bottom-3 mt-n2">
-              <h4 className="text-primary-green fw-bold">
-                {facilities[activeImg].title}
-              </h4>
-              <p className="text-muted mb-0">{facilities[activeImg].desc}</p>
-            </div>
+            
+            {albums[activeAlbum] && (
+              <div className="bg-white rounded-4 overflow-hidden shadow-2xl">
+                <Carousel 
+                  indicators={albums[activeAlbum].images.length > 1} 
+                  controls={albums[activeAlbum].images.length > 1}
+                  fade
+                >
+                  {albums[activeAlbum].images.map((imgSrc, idx) => (
+                    <Carousel.Item key={idx}>
+                      <img
+                        src={imgSrc}
+                        alt={`${albums[activeAlbum].title} ${idx + 1}`}
+                        className="w-100 object-fit-cover"
+                        style={{ height: "65vh", minHeight: "400px", maxHeight: "600px" }}
+                      />
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+                
+                <div className="p-4 bg-white text-center">
+                  <h4 className="text-primary-green fw-bold mb-2">
+                    {albums[activeAlbum].title}
+                  </h4>
+                  <p className="text-muted mb-0">{albums[activeAlbum].desc}</p>
+                </div>
+              </div>
+            )}
           </Modal.Body>
         </Modal>
       </Container>

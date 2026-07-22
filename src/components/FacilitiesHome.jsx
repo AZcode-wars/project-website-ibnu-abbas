@@ -1,34 +1,48 @@
 import React from "react";
-import { Container, Carousel } from "react-bootstrap";
+import { Container, Carousel, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 
-// Import assets from Facilities component for consistency
-import asramaImg from "../assets/asrama.png";
-import masjidImg from "../assets/masjid.png";
-import kelasImg from "../assets/kelas.png";
-import maktabahImg from "../assets/maktabah.png";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+
+import asramaBaruImg from "../assets/asrama baru.jpeg";
+import masjidDalamImg from "../assets/masjid dalam.jpeg";
+import masjidLuarImg from "../assets/masjid luar.jpeg";
+import gedungTaImg from "../assets/gedung ta.jpeg";
+import kmBaruImg from "../assets/km baru.jpeg";
+import parkirImg from "../assets/area parkir luas.jpeg";
 
 const FacilitiesHome = () => {
   const facilities = [
     {
-      title: "Asrama Santri Modern",
-      desc: "Kamar tidur yang nyaman dan bersih untuk mendukung istirahat santri.",
-      img: asramaImg,
+      title: "Asrama Santri Baru",
+      desc: "Kamar tidur yang nyaman dan representatif untuk mendukung istirahat santri.",
+      img: asramaBaruImg,
     },
     {
-      title: "Masjid Jami' Ibnu Abbas",
-      desc: "Pusat kegiatan ibadah dan kajian keislaman dengan arsitektur menawan.",
-      img: masjidImg,
+      title: "Masjid Jami' (Bagian Dalam)",
+      desc: "Suasana nyaman dan khusyuk di dalam masjid untuk kegiatan ibadah dan hafalan.",
+      img: masjidDalamImg,
     },
     {
-      title: "Ruang Kelas Kondusif",
-      desc: "Kelas interaktif dengan fasilitas-fasilitas pendukung untuk pembelajaran islami.",
-      img: kelasImg,
+      title: "Masjid Jami' (Tampak Luar)",
+      desc: "Pusat kegiatan ibadah dan kajian keislaman pondok pesantren.",
+      img: masjidLuarImg,
     },
     {
-      title: "Perpustakaan & Maktabah",
-      desc: "Koleksi ribuan kitab kuning dan buku literatur umum yang lengkap.",
-      img: maktabahImg,
+      title: "Gedung Tarbiyatul Aulad",
+      desc: "Area belajar anak-anak TA yang aman dan nyaman.",
+      img: gedungTaImg,
+    },
+    {
+      title: "Kamar Mandi Santri",
+      desc: "Fasilitas sanitasi yang bersih dan memadai demi kenyamanan seluruh santri.",
+      img: kmBaruImg,
+    },
+    {
+      title: "Area Parkir Luas",
+      desc: "Fasilitas area parkir yang luas untuk menampung kendaraan pengurus dan tamu.",
+      img: parkirImg,
     },
   ];
 
@@ -51,7 +65,7 @@ const FacilitiesHome = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="shadow-xl rounded-4 overflow-hidden"
+          className="shadow-xl rounded-4 overflow-hidden mb-5"
         >
           <Carousel
             indicators={true}
@@ -77,6 +91,22 @@ const FacilitiesHome = () => {
               </Carousel.Item>
             ))}
           </Carousel>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <Button
+            as={Link}
+            to="/fasilitas"
+            className="btn-primary-pondok d-inline-flex align-items-center justify-content-center shadow-sm"
+          >
+            Lihat Galeri Fasilitas Lengkap
+            <ArrowRight className="ms-2" size={18} />
+          </Button>
         </motion.div>
       </Container>
     </section>

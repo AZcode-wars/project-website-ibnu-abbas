@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import programs from "../data/programsData";
 
 const FeaturedPrograms = () => {
@@ -79,24 +79,10 @@ const FeaturedPrograms = () => {
             <Button
               as={Link}
               to="/program"
-              variant="outline-primary-green"
-              className="px-4 py-2 fw-bold rounded-3 border-2"
-              style={{
-                borderColor: "#065f46",
-                color: "#065f46",
-                transition: "all 0.3s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#065f46";
-                e.target.style.color = "white";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "transparent";
-                e.target.style.color = "#065f46";
-              }}
+              className="btn-primary-pondok d-inline-flex align-items-center justify-content-center shadow-sm"
             >
-              Lihat Semua Program
-              <ArrowRight size={18} className="ms-2" />
+              Lihat Semua Program Pendidikan
+              <ArrowRight className="ms-2" size={18} />
             </Button>
           </motion.div>
         </div>

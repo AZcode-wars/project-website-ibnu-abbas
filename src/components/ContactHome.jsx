@@ -67,8 +67,7 @@ const ContactHome = () => {
                 <div>
                   <p className="mb-0 fw-bold">Alamat</p>
                   <p className="text-white-50 mb-0">
-                    Dusun Kayunan, RT.05/RW.04, Banjermangu, Banjarmangu, Kec.
-                    Banjarmangu, Kab. Banjarnegara, Jawa Tengah 53452
+                    Dusun Kayunan, RT.05/RW.04,Ds. Banjarmangu, Kec. Banjarmangu, Kab. Banjarnegara, Jawa Tengah 53452
                   </p>
                 </div>
               </div>
