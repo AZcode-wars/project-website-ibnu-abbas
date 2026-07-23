@@ -15,6 +15,10 @@ import parkirImg from "../assets/area parkir luas.jpeg";
 import pondokJalanImg from "../assets/pondok tampak jalan.jpeg";
 import kandangImg from "../assets/kandang.jpeg";
 import kelasDua from "../assets/kelas dua.jpeg";
+// import kelas1Img from "../assets/kelas1.jpeg";
+import kelas11Img from "../assets/kelas1.1.jpeg";
+// import kelas12Img from "../assets/kelas1.2.jpeg";
+import asramaKelas2Img from "../assets/asrama kelas 2.jpeg";
 
 const Facilities = () => {
   const [showLightbox, setShowLightbox] = useState(false);
@@ -28,16 +32,16 @@ const Facilities = () => {
       images: [masjidLuarImg, masjidDalamImg],
     },
     {
-      title: "Asrama Santri Baru",
+      title: "Asrama Santri",
       desc: "Kamar tidur yang nyaman dan representatif untuk mendukung istirahat santri.",
       thumbnail: asramaBaruImg,
-      images: [asramaBaruImg],
+      images: [asramaBaruImg, asramaKelas2Img],
     },
     {
       title: "Gedung & Kelas",
       desc: "Fasilitas gedung yang memadai untuk mendukung kelancaran program tahfizh.",
       thumbnail: kelasDua,
-      images: [kelasDua, gedungTaImg, pondokJalanImg],
+      images: [pondokJalanImg, kelasDua, kelas11Img, gedungTaImg],
     },
     {
       title: "Fasilitas Kamar Mandi",

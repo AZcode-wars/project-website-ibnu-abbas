@@ -15,9 +15,9 @@ import parkirImg from "../assets/area parkir luas.jpeg";
 const FacilitiesHome = () => {
   const facilities = [
     {
-      title: "Asrama Santri Baru",
-      desc: "Kamar tidur yang nyaman dan representatif untuk mendukung istirahat santri.",
-      img: asramaBaruImg,
+      title: "Masjid Aqil Al Ghollab'",
+      desc: "Pusat kegiatan ibadah dan kajian keislaman pondok pesantren.",
+      img: masjidLuarImg,
     },
     {
       title: "Masjid Jami' (Bagian Dalam)",
@@ -25,9 +25,9 @@ const FacilitiesHome = () => {
       img: masjidDalamImg,
     },
     {
-      title: "Masjid Jami' (Tampak Luar)",
-      desc: "Pusat kegiatan ibadah dan kajian keislaman pondok pesantren.",
-      img: masjidLuarImg,
+      title: "Asrama Santri Baru",
+      desc: "Kamar tidur yang nyaman dan representatif untuk mendukung istirahat santri.",
+      img: asramaBaruImg,
     },
     {
       title: "Gedung Tarbiyatul Aulad",

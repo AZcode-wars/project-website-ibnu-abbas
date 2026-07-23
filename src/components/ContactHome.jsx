@@ -99,7 +99,7 @@ const ContactHome = () => {
                 href="https://wa.me/6282376582633?text=Assalamualaikum"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-100 py-3 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2 btn-primary-pondok"
+                className="w-100 py-3 fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2 btn-accent-pondok bg-accent-gold"
                 style={{
                   border: "none",
                 }}

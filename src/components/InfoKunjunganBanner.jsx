@@ -31,7 +31,7 @@ const InfoKunjunganBanner = () => {
             <Col lg={4} className="text-lg-end">
               <Button
                 as="a"
-                href={LINK_EKSTERNAL}
+                href="https://script.google.com/macros/s/AKfycbwMyf_qlru2xuXj2OnYqBeQx1rj-dtQB0760ej6HOKqj4LHQ9tYPyVZdMMP5mInXaEF/exec"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-light text-primary-green fw-bold rounded-3 px-4 py-2 text-decoration-none d-inline-flex align-items-center"
