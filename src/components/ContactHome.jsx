@@ -67,7 +67,7 @@ const ContactHome = () => {
                 <div>
                   <p className="mb-0 fw-bold">Alamat</p>
                   <p className="text-white-50 mb-0">
-                    Dusun Kayunan, RT.05/RW.04,Ds. Banjarmangu, Kec. Banjarmangu, Kab. Banjarnegara, Jawa Tengah 53452
+                    Dusun Kayunan, RT. 05/RW. 04, Desa Banjarmangu, Kecamatan Banjarmangu, Kabupaten Banjarnegara, Jawa Tengah 53452
                   </p>
                 </div>
               </div>
@@ -188,7 +188,7 @@ const ContactHome = () => {
                 <div className="text-end">
                   <Button
                     type="submit"
-                    className="px-5 py-2 btn-accent-pondok bg-accent-gold fw-bold shadow-sm"
+                    className="px-5 py-2 btn-primary-pondok fw-bold shadow-sm"
                     style={{
                       border: "none",
                     }}

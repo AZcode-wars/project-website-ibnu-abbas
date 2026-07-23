@@ -104,8 +104,8 @@ const IntroStats = () => {
                 className=" text-muted intro-stats-description mb-0"
                 style={{ lineHeight: "1.8" }}
               >
-                Berdiri sejak 2012 dan berlokasi di Dusun Kayunan, Banjarmangu,
-                Banjarnegara, Jawa Tengah, ma'had ini terus tumbuh dan
+                Berdiri sejak 2012 dan berlokasi di Dusun Kayunan, RT. 05/RW. 04, Desa Banjarmangu,
+                Kecamatan Banjarmangu, Kabupaten Banjarnegara, Jawa Tengah, ma'had ini terus tumbuh dan
                 berkembang dalam kepercayaan umat — mencetak generasi muda yang
                 berilmu, bertakwa, dan siap membawa manfaat bagi agama,
                 keluarga, dan masyarakat.
