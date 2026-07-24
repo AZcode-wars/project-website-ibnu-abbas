@@ -58,8 +58,8 @@ const programs = [
 
   // Madrasah Ibtidaiyah
   {
-    slug: 'marhalah-ibtida\'i',
-    title: 'Marhalah Ibtida\'i',
+    slug: 'marhalah-ula',
+    title: 'Marhalah Ula',
     subtitle: 'Banin & Banat',
     icon: React.createElement(GraduationCap, { size: 40, className: 'text-accent-gold mb-3' }),
     description:
