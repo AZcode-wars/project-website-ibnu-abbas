@@ -160,6 +160,9 @@ const Header = () => {
                 to="/ppdb"
                 onClick={() => setExpanded(false)}
                 className="btn-accent-pondok mt-3 mt-lg-0 shadow-sm"
+                style={{
+                  transition: "all 0.3s ease",
+                }}
               >
                 Daftar Sekarang
               </Button>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Carousel, Modal, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Maximize2, X, Images } from "lucide-react";
@@ -23,6 +23,7 @@ import asramaKelas2Img from "../assets/asrama kelas 2.jpeg";
 const Facilities = () => {
   const [showLightbox, setShowLightbox] = useState(false);
   const [activeAlbum, setActiveAlbum] = useState(0);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const albums = [
     {
@@ -59,8 +60,34 @@ const Facilities = () => {
 
   const handleOpenLightbox = (index) => {
     setActiveAlbum(index);
+    setActiveImageIndex(0);
     setShowLightbox(true);
   };
+
+  const handleCloseLightbox = () => {
+    setShowLightbox(false);
+    setActiveImageIndex(0);
+  };
+
+  useEffect(() => {
+    if (!showLightbox) return;
+    const album = albums[activeAlbum];
+    const total = album?.images.length || 0;
+    if (total <= 1) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowLeft") {
+        setActiveImageIndex((i) => (i === 0 ? total - 1 : i - 1));
+      } else if (e.key === "ArrowRight") {
+        setActiveImageIndex((i) => (i === total - 1 ? 0 : i + 1));
+      } else if (e.key === "Escape") {
+        handleCloseLightbox();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [showLightbox, activeAlbum, albums]);
 
   return (
     <section id="fasilitas" className="section-padding bg-light">
@@ -115,7 +142,7 @@ const Facilities = () => {
         {/* Lightbox Modal with Carousel */}
         <Modal
           show={showLightbox}
-          onHide={() => setShowLightbox(false)}
+          onHide={handleCloseLightbox}
           size="lg"
           centered
           contentClassName="bg-transparent border-0"
@@ -124,7 +151,7 @@ const Facilities = () => {
             <Button
               variant="link"
               className="position-absolute top-0 end-0 text-white p-3 z-3"
-              onClick={() => setShowLightbox(false)}
+              onClick={handleCloseLightbox}
             >
               <X size={32} />
             </Button>
@@ -132,6 +159,8 @@ const Facilities = () => {
             {albums[activeAlbum] && (
               <div className="bg-white rounded-4 overflow-hidden shadow-2xl">
                 <Carousel 
+                  activeIndex={activeImageIndex}
+                  onSelect={setActiveImageIndex}
                   indicators={albums[activeAlbum].images.length > 1} 
                   controls={albums[activeAlbum].images.length > 1}
                   fade

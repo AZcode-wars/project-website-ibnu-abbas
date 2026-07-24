@@ -102,7 +102,10 @@ const FacilitiesHome = () => {
           <Button
             as={Link}
             to="/fasilitas"
-            className="btn-primary-pondok d-inline-flex align-items-center justify-content-center shadow-sm"
+            className="btn-primary-pondok d-inline-flex align-items-center justify-content-center shadow-sm py-2"
+            style={{
+              transition: "all 0.3s ease",
+            }}
           >
             Lihat Galeri Fasilitas Lengkap
             <ArrowRight className="ms-2" size={18} />

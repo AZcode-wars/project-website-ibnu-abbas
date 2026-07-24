@@ -79,7 +79,10 @@ const FeaturedPrograms = () => {
             <Button
               as={Link}
               to="/program"
-              className="btn-primary-pondok d-inline-flex align-items-center justify-content-center shadow-sm"
+              className="btn-primary-pondok d-inline-flex align-items-center justify-content-center shadow-sm py-2"
+              style={{
+                transition: "all 0.3s ease",
+              }}
             >
               Lihat Semua Program Pendidikan
               <ArrowRight className="ms-2" size={18} />
