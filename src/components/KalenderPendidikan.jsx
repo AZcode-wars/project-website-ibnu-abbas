@@ -189,7 +189,7 @@ const KalenderPendidikan = () => {
                       height: "10px",
                       padding: 0,
                       backgroundColor:
-                        i === currentIndex ? "#2e7d32" : "#cfe0d8",
+                        i === currentIndex ? "#065f46" : "#cfe0d8",
                       cursor: "pointer",
                     }}
                   />

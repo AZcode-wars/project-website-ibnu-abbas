@@ -7,7 +7,6 @@ import { ArrowRight } from "lucide-react";
 import pondokImage from "../assets/pondok tampak jalan.jpeg";
 
 const AboutHome = () => {
-
   return (
     <section className="section-padding position-relative overflow-hidden">
       <Container>
@@ -43,7 +42,10 @@ const AboutHome = () => {
                 <Button
                   as={Link}
                   to="/profil"
-                  className="btn-primary-pondok d-inline-flex align-items-center justify-content-center shadow-sm"
+                  className="btn-primary-pondok d-inline-flex align-items-center justify-content-center shadow-sm py-2"
+                  style={{
+                    transition: "all 0.3s ease",
+                  }}
                 >
                   Baca Selengkapnya
                   <ArrowRight className="ms-2" size={18} />
