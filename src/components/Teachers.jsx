@@ -12,7 +12,7 @@ const Teachers = () => {
       "D2 PGSD Universitas Negeri Yogyakarta",
       "Pondok Pesantren Darul Atsar Temanggung",
       "Darul Hadits Fiyush Yaman",
-      "S1 Tarbiyah STIT Bandung",
+      "S1 PAI STIT Bandung",
 
     ],
     specialty: "Fiqh & Ushul Fiqh",
