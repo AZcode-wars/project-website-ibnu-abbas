@@ -4,7 +4,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { GraduationCap, Users, Calendar, ArrowRight } from "lucide-react";
 
-import asramaImage from "../assets/asrama baru.jpeg";
+import asramaImage from "../assets/asrama baru tampak luar.jpeg";
 import Marquee from "./Marquee";
 
 const Hero = () => {

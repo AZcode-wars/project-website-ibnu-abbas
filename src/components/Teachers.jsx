@@ -60,9 +60,9 @@ const Teachers = () => {
           viewport={{ once: true }}
           className="text-center mb-5"
         >
-          <h5 className="text-accent-gold fw-bold mb-2">Tenaga Pendidik</h5>
+          <h5 className="text-accent-gold fw-bold mb-2">Pengasuh & Pengampu</h5>
           <h2 className="display-5 fw-bold section-title text-center">
-            Tenaga Pengajar
+            Mudir Pondok Pesantren Ibnu Abbas
           </h2>
         </motion.div>
 
