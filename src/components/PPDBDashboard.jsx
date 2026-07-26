@@ -142,6 +142,7 @@ const PPDBDashboard = ({ settings, stats, isClosed }) => {
             to="/"
             label="Kembali ke Beranda"
             variant="outline-light"
+            className="btn-outline-light"
           />
           <motion.div
             initial={{ opacity: 0, y: -20 }}

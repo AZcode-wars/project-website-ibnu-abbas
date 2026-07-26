@@ -94,7 +94,7 @@ const Footer = () => {
           <Col lg={4}>
             <h5 className="fw-bold mb-4 text-white">Kontak Kami</h5>
             <div
-              className="footer-contact-item adress"
+              className="footer-contact-item"
               style={{ margin: "1rem auto" }}
             >
               <div className="map">

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Spinner, Badge } from "react-bootstrap";
+import { Container, Row, Col, Card, Badge, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { client, urlFor } from "../utils/sanity";
 import BackButton from "../components/BackButton";
 import InfoKunjunganBanner from "../components/InfoKunjunganBanner";
-import { Zap, Clock } from "lucide-react";
+import { ArticleCardSkeleton, Skeleton } from "../components/Skeleton";
+import { Zap, Clock, FileText, ArrowLeft } from "lucide-react";
 
 const ArtikelPage = () => {
   const [articles, setArticles] = useState([]);
@@ -76,11 +77,63 @@ const ArtikelPage = () => {
 
   if (loading) {
     return (
-      <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ minHeight: "80vh", paddingTop: "80px" }}
-      >
-        <Spinner animation="border" variant="success" />
+      <div style={{ paddingTop: "80px" }}>
+        <section className="section-padding bg-light bg-pattern-islamic">
+          <Container>
+            <BackButton to="/" label="Kembali ke Beranda" />
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-5"
+            >
+              <h5 className="text-accent-gold fw-bold mb-2">
+                Wawasan & Edukasi
+              </h5>
+              <h2 className="display-5 fw-bold section-title text-center">
+                Artikel & Berita
+              </h2>
+              <p
+                className="text-muted mt-3"
+                style={{ maxWidth: "700px", margin: "0 auto" }}
+              >
+                Kumpulan artikel edukatif, berita terkini, dan wawasan seputar
+                pendidikan Islam serta kehidupan pesantren.
+              </p>
+            </motion.div>
+
+            <InfoKunjunganBanner />
+
+            <div className="urgent-section-wrapper mb-5">
+              <div className="text-center mb-4">
+                <Skeleton
+                  className="mx-auto mb-2"
+                  style={{ width: "120px", height: "32px" }}
+                />
+                <Skeleton
+                  className="mx-auto"
+                  style={{ width: "250px", height: "1.5rem" }}
+                />
+              </div>
+              <Row className="g-3">
+                {[1, 2, 3].map((i) => (
+                  <Col key={i} xs={12} sm={6} lg={4}>
+                    <ArticleCardSkeleton urgent />
+                  </Col>
+                ))}
+              </Row>
+            </div>
+
+            <Row>
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <Col key={i} md={6} lg={4} className="mb-4">
+                  <ArticleCardSkeleton />
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </section>
       </div>
     );
   }
@@ -279,9 +332,22 @@ const ArtikelPage = () => {
               ))
             ) : (
               <Col className="text-center mt-5">
+                <FileText size={80} className="text-secondary mb-4" />
                 <p className="text-muted">
                   Belum ada artikel yang tersedia saat ini.
                 </p>
+                <Button
+                  as={Link}
+                  to="/"
+                  className="btn-primary-green is-mobile d-sm-none py-2"
+                  style={{
+                    transition: "all 0.3s ease",
+                    border: "none",
+                  }}
+                >
+                  <ArrowLeft size={18} className="me-2" />
+                  Kembali Ke Beranda
+                </Button>
               </Col>
             )}
           </Row>
