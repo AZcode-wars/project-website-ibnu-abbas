@@ -15,9 +15,7 @@ import parkirImg from "../assets/area parkir luas.jpeg";
 import pondokJalanImg from "../assets/pondok tampak jalan.jpeg";
 import kandangImg from "../assets/kandang.jpeg";
 import kelasDua from "../assets/kelas dua.jpeg";
-// import kelas1Img from "../assets/kelas1.jpeg";
 import kelas11Img from "../assets/kelas1.1.jpeg";
-// import kelas12Img from "../assets/kelas1.2.jpeg";
 import asramaKelas2Img from "../assets/asrama kelas 2.jpeg";
 
 const Facilities = () => {
