@@ -19,6 +19,14 @@ import kelasDua from "../assets/kelas dua.jpeg";
 import kelas11Img from "../assets/kelas1.1.jpeg";
 // import kelas12Img from "../assets/kelas1.2.jpeg";
 import asramaKelas2Img from "../assets/asrama kelas 2.jpeg";
+import kelas13Img from "../assets/kelas 1.3.jpeg";
+import tempatCuciImg from "../assets/tempat cuci.jpeg";
+import kmMasjidImg from "../assets/km masjid.jpeg";
+import asramaBaruLuarImg from "../assets/asrama baru tampak luar.jpeg";
+import asramaBaru1Img from "../assets/asrama baru1.jpeg";
+import asrama2Img from "../assets/asrama2.jpeg";
+import lapanganBermainImg from "../assets/lapangan bermain.jpeg";
+import parkirMotorImg from "../assets/parkir motor.jpeg";
 
 const Facilities = () => {
   const [showLightbox, setShowLightbox] = useState(false);
@@ -28,33 +36,33 @@ const Facilities = () => {
   const albums = [
     {
       title: "Masjid Aqil Al Ghollab",
-      desc: "Pusat kegiatan ibadah dan kajian keislaman pondok pesantren.",
+      desc: "Pusat kegiatan belajar, ibadah dan kajian pondok pesantren.",
       thumbnail: masjidLuarImg,
       images: [masjidLuarImg, masjidDalamImg],
     },
     {
       title: "Asrama Santri",
       desc: "Kamar tidur yang nyaman dan representatif untuk mendukung istirahat santri.",
-      thumbnail: asramaBaruImg,
-      images: [asramaBaruImg, asramaKelas2Img],
+      thumbnail: asramaBaruLuarImg,
+      images: [asramaBaruLuarImg, asramaBaruImg, asramaKelas2Img, asramaBaru1Img, asrama2Img],
     },
     {
       title: "Gedung & Kelas",
       desc: "Fasilitas gedung yang memadai untuk mendukung kelancaran program tahfizh.",
-      thumbnail: kelasDua,
-      images: [pondokJalanImg, kelasDua, kelas11Img, gedungTaImg],
+      thumbnail: pondokJalanImg,
+      images: [pondokJalanImg, kelasDua, kelas13Img, gedungTaImg],
     },
     {
       title: "Fasilitas Kamar Mandi",
       desc: "Fasilitas sanitasi yang bersih dan memadai demi kenyamanan seluruh santri.",
       thumbnail: kmBaruImg,
-      images: [kmBaruImg, kmBaruPotraitImg, kmTaImg],
+      images: [kmBaruImg, kmBaruPotraitImg, kmMasjidImg, tempatCuciImg, kmTaImg],
     },
     {
       title: "Area Publik & Fasilitas",
-      desc: "Fasilitas pendukung area parkir yang luas dan peternakan.",
+      desc: "Fasilitas pendukung area parkir yang luas, lapangan bermain, dan peternakan.",
       thumbnail: parkirImg,
-      images: [parkirImg, kandangImg],
+      images: [parkirImg, parkirMotorImg, lapanganBermainImg],
     }
   ];
 
