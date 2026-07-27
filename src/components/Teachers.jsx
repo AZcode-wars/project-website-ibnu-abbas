@@ -6,7 +6,7 @@ import { BookOpen, Award, GraduationCap } from "lucide-react";
 const Teachers = () => {
   const mudir = {
     titleName: "Ustadz Abu Yahya",
-    fullName: "A'ang Andriansyah Siregar S.Pd",
+    fullName: "A'ang Andriansyah Siregar, S.Pd",
     role: "Mudir Pondok Pesantren Ibnu Abbas",
     education: [
       "D2 PGSD Universitas Negeri Yogyakarta",

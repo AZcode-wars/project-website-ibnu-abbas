@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-import asramaBaruImg from "../assets/asrama baru.jpeg";
 import masjidDalamImg from "../assets/masjid dalam.jpeg";
 import masjidLuarImg from "../assets/masjid luar.jpeg";
 import gedungTaImg from "../assets/gedung ta.jpeg";
@@ -16,18 +15,13 @@ const FacilitiesHome = () => {
   const facilities = [
     {
       title: "Masjid Aqil Al Ghollab'",
-      desc: "Pusat kegiatan ibadah dan kajian keislaman pondok pesantren.",
+      desc: "Pusat kegiatan ibadah, belajar dan kajian pondok pesantren.",
       img: masjidLuarImg,
     },
     {
-      title: "Masjid Jami' (Bagian Dalam)",
+      title: "Masjid(Bagian Dalam)",
       desc: "Suasana nyaman dan khusyuk di dalam masjid untuk kegiatan ibadah dan hafalan.",
       img: masjidDalamImg,
-    },
-    {
-      title: "Asrama Santri Baru",
-      desc: "Kamar tidur yang nyaman dan representatif untuk mendukung istirahat santri.",
-      img: asramaBaruImg,
     },
     {
       title: "Gedung Tarbiyatul Aulad",

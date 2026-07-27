@@ -8,8 +8,8 @@ const programs = [
     subtitle: 'Banin & Banat',
     icon: React.createElement(Users, { size: 40, className: 'text-accent-gold mb-3' }),
     description:
-      "Pendidikan untuk anak usia dini (5-6 tahun) yang terfokus pada sisi pembentukan kebiasaan baik, penanaman adab, dan kemandirian sebagai fondasi kepribadian Islami.",
-    ageGroup: '5 – 6 tahun',
+      "Pendidikan untuk anak usia dini (4-6 tahun) yang terfokus pada sisi pembentukan kebiasaan baik, penanaman adab, dan kemandirian sebagai fondasi kepribadian Islami.",
+    ageGroup: '4 – 6 tahun',
     generalCurriculum: [
       'Hafalan Surat Pendek',
       'Hafalan Do\'a Harian',
@@ -17,6 +17,22 @@ const programs = [
       
     ],
     classCurriculum: [
+      {
+        className: 'Tarbiyatus Sibyan',
+        subjects: [
+            { subject: "Menulis & Membaca", hoursPerWeek: 0 },
+            { subject: "Berbahasa", hoursPerWeek: 0 },
+            { subject: "Aqidah", hoursPerWeek: 0 },
+            { subject: "Adab/Ahlak", hoursPerWeek: 0 },
+            { subject: "Fisik Motorik", hoursPerWeek: 0 },
+            { subject: "Berhitung", hoursPerWeek: 0 },
+            { subject: "Bahasa Arab", hoursPerWeek: 0 },
+            { subject: "Kognitif", hoursPerWeek: 0 },
+            { subject: "Seni", hoursPerWeek: 0 },
+            { subject: "EXTRA", hoursPerWeek: 0 },
+            { subject: "Siroh", hoursPerWeek: 0 },
+]
+      },
       {
         className: 'TA A',
         subjects: [

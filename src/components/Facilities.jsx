@@ -4,27 +4,28 @@ import { motion } from "framer-motion";
 import { Maximize2, X, Images } from "lucide-react";
 import BackButton from "./BackButton";
 
-import asramaBaruImg from "../assets/asrama baru.jpeg";
 import masjidDalamImg from "../assets/masjid dalam.jpeg";
+import masjidDalam1Img from "../assets/madjid dalam1.jpeg";
+import masjidDalam2Img from "../assets/masjid dalam 2.jpeg";
 import masjidLuarImg from "../assets/masjid luar.jpeg";
-import gedungTaImg from "../assets/gedung ta.jpeg";
-import kmBaruImg from "../assets/km baru.jpeg";
-import kmBaruPotraitImg from "../assets/km baru potrait.jpeg";
-import kmTaImg from "../assets/km ta.jpeg";
-import parkirImg from "../assets/area parkir luas.jpeg";
-import pondokJalanImg from "../assets/pondok tampak jalan.jpeg";
-import kandangImg from "../assets/kandang.jpeg";
-import kelasDua from "../assets/kelas dua.jpeg";
-import kelas11Img from "../assets/kelas1.1.jpeg";
-import asramaKelas2Img from "../assets/asrama kelas 2.jpeg";
-import kelas13Img from "../assets/kelas 1.3.jpeg";
-import tempatCuciImg from "../assets/tempat cuci.jpeg";
-import kmMasjidImg from "../assets/km masjid.jpeg";
 import asramaBaruLuarImg from "../assets/asrama baru tampak luar.jpeg";
 import asramaBaru1Img from "../assets/asrama baru1.jpeg";
 import asrama2Img from "../assets/asrama2.jpeg";
-import lapanganBermainImg from "../assets/lapangan bermain.jpeg";
+import gedungTaImg from "../assets/gedung ta.jpeg";
+import pondokJalanImg from "../assets/pondok tampak jalan.jpeg";
+import kelasDua from "../assets/kelas dua.jpeg";
+import kelas13Img from "../assets/kelas 1.3.jpeg";
+import kelasTa1Img from "../assets/kelas ta 1.jpeg";
+import kelasTaAImg from "../assets/kelas ta a.jpeg";
+import halamanaTaImg from "../assets/halamana ta.jpeg";
+import kmBaruPotraitImg from "../assets/km baru potrait.jpeg";
+import kmTaImg from "../assets/km ta.jpeg";
+import kmMasjidImg from "../assets/km masjid.jpeg";
+import tempatCuciImg from "../assets/tempat cuci.jpeg";
+import parkirImg from "../assets/area parkir luas.jpeg";
 import parkirMotorImg from "../assets/parkir motor.jpeg";
+import lapanganBermainImg from "../assets/lapangan bermain.jpeg";
+import halamanParkir2Img from "../assets/halaman parkir 2.jpeg";
 
 const Facilities = () => {
   const [showLightbox, setShowLightbox] = useState(false);
@@ -36,31 +37,31 @@ const Facilities = () => {
       title: "Masjid Aqil Al Ghollab",
       desc: "Pusat kegiatan belajar, ibadah dan kajian pondok pesantren.",
       thumbnail: masjidLuarImg,
-      images: [masjidLuarImg, masjidDalamImg],
+      images: [masjidLuarImg, masjidDalamImg, masjidDalam1Img, masjidDalam2Img],
     },
     {
       title: "Asrama Santri",
       desc: "Kamar tidur yang nyaman dan representatif untuk mendukung istirahat santri.",
       thumbnail: asramaBaruLuarImg,
-      images: [asramaBaruLuarImg, asramaBaruImg, asramaKelas2Img, asramaBaru1Img, asrama2Img],
+      images: [asramaBaruLuarImg, asramaBaru1Img, asrama2Img],
     },
     {
       title: "Gedung & Kelas",
       desc: "Fasilitas gedung yang memadai untuk mendukung kelancaran program tahfizh.",
       thumbnail: pondokJalanImg,
-      images: [pondokJalanImg, kelasDua, kelas13Img, gedungTaImg],
+      images: [pondokJalanImg, kelasDua, kelas13Img, gedungTaImg, kelasTa1Img, kelasTaAImg, halamanaTaImg],
     },
     {
       title: "Fasilitas Kamar Mandi",
       desc: "Fasilitas sanitasi yang bersih dan memadai demi kenyamanan seluruh santri.",
-      thumbnail: kmBaruImg,
-      images: [kmBaruImg, kmBaruPotraitImg, kmMasjidImg, tempatCuciImg, kmTaImg],
+      thumbnail: kmBaruPotraitImg,
+      images: [kmBaruPotraitImg, kmMasjidImg, tempatCuciImg, kmTaImg],
     },
     {
       title: "Area Publik & Fasilitas",
-      desc: "Fasilitas pendukung area parkir yang luas, lapangan bermain, dan peternakan.",
+      desc: "Fasilitas pendukung area parkir yang luas, lapangan bermain, dan maqshof (kantin).",
       thumbnail: parkirImg,
-      images: [parkirImg, parkirMotorImg, lapanganBermainImg],
+      images: [parkirImg, parkirMotorImg, lapanganBermainImg, halamanParkir2Img],
     }
   ];
 
