@@ -89,6 +89,31 @@ const ArtikelDetailPage = () => {
     });
   };
 
+  const portableComponents = {
+    types: {
+      image: ({ value }) => {
+        if (!value) return null;
+        let src = "";
+        try {
+          src = urlFor(value).width(1200).auto("format").url();
+        } catch {
+          return null;
+        }
+        if (!src) return null;
+        return (
+          <figure className="article-inline-figure">
+            <img
+              src={src}
+              alt={value.alt || value.caption || article?.judul || "Gambar artikel"}
+              loading="lazy"
+            />
+            {value.caption && <figcaption>{value.caption}</figcaption>}
+          </figure>
+        );
+      },
+    },
+  };
+
   return (
     <div style={{ paddingTop: "110px", paddingBottom: "50px" }}>
       <Container>
@@ -158,7 +183,7 @@ const ArtikelDetailPage = () => {
                       {fileContent}
                     </ReactMarkdown>
                   ) : (
-                    <PortableText value={article.konten} />
+                    <PortableText value={article.konten} components={portableComponents} />
                   )}
                 </div>
               </div>
@@ -209,6 +234,23 @@ const ArtikelDetailPage = () => {
           padding-left: 1rem;
           font-style: italic;
           color: #666;
+        }
+        .portable-text-wrapper figure.article-inline-figure {
+          margin: 2rem 0;
+          width: 100%;
+        }
+        .portable-text-wrapper figure.article-inline-figure img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 12px;
+        }
+        .portable-text-wrapper figure.article-inline-figure figcaption {
+          text-align: center;
+          font-size: 0.9rem;
+          color: #666;
+          margin-top: 0.5rem;
+          line-height: 1.6;
         }
       `}</style>
     </div>
